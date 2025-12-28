@@ -71,7 +71,7 @@ For each iteration:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ASG-SI.git
+   git clone https://github.com/kenhuangus/ASG-SI.git
    cd ASG-SI
    ```
 
@@ -89,7 +89,7 @@ For each iteration:
 
 4. **Run the agent**
    ```bash
-   python SmartAgent.py --model
+   python asg_si_demo.py --model
    ```
 
 ## 🎮 Usage
@@ -98,10 +98,10 @@ For each iteration:
 
 ```bash
 # Run with local model (recommended)
-python SmartAgent.py --model
+python asg_si_demo.py --model
 
 # Run with stochastic policy only (baseline)
-python SmartAgent.py
+python asg_si_demo.py
 ```
 
 ### Configuration
