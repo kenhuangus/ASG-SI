@@ -1,5 +1,5 @@
 # ASG-SI: Audited Skill-Graph Self-Improvement
-[This repo implement our published paper in arxiv](https://arxiv.org/abs/2512.23760)
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
