@@ -1,0 +1,83 @@
+{
+  "ts": "2026-01-13T00:17:31Z",
+  "iteration": 3,
+  "event": "skill_candidate_verification",
+  "task_kind": "concat",
+  "skill_id": "587510b9086c5623",
+  "skill_name": "concat_tool_skill_103",
+  "interface": {
+    "inputs": [
+      "a",
+      "b"
+    ],
+    "output_type": "str"
+  },
+  "program": {
+    "type": "TOOL_CALL",
+    "tool": "concat",
+    "argmap": {
+      "a": "a",
+      "b": "b"
+    }
+  },
+  "verification_report": {
+    "verified": true,
+    "kind": "concat",
+    "num_tests": 10,
+    "pass_rate": 1.0,
+    "results": [
+      {
+        "task_id": "a35d5f511259f19c",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "47372ea2e983e694",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "92813b603ef5b35c",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "119cbf278a0d3a35",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "9f64d987888d52da",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "3115e1f270244eb5",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "46a388ed6de14a87",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "48d37b129023049a",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "f5bbe838780e7017",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "4d4276bcc40ca9c0",
+        "ok": true,
+        "msg": "pass"
+      }
+    ],
+    "checked_at": "2026-01-13T00:17:31Z",
+    "skill_program_hash": "37cb041120e8e134"
+  }
+}

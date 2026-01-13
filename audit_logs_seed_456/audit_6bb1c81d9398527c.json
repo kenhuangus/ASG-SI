@@ -1,0 +1,81 @@
+{
+  "ts": "2026-01-13T00:17:31Z",
+  "iteration": 2,
+  "event": "skill_candidate_verification",
+  "task_kind": "calc",
+  "skill_id": "9eb6a3afab316a7d",
+  "skill_name": "calc_tool_skill_89",
+  "interface": {
+    "inputs": [
+      "expr"
+    ],
+    "output_type": "int"
+  },
+  "program": {
+    "type": "TOOL_CALL",
+    "tool": "calc",
+    "argmap": {
+      "expr": "expr"
+    }
+  },
+  "verification_report": {
+    "verified": true,
+    "kind": "calc",
+    "num_tests": 10,
+    "pass_rate": 1.0,
+    "results": [
+      {
+        "task_id": "4fc3534d1c77b9a2",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "a1f4708669f37dad",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "ce9f6ce87f29491a",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "77b101849199ce6e",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "b7bc11060a73bf99",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "f3789adc308dac17",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "ceb95a9ce11616ee",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "941d9b6cb88f3414",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "a4d7290e83b79825",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "9dea64992154f696",
+        "ok": true,
+        "msg": "pass"
+      }
+    ],
+    "checked_at": "2026-01-13T00:17:31Z",
+    "skill_program_hash": "5605471852669a8b"
+  }
+}

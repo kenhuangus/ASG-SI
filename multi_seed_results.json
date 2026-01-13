@@ -1,0 +1,492 @@
+{
+  "7": [
+    {
+      "iteration": 0,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 2.7375,
+      "actions": {
+        "skill": 0,
+        "tool": 65,
+        "direct": 15
+      },
+      "compiled_candidates": 65,
+      "verified_skills_added": 65,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:736ecfaaff3984eb:ok | concat:472700529d4fc0e1:ok | calc:5a90e669a76f5fab:ok | calc:d0ef6a2f29c5abd4:ok",
+      "audit_dir": "audit_logs_seed_7"
+    },
+    {
+      "iteration": 1,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.3,
+      "actions": {
+        "skill": 64,
+        "tool": 11,
+        "direct": 5
+      },
+      "compiled_candidates": 11,
+      "verified_skills_added": 11,
+      "skill_graph_size": 3,
+      "memory_summary": "reverse:110270e19de4c831:ok | reverse:43a7e5e470acc587:ok | concat:34ec3322a8aedf88:ok | reverse:d0123437cef0a1c8:ok",
+      "audit_dir": "audit_logs_seed_7"
+    },
+    {
+      "iteration": 2,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.2875,
+      "actions": {
+        "skill": 60,
+        "tool": 16,
+        "direct": 4
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "reverse:02bb5269cf9d7cfe:ok | reverse:308598103ddf7ed3:ok | reverse:d32920ed0e1b8273:ok | reverse:02499b064a7cad12:ok",
+      "audit_dir": "audit_logs_seed_7"
+    },
+    {
+      "iteration": 3,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 3.24375,
+      "actions": {
+        "skill": 61,
+        "tool": 14,
+        "direct": 5
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "reverse:66170a1aa4445006:ok | reverse:a41301a67bc5a377:ok | concat:c4bab65576a07d58:ok | reverse:e64c6ce1f7f40306:ok",
+      "audit_dir": "audit_logs_seed_7"
+    },
+    {
+      "iteration": 4,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3625,
+      "actions": {
+        "skill": 62,
+        "tool": 16,
+        "direct": 2
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "reverse:080c89c3d2038d54:ok | reverse:b5b3993c1ec60fec:ok | reverse:34d7cbc46b49a9bf:ok | concat:5c7d890474b7f5f4:ok",
+      "audit_dir": "audit_logs_seed_7"
+    },
+    {
+      "iteration": 5,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3375,
+      "actions": {
+        "skill": 62,
+        "tool": 14,
+        "direct": 4
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:2570907dce258dae:ok | concat:ed5c7bc083ed80dd:ok | calc:3ed5143391155d11:ok | reverse:28d9e0bce60a7551:ok",
+      "audit_dir": "audit_logs_seed_7"
+    }
+  ],
+  "42": [
+    {
+      "iteration": 0,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 2.7375,
+      "actions": {
+        "skill": 0,
+        "tool": 65,
+        "direct": 15
+      },
+      "compiled_candidates": 65,
+      "verified_skills_added": 65,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:16608f23688e3f53:ok | calc:d467f3aade7abb7e:ok | concat:31901e2dc9318714:ok | concat:4beb4e903086ac45:ok",
+      "audit_dir": "audit_logs_seed_42"
+    },
+    {
+      "iteration": 1,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.3,
+      "actions": {
+        "skill": 64,
+        "tool": 11,
+        "direct": 5
+      },
+      "compiled_candidates": 11,
+      "verified_skills_added": 11,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:34c784a75dc131a1:ok | calc:72879cc721118514:ok | calc:ec02fde35aa3e450:ok | reverse:9764c8ac91916181:ok",
+      "audit_dir": "audit_logs_seed_42"
+    },
+    {
+      "iteration": 2,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.2875,
+      "actions": {
+        "skill": 60,
+        "tool": 16,
+        "direct": 4
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:9128b5959b1f25a4:ok | reverse:3bdc6a097f454c50:ok | concat:f5cb083bb7e62b4c:ok | calc:be462469c2893325:ok",
+      "audit_dir": "audit_logs_seed_42"
+    },
+    {
+      "iteration": 3,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 3.24375,
+      "actions": {
+        "skill": 61,
+        "tool": 14,
+        "direct": 5
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:366f006e0ded53b1:ok | reverse:4d11c2596ad97044:ok | calc:7dd5825b32a0c44b:ok | calc:901a830f3c75b086:ok",
+      "audit_dir": "audit_logs_seed_42"
+    },
+    {
+      "iteration": 4,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3625,
+      "actions": {
+        "skill": 62,
+        "tool": 16,
+        "direct": 2
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:e5aa61b4de9bf240:ok | concat:dac1a08ec9f44ed7:ok | reverse:c4523c229218a10a:ok | concat:3ea3fe41cc8adf84:ok",
+      "audit_dir": "audit_logs_seed_42"
+    },
+    {
+      "iteration": 5,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3375,
+      "actions": {
+        "skill": 62,
+        "tool": 14,
+        "direct": 4
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:5509a843f465abd9:ok | reverse:f378674c8f1b43be:ok | reverse:54d2d14ce95a17de:ok | calc:7c2f840e0255e603:ok",
+      "audit_dir": "audit_logs_seed_42"
+    }
+  ],
+  "123": [
+    {
+      "iteration": 0,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 2.7375,
+      "actions": {
+        "skill": 0,
+        "tool": 65,
+        "direct": 15
+      },
+      "compiled_candidates": 65,
+      "verified_skills_added": 65,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:b3b2709242e76d6c:ok | reverse:3b9cb506862c4c0d:ok | calc:5167e42ff069af33:ok | calc:a8a6829b1139551f:ok",
+      "audit_dir": "audit_logs_seed_123"
+    },
+    {
+      "iteration": 1,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.3,
+      "actions": {
+        "skill": 64,
+        "tool": 11,
+        "direct": 5
+      },
+      "compiled_candidates": 11,
+      "verified_skills_added": 11,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:3b6862ee4ce46993:ok | calc:81aaf0309fbb821a:ok | reverse:44723c24929368ed:ok | reverse:0a8a02629463989c:ok",
+      "audit_dir": "audit_logs_seed_123"
+    },
+    {
+      "iteration": 2,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.2875,
+      "actions": {
+        "skill": 60,
+        "tool": 16,
+        "direct": 4
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:ed3fd9071fb7f865:ok | reverse:f847865ca9e20efd:ok | calc:65437046bd87a178:ok | reverse:f733aa9e059bedfd:ok",
+      "audit_dir": "audit_logs_seed_123"
+    },
+    {
+      "iteration": 3,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 3.24375,
+      "actions": {
+        "skill": 61,
+        "tool": 14,
+        "direct": 5
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "reverse:66ccfca1335eb990:ok | reverse:03dce9d49951c062:ok | concat:bb807e1bcfef1fa1:ok | calc:4429b7296df93f1b:ok",
+      "audit_dir": "audit_logs_seed_123"
+    },
+    {
+      "iteration": 4,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3625,
+      "actions": {
+        "skill": 62,
+        "tool": 16,
+        "direct": 2
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "reverse:759cef9aee61274e:ok | reverse:68b6e1de83ae5d8c:ok | concat:4afcaf3c30464757:ok | concat:d39b0562f7201646:ok",
+      "audit_dir": "audit_logs_seed_123"
+    },
+    {
+      "iteration": 5,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3375,
+      "actions": {
+        "skill": 62,
+        "tool": 14,
+        "direct": 4
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:5e02fbb2ed5f9d81:ok | concat:1b3e38549725e0c6:ok | calc:1b333c832ced8ec8:ok | calc:24f0f9810dd2390a:ok",
+      "audit_dir": "audit_logs_seed_123"
+    }
+  ],
+  "456": [
+    {
+      "iteration": 0,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 2.7375,
+      "actions": {
+        "skill": 0,
+        "tool": 65,
+        "direct": 15
+      },
+      "compiled_candidates": 65,
+      "verified_skills_added": 65,
+      "skill_graph_size": 3,
+      "memory_summary": "reverse:db400348ec0eec22:ok | concat:6cf02f58328da3da:ok | reverse:f632933c20b2aad5:ok | calc:18eadd8d6a27b3df:ok",
+      "audit_dir": "audit_logs_seed_456"
+    },
+    {
+      "iteration": 1,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.3,
+      "actions": {
+        "skill": 64,
+        "tool": 11,
+        "direct": 5
+      },
+      "compiled_candidates": 11,
+      "verified_skills_added": 11,
+      "skill_graph_size": 3,
+      "memory_summary": "reverse:b318db919e44b0e6:ok | concat:32c47017f61bbe2e:ok | reverse:746467cc12c9f30a:ok | concat:ca5298be4258ffcc:ok",
+      "audit_dir": "audit_logs_seed_456"
+    },
+    {
+      "iteration": 2,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.2875,
+      "actions": {
+        "skill": 60,
+        "tool": 16,
+        "direct": 4
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:ce0fb4f5e4b01fa0:ok | calc:5fe2fc1adb102c9d:ok | calc:1d3242e6b967c43d:ok | reverse:b9d126ee32a33a78:ok",
+      "audit_dir": "audit_logs_seed_456"
+    },
+    {
+      "iteration": 3,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 3.24375,
+      "actions": {
+        "skill": 61,
+        "tool": 14,
+        "direct": 5
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "reverse:16ee8d0b35829bb2:ok | concat:05c875133847ff3a:ok | concat:1c3cb3b553912f44:ok | calc:a90532774bcbb9c8:ok",
+      "audit_dir": "audit_logs_seed_456"
+    },
+    {
+      "iteration": 4,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3625,
+      "actions": {
+        "skill": 62,
+        "tool": 16,
+        "direct": 2
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:5483873e363c054c:ok | concat:f38a5628887ff7de:ok | concat:715f527e9c7d2446:ok | reverse:9ade1e5715acfa08:ok",
+      "audit_dir": "audit_logs_seed_456"
+    },
+    {
+      "iteration": 5,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3375,
+      "actions": {
+        "skill": 62,
+        "tool": 14,
+        "direct": 4
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:b88691b833f2685f:ok | calc:21e979a7ee1f94c7:ok | concat:9160f52710b537b7:ok | calc:ffded915e92d9c8c:ok",
+      "audit_dir": "audit_logs_seed_456"
+    }
+  ],
+  "789": [
+    {
+      "iteration": 0,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 2.7375,
+      "actions": {
+        "skill": 0,
+        "tool": 65,
+        "direct": 15
+      },
+      "compiled_candidates": 65,
+      "verified_skills_added": 65,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:8b3c03f1cee2355d:ok | calc:adb01f6167655312:ok | concat:d928289f01623e4a:ok | calc:8df3b3a146e06d69:ok",
+      "audit_dir": "audit_logs_seed_789"
+    },
+    {
+      "iteration": 1,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.3,
+      "actions": {
+        "skill": 64,
+        "tool": 11,
+        "direct": 5
+      },
+      "compiled_candidates": 11,
+      "verified_skills_added": 11,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:efdd5837b2a25983:ok | reverse:b3975a7d2399ca14:ok | reverse:9e06566e0266b986:ok | calc:fe9a9f6c13992307:ok",
+      "audit_dir": "audit_logs_seed_789"
+    },
+    {
+      "iteration": 2,
+      "num_tasks": 80,
+      "success_rate": 0.9875,
+      "avg_reward": 3.2875,
+      "actions": {
+        "skill": 60,
+        "tool": 16,
+        "direct": 4
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:b3ff40475d4b0ee8:ok | calc:f336e509786bc1f6:ok | calc:a60a5a24c98dd1d0:ok | calc:c3c2c143cf9b20c4:ok",
+      "audit_dir": "audit_logs_seed_789"
+    },
+    {
+      "iteration": 3,
+      "num_tasks": 80,
+      "success_rate": 0.975,
+      "avg_reward": 3.24375,
+      "actions": {
+        "skill": 61,
+        "tool": 14,
+        "direct": 5
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:c4a8047d0783e232:ok | reverse:ff13293aed0622a0:ok | reverse:4bef15d23c49fa2f:ok | concat:06a156089fdcf267:ok",
+      "audit_dir": "audit_logs_seed_789"
+    },
+    {
+      "iteration": 4,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3625,
+      "actions": {
+        "skill": 62,
+        "tool": 16,
+        "direct": 2
+      },
+      "compiled_candidates": 16,
+      "verified_skills_added": 16,
+      "skill_graph_size": 3,
+      "memory_summary": "calc:5d60bc486a8200b5:ok | calc:0af9952f086a5f97:ok | concat:7255eb9cb7699934:ok | calc:f92b2f1b04a35c2d:ok",
+      "audit_dir": "audit_logs_seed_789"
+    },
+    {
+      "iteration": 5,
+      "num_tasks": 80,
+      "success_rate": 1.0,
+      "avg_reward": 3.3375,
+      "actions": {
+        "skill": 62,
+        "tool": 14,
+        "direct": 4
+      },
+      "compiled_candidates": 14,
+      "verified_skills_added": 14,
+      "skill_graph_size": 3,
+      "memory_summary": "concat:35af2a102067da11:ok | calc:2575da9d4cc96261:ok | reverse:8cbc606f24ca9278:ok | concat:58e07bf19058f19b:ok",
+      "audit_dir": "audit_logs_seed_789"
+    }
+  ]
+}

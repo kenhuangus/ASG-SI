@@ -1,6 +1,6 @@
 # Environment variables
 .env
-
+.sh
 # Python
 __pycache__/
 *.py[cod]
@@ -22,6 +22,8 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+*.bib
+*.tex
 
 # Virtual environments
 venv/

@@ -1,0 +1,81 @@
+{
+  "ts": "2026-01-13T00:17:31Z",
+  "iteration": 4,
+  "event": "skill_candidate_verification",
+  "task_kind": "reverse",
+  "skill_id": "e237be1d805c73c1",
+  "skill_name": "reverse_tool_skill_111",
+  "interface": {
+    "inputs": [
+      "text"
+    ],
+    "output_type": "str"
+  },
+  "program": {
+    "type": "TOOL_CALL",
+    "tool": "reverse",
+    "argmap": {
+      "text": "text"
+    }
+  },
+  "verification_report": {
+    "verified": true,
+    "kind": "reverse",
+    "num_tests": 10,
+    "pass_rate": 1.0,
+    "results": [
+      {
+        "task_id": "ba13a24eefeba590",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "30422073fc09892b",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "2247045154dc6233",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "bcef315320c809c0",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "2e01ec0969b550fb",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "73e466f06aad9be1",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "8c451e1f9663f9db",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "0e5d23a5fe5026b6",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "b81040cf4b73b11a",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "9cb2cc1bc0f848b9",
+        "ok": true,
+        "msg": "pass"
+      }
+    ],
+    "checked_at": "2026-01-13T00:17:31Z",
+    "skill_program_hash": "100eb812a3ad74d1"
+  }
+}

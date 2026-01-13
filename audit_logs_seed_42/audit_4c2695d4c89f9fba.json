@@ -1,0 +1,46 @@
+{
+  "ts": "2026-01-13T00:17:31Z",
+  "iteration": 5,
+  "event": "skill_candidate_verification",
+  "task_kind": "reverse",
+  "skill_id": "e237be1d805c73c1",
+  "skill_name": "reverse_tool_skill_124",
+  "interface": {
+    "inputs": [
+      "text"
+    ],
+    "output_type": "str"
+  },
+  "program": {
+    "type": "TOOL_CALL",
+    "tool": "reverse",
+    "argmap": {
+      "text": "text"
+    }
+  },
+  "verification_report": {
+    "verified": true,
+    "kind": "reverse",
+    "num_tests": 3,
+    "pass_rate": 1.0,
+    "results": [
+      {
+        "task_id": "c8325d2a1a1e5a30",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "c4fcba4dd0f2b3c9",
+        "ok": true,
+        "msg": "pass"
+      },
+      {
+        "task_id": "863953744f5afb97",
+        "ok": true,
+        "msg": "pass"
+      }
+    ],
+    "checked_at": "2026-01-13T00:17:31Z",
+    "skill_program_hash": "100eb812a3ad74d1"
+  }
+}
