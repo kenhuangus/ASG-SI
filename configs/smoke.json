@@ -1,0 +1,9 @@
+{
+  "seeds": [7, 42, 123, 456, 789],
+  "methods": ["first_success", "self_verification", "independent_replay", "independent_composition"],
+  "phases": ["static", "online"],
+  "online_batch_size": 2,
+  "splits": {"promotion_size": 15, "evaluation_size": 30, "stress_size": 20},
+  "gate": {"min_cases": 5, "max_cases": 15, "worker_timeout_seconds": 15},
+  "evaluation_weights": {"outcome": 1.0, "tool_validity": 0.0, "reuse": 0.0, "composition": 0.0, "extra_steps": 0.0}
+}

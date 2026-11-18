@@ -47,3 +47,8 @@ audit_logs/
 # Temporary files
 *.tmp
 *.temp
+
+# Regenerated evidence and local reports
+runs/
+legacy_runs/
+legacy_analysis.json

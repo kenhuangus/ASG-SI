@@ -1,2 +1,2 @@
-python-dotenv>=0.19.0
-requests>=2.26.0
+# Core harness, tests, and HTTP model adapter use the Python standard library.
+# Optional convenience for loading a local .env file: python-dotenv

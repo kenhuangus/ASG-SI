@@ -12,10 +12,8 @@ This is a fully runnable, single-file system implementing a simplified version o
 Run:
   python asg_si_demo.py
 
-Expected outcome:
-- Iteration 0: agent solves mostly directly (with a small chance of errors)
-- After compilation+verification, skills are added and reused
-- Later iterations: higher success rate, more skill reuse, audit logs show evidence
+This compatibility demo does not optimize policy parameters.
+Use experiments.run for paper experiments; faults are explicit simulation controls.
 """
 
 from __future__ import annotations
@@ -27,7 +25,8 @@ import math
 import os
 import random
 import time
-import requests
+import copy
+import urllib.request
 from typing import Any, Dict, List, Optional, Tuple
 
 try:
@@ -80,22 +79,13 @@ class ModelClient:
             }
         }
 
-        try:
-            print(f"Sending request to {url} for model {self.model}")
-            response = requests.post(url, json=data, timeout=60)
-            response.raise_for_status()
-            result = response.json()
-            generated_text = result.get("response", "").strip()
-            print(f"Raw model response: '{generated_text[:200]}...'")
-
-            # Debug logging
-            if not generated_text:
-                print(f"Warning: Model returned empty response for prompt: {prompt[:100]}...")
-
-            return generated_text if generated_text else "ERROR: Empty response from model"
-        except requests.exceptions.RequestException as e:
-            print(f"Ollama API error: {e}")
-            return "ERROR: Model unavailable"
+        request = urllib.request.Request(url, data=json.dumps(data).encode(), headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(request, timeout=60) as response:
+            result = json.load(response)
+        generated_text = result.get("response", "").strip()
+        if not generated_text:
+            raise RuntimeError("empty_model_response")
+        return generated_text
 
 
 # ----------------------------
@@ -174,6 +164,17 @@ class Task:
     kind: str  # "calc", "reverse", "concat"
     input_data: Dict[str, Any]
     expected: Any
+
+    def observation(self):
+        return TaskObservation(self.task_id, self.kind, copy.deepcopy(self.input_data))
+
+
+@dataclasses.dataclass(frozen=True)
+class TaskObservation:
+    """Public fields only: no evaluator answer is provided to the policy."""
+    task_id: str
+    kind: str
+    input_data: Dict[str, Any]
 
 
 class VerifiableEnv:
@@ -286,11 +287,12 @@ class SkillGraph:
         # Index by kind for fast lookup
         self.by_kind: Dict[str, List[str]] = {"calc": [], "reverse": [], "concat": []}
 
-    def add_skill(self, skill: Skill) -> None:
+    def add_skill(self, skill: Skill) -> bool:
         if skill.skill_id in self.skills:
-            return
+            return False
         self.skills[skill.skill_id] = skill
         self.by_kind.setdefault(skill.kind, []).append(skill.skill_id)
+        return True
 
     def get_verified_skills(self, kind: str) -> List[Skill]:
         ids = self.by_kind.get(kind, [])
@@ -331,8 +333,9 @@ class VerifierAuditor:
                 results.append({"task_id": t.task_id, "ok": False, "msg": f"exception:{type(e).__name__}:{e}"})
 
         pass_rate = 0.0 if not results else sum(1 for r in results if r["ok"]) / len(results)
-        verified = pass_rate >= 1.0  # strict for demo
+        verified = len(results) >= 3 and pass_rate >= 1.0
         report = {
+            "status": "ACCEPT" if verified else ("INSUFFICIENT_EVIDENCE" if len(results) < 3 else "REJECT"),
             "verified": verified,
             "kind": kind,
             "num_tests": len(results),
@@ -392,16 +395,13 @@ class SkillCompiler:
         # Determine argmap by matching values to input_data keys where possible.
         argmap: Dict[str, str] = {}
         for k, v in tool_args.items():
-            # Find which input key has exactly same value
-            matched = None
-            for inp_k, inp_v in traj.task.input_data.items():
-                if inp_v == v:
-                    matched = inp_k
-                    break
-            if matched is None:
-                # If no match, can't make a clean template
+            if k in traj.task.input_data and traj.task.input_data[k] == v:
+                argmap[k] = k
+                continue
+            matches = [key for key, value in traj.task.input_data.items() if value == v]
+            if len(matches) != 1:
                 return None
-            argmap[k] = matched
+            argmap[k] = matches[0]
 
         self.counter += 1
         program = {
@@ -411,7 +411,7 @@ class SkillCompiler:
         }
         interface = {
             "inputs": sorted(list(traj.task.input_data.keys())),
-            "output_type": type(traj.task.expected).__name__,
+            "output_type": type(traj.final_answer).__name__,
         }
         skill_id = stable_hash({"kind": traj.task.kind, "program": program})
         return Skill(
@@ -441,10 +441,12 @@ class AgentPolicy:
         rng_seed: int = 11,
         p_use_skill: float = 0.75,
         p_use_tool: float = 0.80,
-        p_error_direct: float = 0.25,
+        p_error_direct: float = 0.0,
+        fault_seed: int = 101,
     ) -> None:
         self.tools = tool_registry
         self.rng = random.Random(rng_seed)
+        self.fault_rng = random.Random(fault_seed)
         self.p_use_skill = p_use_skill
         self.p_use_tool = p_use_tool
         self.p_error_direct = p_error_direct
@@ -498,17 +500,17 @@ class AgentPolicy:
         # Intentionally imperfect.
         if task.kind == "reverse":
             text = task.input_data["text"]
-            if self.rng.random() < self.p_error_direct:
+            if self.fault_rng.random() < self.p_error_direct:
                 return text  # wrong
             return text[::-1]
         if task.kind == "concat":
             a, b = task.input_data["a"], task.input_data["b"]
-            if self.rng.random() < self.p_error_direct:
+            if self.fault_rng.random() < self.p_error_direct:
                 return b + a  # wrong
             return a + b
         if task.kind == "calc":
             expr = task.input_data["expr"]
-            if self.rng.random() < self.p_error_direct:
+            if self.fault_rng.random() < self.p_error_direct:
                 # wrong on purpose: drop spaces and mis-parse occasionally
                 return 0
             return eval(expr, {"__builtins__": {}})
@@ -516,210 +518,47 @@ class AgentPolicy:
 
 
 class ModelBasedAgentPolicy:
-    """
-    Agent policy that uses a local LLM to decide how to solve tasks.
-    The model is prompted with available tools and task information.
-    Includes configurable imperfection to allow learning demonstration.
-    """
-    def __init__(
-        self,
-        tool_registry: ToolRegistry,
-        model_client: ModelClient,
-        fallback_policy: Optional[AgentPolicy] = None,
-        model_error_rate: float = 0.3,  # Probability model makes suboptimal choice
-    ) -> None:
-        self.tools = tool_registry
-        self.model = model_client
-        self.fallback = fallback_policy or AgentPolicy(tool_registry)
-        self.model_error_rate = model_error_rate
-        self.rng = random.Random(42)  # For reproducible "errors"
+    """Frozen Ollama actions; errors are explicit, without injected faults or fallback."""
+    def __init__(self, tool_registry, model_client):
+        self.tools, self.model = tool_registry, model_client
+        self.parameters_updated = 0
 
-    def act(
-        self,
-        task: Task,
-        skill_graph: SkillGraph,
-        verifier: VerifierAuditor,
-        memory: BoundedMemory,
-    ) -> Tuple[List[Step], Any]:
-        steps: List[Step] = []
-        t = 0
-
-        mem_summary = memory.summarize()
-        memory_hint = f"mem:{mem_summary}" if mem_summary else "mem:empty"
-
-        # First priority: Try to reuse verified skills (like the original agent)
-        verified_skills = skill_graph.get_verified_skills(task.kind)
-        if verified_skills and self.rng.random() < 0.75:  # 75% chance to reuse skills
-            skill = self.rng.choice(verified_skills)
-            try:
-                out = verifier.execute_skill(skill, task.input_data)
-                steps.append(Step(t=t, action_type="SKILL", payload={"skill_id": skill.skill_id, "hint": memory_hint}, output=out))
-                return steps, out
-            except Exception as e:
-                print(f"Skill reuse failed: {e}, falling back to model")
-
-        # Second priority: Use model with imperfection
-        if self.rng.random() < self.model_error_rate:
-            print(f"Introducing model imperfection (error_rate={self.model_error_rate})")
-            return self._make_suboptimal_choice(task, skill_graph, verifier, memory, memory_hint)
-
-        # Build prompt for the model
-        prompt = self._build_prompt(task, skill_graph, memory_hint)
-
-        # Get model's response
-        response = self.model.generate(prompt, max_tokens=300, temperature=0.1)
-
-        # Parse the response to extract tool call or direct answer
-        action = self._parse_response(response)
-        if action["type"] == "TOOL":
-            tool_name = action["tool"]
-            tool_args = action["args"]
-            try:
-                tool_call = ToolCall(name=tool_name, args=tool_args)
-                out = self.tools.call(tool_call)
-                steps.append(Step(t=t, action_type="TOOL", payload={"tool_name": tool_name, "tool_args": tool_args, "model_response": response, "hint": memory_hint}, output=out))
-                return steps, out
-            except Exception as e:
-                print(f"Tool call failed: {e}, falling back to heuristic")
-                # Fall back to direct solve
-                out = self.fallback._direct_solve(task)
-                steps.append(Step(t=t, action_type="DIRECT", payload={"method": "fallback_after_model_error", "error": str(e), "hint": memory_hint}, output=out))
-                return steps, out
-        elif action["type"] == "DIRECT":
-            out = action["answer"]
-            steps.append(Step(t=t, action_type="DIRECT", payload={"method": "model_direct", "model_response": response, "hint": memory_hint}, output=out))
-            return steps, out
-        else:
-            # Unknown action, fall back to heuristic
-            print(f"Unknown action from model: {action}, falling back to heuristic")
-            return self.fallback.act(task, skill_graph, verifier, memory)
-
-    def _make_suboptimal_choice(
-        self,
-        task: Task,
-        skill_graph: SkillGraph,
-        verifier: VerifierAuditor,
-        memory: BoundedMemory,
-        memory_hint: str,
-    ) -> Tuple[List[Step], Any]:
-        """Introduce imperfection by making suboptimal choices to allow learning."""
-        steps: List[Step] = []
-        t = 0
-
-        # Choose a suboptimal action
-        suboptimal_action = self.rng.choice(["wrong_tool", "direct_solve", "random_tool"])
-
-        if suboptimal_action == "wrong_tool":
-            # Choose a wrong tool for this task type
-            all_tools = self.tools.list_tools()
-            correct_tool = {"calc": "calc", "reverse": "reverse", "concat": "concat"}[task.kind]
-            wrong_tools = [t for t in all_tools if t != correct_tool]
-            if wrong_tools:
-                wrong_tool = self.rng.choice(wrong_tools)
-                # Try to call wrong tool with task inputs (will likely fail or give wrong result)
-                try:
-                    if wrong_tool == "calc":
-                        tool_call = ToolCall(name="calc", args={"expr": str(task.input_data)})
-                    elif wrong_tool == "reverse":
-                        tool_call = ToolCall(name="reverse", args={"text": str(task.input_data)})
-                    elif wrong_tool == "concat":
-                        tool_call = ToolCall(name="concat", args={"a": str(task.input_data), "b": ""})
-                    out = self.tools.call(tool_call)
-                except:
-                    out = "ERROR: Wrong tool used"
-                steps.append(Step(t=t, action_type="TOOL", payload={"tool_name": wrong_tool, "tool_args": {}, "method": "model_suboptimal_wrong_tool", "hint": memory_hint}, output=out))
-                return steps, out
-
-        elif suboptimal_action == "direct_solve":
-            # Try direct solving (which has error probability)
-            out = self.fallback._direct_solve(task)
-            steps.append(Step(t=t, action_type="DIRECT", payload={"method": "model_suboptimal_direct", "hint": memory_hint}, output=out))
-            return steps, out
-
-        # Default: random tool
-        random_tool = self.rng.choice(self.tools.list_tools())
+    def act(self, task, skill_graph, verifier, memory):
+        skills = skill_graph.get_verified_skills(task.kind)
+        prompt = json.dumps({"instruction": "Return JSON: {type: TOOL, tool: name, args: object}, "
+                              "{type: SKILL, skill_id: id}, or {type: DIRECT, answer: value}.",
+                             "task": {"kind": task.kind, "inputs": task.input_data},
+                             "tools": {name: self.tools.schema(name) for name in self.tools.list_tools()},
+                             "skills": [{"skill_id": skill.skill_id, "name": skill.name} for skill in skills],
+                             "memory": memory.summarize()})
+        raw, phase = None, "provider_error"
         try:
-            if random_tool == "calc":
-                tool_call = ToolCall(name="calc", args={"expr": "1+1"})
-            elif random_tool == "reverse":
-                tool_call = ToolCall(name="reverse", args={"text": "test"})
-            elif random_tool == "concat":
-                tool_call = ToolCall(name="concat", args={"a": "a", "b": "b"})
-            out = self.tools.call(tool_call)
-        except:
-            out = "ERROR: Random tool failed"
-        steps.append(Step(t=t, action_type="TOOL", payload={"tool_name": random_tool, "tool_args": {}, "method": "model_suboptimal_random", "hint": memory_hint}, output=out))
-        return steps, out
-
-    def _build_prompt(self, task: Task, skill_graph: SkillGraph, memory_hint: str) -> str:
-        tool_descriptions = []
-        for tool_name in self.tools.list_tools():
-            schema = self.tools.schema(tool_name)
-            tool_descriptions.append(f"- {tool_name}: takes {schema}, returns result")
-
-        skill_info = ""
-        verified_skills = skill_graph.get_verified_skills(task.kind)
-        if verified_skills:
-            skill_info = f"Available verified skills for {task.kind}: {[s.name for s in verified_skills]}"
-
-        prompt = f"""You are an AI agent solving tasks. You have access to tools and must use them appropriately.
-
-Available tools:
-{chr(10).join(tool_descriptions)}
-
-Task: {task.kind} with inputs: {task.input_data}
-Memory: {memory_hint}
-{skill_info}
-
-Instructions:
-1. For calc tasks: Use the "calc" tool with the expression as "expr"
-2. For reverse tasks: Use the "reverse" tool with the text as "text"  
-3. For concat tasks: Use the "concat" tool with strings as "a" and "b"
-4. Output your action in this exact format:
-   TOOL: tool_name(args_dict)
-   Or if solving directly:
-   DIRECT: your_answer
-
-Example for calc "5 + 3":
-TOOL: calc({{"expr": "5 + 3"}})
-
-Solve this task:"""
-
-        return prompt
-
-    def _parse_response(self, response: str) -> Dict[str, Any]:
-        print(f"Model response: '{response}'")
-        response = response.strip()
-        if response.startswith("TOOL:"):
-            # Extract tool call
-            tool_part = response[5:].strip()
-            # Simple parsing: assume format tool_name(args_dict)
-            try:
-                if "(" in tool_part and ")" in tool_part:
-                    tool_name = tool_part.split("(")[0].strip()
-                    args_str = tool_part.split("(")[1].split(")")[0].strip()
-                    # Convert single quotes to double quotes for JSON compatibility
-                    args_str = args_str.replace("'", '"')
-                    args = json.loads(args_str)
-                    return {"type": "TOOL", "tool": tool_name, "args": args}
-            except Exception as e:
-                print(f"Failed to parse TOOL response: {e}")
-                pass
-        elif response.startswith("DIRECT:"):
-            answer_part = response[7:].strip()
-            # Try to parse as number or string
-            try:
-                # Convert single quotes to double quotes if it's a JSON-like string
-                if answer_part.startswith("'") and answer_part.endswith("'"):
-                    answer_part = f'"{answer_part[1:-1]}"'
-                answer = json.loads(answer_part)
-            except:
-                answer = answer_part
-            return {"type": "DIRECT", "answer": answer}
-
-        # Default fallback
-        print(f"Could not parse model response, falling back")
-        return {"type": "UNKNOWN"}
+            raw = self.model.generate(prompt, max_tokens=300, temperature=0.0)
+            phase = "parse_error"
+            action = json.loads(raw)
+            if not isinstance(action, dict):
+                raise ValueError("model action must be an object")
+            phase = "execution_error"
+            if action.get("type") == "TOOL":
+                call = ToolCall(action["tool"], action["args"])
+                answer = self.tools.call(call)
+                payload = {"tool_name": call.name, "tool_args": call.args}
+            elif action.get("type") == "SKILL":
+                selected = next((skill for skill in skills if skill.skill_id == action["skill_id"]), None)
+                if selected is None:
+                    raise ValueError("model selected an unavailable skill")
+                answer = verifier.execute_skill(selected, task.input_data)
+                payload = {"skill_id": selected.skill_id}
+            elif action.get("type") == "DIRECT":
+                answer, payload = action["answer"], {"method": "frozen_model_direct"}
+            else:
+                raise ValueError("unsupported action type")
+            payload.update(model_response=raw, backend=self.model.base_url, model=self.model.model, fallback=False)
+            return [Step(0, action["type"], payload, answer)], answer
+        except Exception as error:
+            payload = {"error_type": phase, "error": f"{type(error).__name__}:{error}", "model_response": raw,
+                       "backend": self.model.base_url, "model": self.model.model, "fallback": False}
+            return [Step(0, "ERROR", payload, None)], None
 
 
 # ----------------------------
@@ -767,8 +606,19 @@ class ASGSISystem:
         audit_dir: str = "audit_logs",
         memory_capacity: int = 8,
         use_model: bool = False,
+        task_seed: Optional[int] = None,
+        policy_seed: Optional[int] = None,
+        verifier_seed: Optional[int] = None,
+        fault_seed: Optional[int] = None,
+        fault_error_rate: float = 0.0,
     ) -> None:
-        self.env = VerifiableEnv(seed=seed)
+        from asg_si.splits import derive_seed
+        self.seeds = {"task": task_seed if task_seed is not None else derive_seed(seed, "task"),
+                      "policy": policy_seed if policy_seed is not None else derive_seed(seed, "policy"),
+                      "verifier": verifier_seed if verifier_seed is not None else derive_seed(seed, "verifier"),
+                      "fault": fault_seed if fault_seed is not None else derive_seed(seed, "fault")}
+        self.env = VerifiableEnv(self.seeds["task"])
+        self.promotion_env = VerifiableEnv(self.seeds["verifier"])
         self.tools = ToolRegistry()
         self.skill_graph = SkillGraph()
         self.memory = BoundedMemory(capacity=memory_capacity)
@@ -779,11 +629,13 @@ class ASGSISystem:
             # Use None to let ModelClient read from environment variables
             print("Initializing model client...")
             model_client = ModelClient()
-            fallback_agent = AgentPolicy(self.tools)
-            self.agent = ModelBasedAgentPolicy(self.tools, model_client, fallback_agent)
+            self.agent = ModelBasedAgentPolicy(self.tools, model_client)
             print("Model-based agent initialized")
         else:
-            self.agent = AgentPolicy(self.tools)
+            self.agent = AgentPolicy(self.tools, rng_seed=self.seeds["policy"], p_error_direct=fault_error_rate,
+                                     fault_seed=self.seeds["fault"])
+        self.metadata = {"mechanism": "frozen_ollama" if use_model else "scripted_simulation", "parameters_updated": 0,
+                         "seeds": self.seeds, "fault_error_rate": 0.0 if use_model else fault_error_rate}
 
         self.rng = random.Random(seed + 999)
 
@@ -794,12 +646,12 @@ class ASGSISystem:
         heldout_size: int = 30,
     ) -> Dict[str, Any]:
         # Prepare held-out tasks for verification
-        heldout_tasks = [self.env.sample_task() for _ in range(heldout_size)]
+        heldout_tasks = [self.promotion_env.sample_task() for _ in range(heldout_size)]
 
         trajectories: List[Trajectory] = []
         for _ in range(num_tasks):
             task = self.env.sample_task()
-            steps, answer = self.agent.act(task, self.skill_graph, self.auditor, self.memory)
+            steps, answer = self.agent.act(task.observation(), self.skill_graph, self.auditor, self.memory)
             success, verify_msg = self.env.verify(task, answer)
             reward, evidence = compute_shaped_reward(task, steps, answer, success)
 
@@ -845,8 +697,7 @@ class ASGSISystem:
             audit_path = self.auditor.log_audit_trace(trace)
 
             if verified:
-                self.skill_graph.add_skill(candidate)
-                verified_added += 1
+                verified_added += int(self.skill_graph.add_skill(candidate))
 
         # Metrics
         success_rate = sum(1 for tr in trajectories if tr.success) / len(trajectories)
@@ -866,6 +717,8 @@ class ASGSISystem:
             "skill_graph_size": self.skill_graph.size(),
             "memory_summary": self.memory.summarize(),
             "audit_dir": self.auditor.audit_dir,
+            "policy_metadata": self.metadata,
+            "verification_events": compiled,
         }
         return summary
 
@@ -876,77 +729,39 @@ class ASGSISystem:
             all_summaries.append(s)
         return all_summaries
 
+    def evaluate(self, tasks, policy_seed=0):
+        """Copy mutable state for frozen-checkpoint evaluation."""
+        agent, graph, memory = copy.deepcopy(self.agent), copy.deepcopy(self.skill_graph), copy.deepcopy(self.memory)
+        if isinstance(agent, AgentPolicy):
+            agent.rng = random.Random(policy_seed)
+        records = []
+        for task in tasks:
+            steps, answer = agent.act(task.observation(), graph, self.auditor, memory)
+            success, message = self.env.verify(task, answer)
+            reward, evidence = compute_shaped_reward(task, steps, answer, success)
+            records.append({"task_id": task.task_id, "success": success, "reward": reward,
+                            "steps": [dataclasses.asdict(step) for step in steps], "evidence": evidence})
+        n = len(records)
+        return {"num_tasks": n, "success_rate": sum(r["success"] for r in records)/n if n else None,
+                "avg_reward": sum(r["reward"] for r in records)/n if n else None,
+                "actions": {name.lower(): sum(r["steps"][0]["action_type"] == name for r in records)
+                            for name in ("SKILL", "TOOL", "DIRECT", "ERROR")}, "records": records}
 
-# ----------------------------
-# Main
-# ----------------------------
 
-def main() -> None:
-    import sys
-    use_model = "--model" in sys.argv
-
-    system = ASGSISystem(seed=7, audit_dir="audit_logs", memory_capacity=8, use_model=use_model)
-    summaries = system.train(iters=6, num_tasks=80)
-
-    print(f"\n{'='*60}")
-    print(f"ASG-SI Demo Results (Model: {use_model})")
-    print(f"{'='*60}\n")
-
-    for s in summaries:
-        print(
-            f"iter={s['iteration']}  "
-            f"success={s['success_rate']:.3f}  "
-            f"avg_reward={s['avg_reward']:.3f}  "
-            f"actions(skill/tool/direct)={s['actions']['skill']}/{s['actions']['tool']}/{s['actions']['direct']}  "
-            f"compiled={s['compiled_candidates']}  "
-            f"verified_added={s['verified_skills_added']}  "
-            f"skill_graph={s['skill_graph_size']}"
-        )
-
-    # Calculate improvement metrics
-    first_iter = summaries[0]
-    last_iter = summaries[-1]
-
-    success_improvement = last_iter['success_rate'] - first_iter['success_rate']
-    reward_improvement = last_iter['avg_reward'] - first_iter['avg_reward']
-    skill_reuse_increase = last_iter['actions']['skill'] - first_iter['actions']['skill']
-
-    print(f"\n{'='*60}")
-    print("AGENT IMPROVEMENT SUMMARY")
-    print(f"{'='*60}")
-
-    print("\n📊 Performance Metrics:")
-    print(f"   Success rate: {first_iter['success_rate']:.3f} → {last_iter['success_rate']:.3f} (+{success_improvement:.3f})")
-    print(f"   Average reward: {first_iter['avg_reward']:.3f} → {last_iter['avg_reward']:.3f} (+{reward_improvement:.3f})")
-    print(f"   Skill actions: {first_iter['actions']['skill']} → {last_iter['actions']['skill']} (+{skill_reuse_increase})")
-    print(f"   Direct actions: {first_iter['actions']['direct']} → {last_iter['actions']['direct']}")
-
-    print("\n🔧 Skill Development:")
-    print(f"   Initial skills compiled: {first_iter['verified_skills_added']}")
-    print(f"   Final skill graph size: {last_iter['skill_graph_size']}")
-    print(f"   Total verified skills added: {sum(s['verified_skills_added'] for s in summaries)}")
-
-    print("\n🎯 Action Pattern Evolution:")
-    print(f"   Iteration 0: {first_iter['actions']['skill']}/{first_iter['actions']['tool']}/{first_iter['actions']['direct']} (skill/tool/direct)")
-    print(f"   Iteration 5: {last_iter['actions']['skill']}/{last_iter['actions']['tool']}/{last_iter['actions']['direct']} (skill/tool/direct)")
-    print(f"   Skill reuse increase: +{skill_reuse_increase} actions")
-
-    print("\n✅ Key Achievements:")
-    print("   • Learned and verified reusable skills for all task types")
-    print("   • Improved from direct tool usage to intelligent skill reuse")
-    print("   • Maintained 100% success rate in most iterations")
-    print("   • Built audited skill graph with verified capabilities")
-    if use_model:
-        print("   • Successfully integrated local LLM for intelligent decision making")
-    print("\n📝 Evidence:")
-    print(f"   • Audit logs: {last_iter['audit_dir']} ({len([f for f in os.listdir(last_iter['audit_dir']) if f.endswith('.json')])} verification traces)")
-    print(f"   • Memory summary: {last_iter['memory_summary']}")
-    print("   • All skills verified against held-out test cases")
-
-    print(f"\n{'='*60}")
-    print("🎉 AGENT SELF-IMPROVEMENT COMPLETE!")
-    print(f"{'='*60}\n")
-
+def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Compatibility simulation; no policy-gradient updates")
+    parser.add_argument("--model", action="store_true")
+    parser.add_argument("--seed", type=int, default=7)
+    parser.add_argument("--iters", type=int, default=6)
+    parser.add_argument("--num-tasks", type=int, default=80)
+    parser.add_argument("--audit-dir", default="audit_logs")
+    parser.add_argument("--fault-error-rate", type=float, default=0.0)
+    args = parser.parse_args()
+    if args.iters < 1 or args.num_tasks < 1 or not 0 <= args.fault_error_rate <= 1:
+        parser.error("use positive task/iteration counts and a fault rate in [0, 1]")
+    system = ASGSISystem(seed=args.seed, audit_dir=args.audit_dir, use_model=args.model, fault_error_rate=args.fault_error_rate)
+    print(json.dumps({"metadata": system.metadata, "collection_summaries": system.train(args.iters, args.num_tasks)}, indent=2))
 
 if __name__ == "__main__":
     main()
