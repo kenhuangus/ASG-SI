@@ -1,0 +1,42 @@
+{
+  "scope": "controlled two-skill pairings withheld from primitive tests; not broad compositional generalization",
+  "seed": 7,
+  "summary": [
+    {
+      "blocked": 0,
+      "compatible": true,
+      "incorrect_completed": 0,
+      "mode": "flat_verified_library",
+      "num_tasks": 30,
+      "successes": 30,
+      "tool_calls": 150
+    },
+    {
+      "blocked": 0,
+      "compatible": false,
+      "incorrect_completed": 24,
+      "mode": "flat_verified_library",
+      "num_tasks": 30,
+      "successes": 6,
+      "tool_calls": 150
+    },
+    {
+      "blocked": 0,
+      "compatible": true,
+      "incorrect_completed": 0,
+      "mode": "checked_graph",
+      "num_tasks": 30,
+      "successes": 30,
+      "tool_calls": 150
+    },
+    {
+      "blocked": 30,
+      "compatible": false,
+      "incorrect_completed": 0,
+      "mode": "checked_graph",
+      "num_tasks": 30,
+      "successes": 0,
+      "tool_calls": 120
+    }
+  ]
+}

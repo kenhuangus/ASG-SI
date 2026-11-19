@@ -143,3 +143,9 @@ Historical JSON results and audit logs are retained as historical artifacts.
 Their old significance, learning, and security claims must not be inferred
 from this revision's results. See [research protocol](docs/RESEARCH_PROTOCOL.md)
 and [implementation progress](docs/IMPLEMENTATION_PROGRESS.md).
+
+## Recorded validation results
+
+See [results/README.md](results/README.md) for the five-seed results, per-run
+metrics, confidence intervals, PDF progress report, full evidence archive, and
+commands for replaying the supplied artifacts.
