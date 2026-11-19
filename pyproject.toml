@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asg-si"
+version = "0.2.0"
+description = "Deterministic research harness for evidence-gated skill admission"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["asg_si*", "experiments*"]

@@ -1,0 +1,182 @@
+{
+  "base_commit": "c1da9a1d15883d04518f4a7213ccba612b0e6b28",
+  "budget": "same allocated max_cases; actual work and process overhead are reported",
+  "config": {
+    "evaluation_weights": {
+      "composition": 0.0,
+      "extra_steps": 0.0,
+      "outcome": 1.0,
+      "reuse": 0.0,
+      "tool_validity": 0.0
+    },
+    "gate": {
+      "max_cases": 15,
+      "min_cases": 5,
+      "worker_timeout_seconds": 15
+    },
+    "methods": [
+      "first_success",
+      "self_verification",
+      "independent_replay",
+      "independent_composition"
+    ],
+    "online_batch_size": 2,
+    "phases": [
+      "static",
+      "online"
+    ],
+    "seeds": [
+      7,
+      42,
+      123,
+      456,
+      789
+    ],
+    "splits": {
+      "evaluation_size": 30,
+      "promotion_size": 15,
+      "stress_size": 20
+    }
+  },
+  "config_hash": "363fff6fd4b240bea3530476e927e044e0a9503e06b546f8f5de75938f9ab145",
+  "environment": {
+    "python": "3.12.14",
+    "source_sha256": {
+      "analyze_results.py": "32a89963711f2dd3fefaca5667cb519ab93d52360f1e4fc706e23e1043a3eda4",
+      "asg_si/__init__.py": "a3955439844d61a22adecc672345dd756a9af3129c3436d9e9ae99c6ff0df990",
+      "asg_si/audit_replay.py": "ecb01623ffaf7cec5485fd153e49d1aa0c2edb7185dbb90e2ffbd0df644ea055",
+      "asg_si/benchmark.py": "1af4fa663ccecf4962335e2754e9e6f13c558bbd1960cf9277463f01ea27f124",
+      "asg_si/compiler.py": "16b61bd0cdfc05dbc2f76bd1ef7a5679f572b7119933585d240116c7f9900c86",
+      "asg_si/contracts.py": "5cb5c6fabad6acbc7ff4bf5b28f2473f2e4238802f7cb33afaf1bd1ef57b6f97",
+      "asg_si/evaluation.py": "47d8a7aa1ad7f98751db5f2c18d9d5a9e79d1de37e7574246991d02a1e4937f4",
+      "asg_si/evidence.py": "3321c88e28eb960f9ffced8005e26a284e47a562ce9ee53d67e09869e3a933cb",
+      "asg_si/executor.py": "fcabac246955b3144bf5161674b492a04366372d14abf3ef984ff884ecaca4a3",
+      "asg_si/graph.py": "15c19a418d90d6d92f75750fa7e11cf55c2366deabe073cbd3aaf47e7fbb6cad",
+      "asg_si/oracle.py": "2bd70c8e92c98a44309b18fe9d4f583ce44f4e17454befc33eaef7cad847d5e5",
+      "asg_si/policies.py": "d9e47deb135af10ea1789bb1808593af9929eb618bdfffda21035ef9687e60e0",
+      "asg_si/rewards.py": "a719cb8e37f7a270648dfcd615abe8dbcbd386c36709a57fda57a4252f70d874",
+      "asg_si/splits.py": "11f9a358c047fca07da1fc30cadc37ef3bc46fc6ad5bf0de93f63a218f03a6fb",
+      "asg_si/tools.py": "17e4061783eb92f8951b895851a935a85ecfcbfb51d05d072bef208b63e30571",
+      "asg_si/types.py": "01160d51a7c8c683e850b0e3baee78bb2ebb061eccc72412a736e06b2a2ff2a1",
+      "asg_si/verifier.py": "a3a97b50679c7d123b9643c571549f90f0f2731934b2481f217680de8e970e0f",
+      "asg_si/verifier_worker.py": "9a48cad2411338fba186d40064983ee31bbecf9dfbff08ab4ee783a8442d9b00",
+      "asg_si_demo.py": "526703c957fbc261cc8ff598efdda9224cd57f74a27f0809ef1e594391209ac5",
+      "experiments/__init__.py": "f6f05eaaf06f6bd047be7818fd0c805f31d09117d5e8c4e179321ac1ab416563",
+      "experiments/audit.py": "6bb330ff7cad26e6ef010254bee90625cdefb78986b0d6e5a2b64f78a4e0f2da",
+      "experiments/composition.py": "66d4750d873e95bd47d21cf380f6ceac9a5a7375dd21d3f945abd395221d27d7",
+      "experiments/report.py": "90510d65b0c28cbc966dd247607655e4507ba91be4289360026b2d8db4c8058d",
+      "experiments/run.py": "0bf608f2fcbba781effc38214c2cb74081834b92b72f45af7cf2e4e124779680",
+      "run_multi_seed.py": "84ed8e1d257257b825d931b61470600acec9b497b0dfd996036bd81af277677c"
+    },
+    "tool_registry": {
+      "aggregate": {
+        "contract": {
+          "arguments": {
+            "batch": "dict"
+          },
+          "input_units": {
+            "batch": "L"
+          },
+          "output_type": "dict",
+          "output_unit": "L"
+        },
+        "version": "1.0.0"
+      },
+      "constant_report": {
+        "contract": {
+          "arguments": {
+            "value": "number"
+          },
+          "input_units": null,
+          "output_type": "dict",
+          "output_unit": "L"
+        },
+        "version": "1.0.0"
+      },
+      "convert_liters": {
+        "contract": {
+          "arguments": {
+            "records": "list"
+          },
+          "input_units": null,
+          "output_type": "dict",
+          "output_unit": "L"
+        },
+        "version": "1.0.0"
+      },
+      "convert_milliliters": {
+        "contract": {
+          "arguments": {
+            "records": "list"
+          },
+          "input_units": null,
+          "output_type": "dict",
+          "output_unit": "mL"
+        },
+        "version": "1.0.0"
+      },
+      "duplicate_first": {
+        "contract": {
+          "arguments": {
+            "batch": "dict"
+          },
+          "input_units": {
+            "batch": "L"
+          },
+          "output_type": "dict",
+          "output_unit": "L"
+        },
+        "version": "1.0.0"
+      },
+      "read_records": {
+        "contract": {
+          "arguments": {
+            "records": "list"
+          },
+          "input_units": null,
+          "output_type": "list",
+          "output_unit": null
+        },
+        "version": "1.0.0"
+      },
+      "validate_fields": {
+        "contract": {
+          "arguments": {
+            "records": "list"
+          },
+          "input_units": null,
+          "output_type": "list",
+          "output_unit": null
+        },
+        "version": "1.0.0"
+      },
+      "write_output": {
+        "contract": {
+          "arguments": {
+            "destination": "str",
+            "report": "dict"
+          },
+          "input_units": {
+            "report": "L"
+          },
+          "output_type": "dict",
+          "output_unit": "L"
+        },
+        "version": "1.0.0"
+      }
+    }
+  },
+  "evaluation_metric_hash": "ddd27e3d1a15353134130f2e51cea56040f8c78f1deda506bf8ff4752fe36c6a",
+  "evaluation_weights": {
+    "composition": 0.0,
+    "extra_steps": 0.0,
+    "outcome": 1.0,
+    "reuse": 0.0,
+    "tool_validity": 0.0
+  },
+  "implementation_commit": "71657fac5c7e135daf8a88199cc6585186abdda3",
+  "parameters_updated": 0,
+  "policy": "scripted_uniform_library_selection",
+  "self_vs_independent": "identical checks and inputs; only process separation differs",
+  "setting": "controlled deterministic candidate-admission simulation"
+}

@@ -1,63 +1,45 @@
-"""
-Run ASG-SI with multiple seeds to generate error bars and learning curves
-"""
+"""Compatibility runner with independent seeds and fixed checkpoint evaluation."""
+import argparse
 import json
-import sys
-sys.path.insert(0, '/home/kengpu/ASG-SI')
+from pathlib import Path
+from asg_si.splits import derive_seed
+from asg_si_demo import ASGSISystem, VerifiableEnv
 
-from asg_si_demo import ASGSISystem
 
-def run_experiment(seed, iters=6, num_tasks=80):
-    """Run single experiment with given seed"""
-    system = ASGSISystem(seed=seed, audit_dir=f"audit_logs_seed_{seed}", memory_capacity=8, use_model=False)
-    summaries = system.train(iters=iters, num_tasks=num_tasks)
+def run_experiment(seed, iters=6, num_tasks=80, evaluation_tasks=80, output="legacy_runs", fault_error_rate=0.0):
+    if min(iters, num_tasks, evaluation_tasks) < 1:
+        raise ValueError("counts must be positive")
+    system = ASGSISystem(seed=seed, audit_dir=str(Path(output)/f"seed_{seed}"/"audit"), fault_error_rate=fault_error_rate)
+    env = VerifiableEnv(derive_seed(seed, "final_evaluation"))
+    tasks = [env.sample_task() for _ in range(evaluation_tasks)]
+    summaries = []
+    for checkpoint in range(iters+1):
+        collection = None if checkpoint == 0 else system.run_iteration(checkpoint-1, num_tasks)
+        summaries.append({"iteration": checkpoint, **system.evaluate(tasks, derive_seed(seed, "evaluation_policy")),
+                          "collection": collection, "policy_metadata": system.metadata, "skill_graph_size": system.skill_graph.size()})
     return summaries
 
+
 def main():
-    seeds = [7, 42, 123, 456, 789]
-    all_results = {}
-    num_tasks = 80
-    iters = 6
-
-    print("Running ASG-SI with multiple seeds for error bars...")
-    print(f"Seeds: {seeds}")
-    print("=" * 80)
-
-    for seed in seeds:
-        print(f"\nRunning seed {seed}...")
-        summaries = run_experiment(seed=seed, iters=iters, num_tasks=num_tasks)
-        all_results[seed] = summaries
-
-        # Print summary for this seed
-        print(f"Seed {seed} - Final results:")
-        final = summaries[-1]
-        print(f"  Success rate: {final['success_rate']:.3f}")
-        print(f"  Avg reward: {final['avg_reward']:.3f}")
-        print(f"  Skill reuse: {final['actions']['skill']}/{num_tasks} ({final['actions']['skill']/num_tasks*100:.1f}%)")
-
-    # Save results
-    with open('multi_seed_results.json', 'w') as f:
-        json.dump(all_results, f, indent=2)
-
-    print("\n" + "=" * 80)
-    print("Results saved to multi_seed_results.json")
-
-    # Compute statistics across seeds
-    import statistics
-
-    print("\n" + "=" * 80)
-    print("AGGREGATE STATISTICS ACROSS SEEDS")
-    print("=" * 80)
-
-    for iter_num in range(6):
-        success_rates = [all_results[seed][iter_num]['success_rate'] for seed in seeds]
-        rewards = [all_results[seed][iter_num]['avg_reward'] for seed in seeds]
-        skill_uses = [all_results[seed][iter_num]['actions']['skill'] for seed in seeds]
-
-        print(f"\nIteration {iter_num}:")
-        print(f"  Success rate: {statistics.mean(success_rates):.3f} ± {statistics.stdev(success_rates) if len(success_rates) > 1 else 0:.3f}")
-        print(f"  Avg reward: {statistics.mean(rewards):.3f} ± {statistics.stdev(rewards) if len(rewards) > 1 else 0:.3f}")
-        print(f"  Skill actions: {statistics.mean(skill_uses):.1f} ± {statistics.stdev(skill_uses) if len(skill_uses) > 1 else 0:.1f}")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--seeds", type=int, nargs="+", default=[7, 42, 123, 456, 789])
+    parser.add_argument("--iters", type=int, default=6)
+    parser.add_argument("--num-tasks", type=int, default=80)
+    parser.add_argument("--evaluation-tasks", type=int, default=80)
+    parser.add_argument("--output", default="legacy_runs")
+    parser.add_argument("--fault-error-rate", type=float, default=0.0)
+    args = parser.parse_args()
+    if len(set(args.seeds)) != len(args.seeds) or min(args.iters, args.num_tasks, args.evaluation_tasks) < 1:
+        parser.error("use distinct seeds and positive counts")
+    root = Path(args.output)
+    if root.exists() and any(root.iterdir()):
+        parser.error("output directory must be empty")
+    root.mkdir(parents=True, exist_ok=True)
+    results = {str(seed): run_experiment(seed, args.iters, args.num_tasks, args.evaluation_tasks, root, args.fault_error_rate) for seed in args.seeds}
+    target = root/"multi_seed_results.json"
+    target.write_text(json.dumps({"schema_version": 2, "mechanism": "scripted_simulation", "parameters_updated": 0,
+                                  "config": vars(args), "runs": results}, indent=2))
+    print(f"Saved fixed-checkpoint results for {len(results)} runs to {target}")
 
 if __name__ == "__main__":
     main()
