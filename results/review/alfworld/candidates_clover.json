@@ -1,0 +1,1714 @@
+[
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "b1f52ca8fc02b1afaff6f7be5e8209cf6f6034effd13337f1c951dd46079ab9c",
+    "end": "error:SyntaxError",
+    "error": "SyntaxError: f-string: expecting '}' (line 128)",
+    "finish_reason": "stop",
+    "steps": 0
+   },
+   {
+    "code_sha": "5cccffd868b34d25b34d1141503cf00b510c7089246d0251d58f6ff77a72d2e8",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 24
+   },
+   {
+    "code_sha": "cef383bb7485cc952c6cf2dff05743bc76262d76758302f2b967afba37d5a4d7",
+    "end": "won",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 26
+   }
+  ],
+  "code": "def solve(env, goal):\n    import re\n    import string\n\n    def parse_obs(obs):\n        items = []\n        for m in re.finditer(r'\\ba ([a-z]+) (\\d+)\\b', obs):\n            items.append((m.group(1), m.group(2)))\n        return items\n\n    # parse goal\n    parts = goal.split()\n    obj_type = None\n    target_type = None\n    for i, w in enumerate(parts):\n        if w in ('in', 'on'):\n            obj_type = parts[i - 1].strip(string.punctuation)\n            target_type = parts[i + 1].strip(string.punctuation)\n            break\n    if obj_type is None:\n        m = re.search(r'put a (?:\\w+\\s+)?(\\w+) (?:in|on) (\\w+)', goal, re.IGNORECASE)\n        if m:\n            obj_type = m.group(1).strip(string.punctuation)\n            target_type = m.group(2).strip(string.punctuation)\n\n    CONTAINERS = {'drawer', 'cabinet', 'fridge', 'microwave', 'safe', 'cupboard'}\n\n    obs = env.observation\n    items = parse_obs(obs)\n\n    target_loc = None\n    for typ, num in items:\n        if typ == target_type:\n            target_loc = f\"{typ} {num}\"\n            break\n\n    obj_name = None\n    visited = set()\n    for typ, num in items:\n        loc = f\"{typ} {num}\"\n        if loc in visited:\n            continue\n        visited.add(loc)\n\n        env.step(f\"go to {loc}\")\n        obs = env.observation\n        items_here = parse_obs(obs)\n\n        for t2, n2 in items_here:\n            if t2 == obj_type:\n                env.step(f\"take {t2} {n2} from {loc}\")\n                obj_name = f\"{t2} {n2}\"\n                break\n        if obj_name is not None:\n            break\n\n        if typ in CONTAINERS:\n            env.step(f\"open {loc}\")\n            obs = env.observation\n            items_here = parse_obs(obs)\n            for t2, n2 in items_here:\n                if t2 == obj_type:\n                    env.step(f\"take {t2} {n2} from {loc}\")\n                    obj_name = f\"{t2} {n2}\"\n                    break\n            if obj_name is not None:\n                break\n\n    if obj_name is None:\n        return\n\n    if target_loc:\n        env.step(f\"go to {target_loc}\")\n        typ = target_loc.split()[0]\n        if typ in CONTAINERS:\n            env.step(f\"open {target_loc}\")\n        env.step(f\"move {obj_name} to {target_loc}\")\n",
+  "code_sha": "cef383bb7485cc952c6cf2dff05743bc76262d76758302f2b967afba37d5a4d7",
+  "compiled": true,
+  "completion_tokens": 53096,
+  "discovery_game": "json_2.1.1/train/pick_and_place_simple-KeyChain-None-SideTable-322/trial_T20190909_091659_910683/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "stop",
+  "id": "clover-pick_and_place_simple-documented-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_and_place_simple"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": "3f5eba6f4464636e7baadaf04fef9b319ee311a2de6fb07e9b7f8820ae4b6a1a",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 3
+   },
+   {
+    "code_sha": "f468ad68f6828a93df2c4acb92236cd2c3d7fbacb528cd9b5b4b6b9fbb4d9fac",
+    "end": "won",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 7
+   }
+  ],
+  "code": "def solve(env, goal):\n    import re\n\n    # Parse the goal to find the target object type and receptacle type.\n    match = re.search(r'put\\s+(?:a|the)?\\s*(\\w+)\\s+(in|on)\\s+(?:the\\s+)?(\\w+)', goal, re.IGNORECASE)\n    if match:\n        obj_type = match.group(1)\n        rec_type = match.group(3)\n    else:\n        parts = goal.split()\n        obj_type = parts[1] if len(parts) > 1 else None\n        rec_type = parts[-1] if parts else None\n\n    if obj_type is None:\n        return\n\n    # Save the initial room description before issuing any commands.\n    room_desc = env.observation\n    items = re.findall(r'a ([a-z]+) (\\d+)', room_desc)\n    receptacles = [f\"{t} {n}\" for t, n in items]\n\n    obj_name = None\n\n    # Check if the object is already being held.\n    env.step(\"inventory\")\n    m = re.search(rf'{obj_type} (\\d+)', env.observation)\n    if m:\n        obj_name = f\"{obj_type} {m.group(1)}\"\n\n    # Otherwise, search through every receptacle in the room.\n    if obj_name is None:\n        for rec in receptacles:\n            env.step(f\"go to {rec}\")\n            obs = env.observation\n\n            m = re.search(rf'{obj_type} (\\d+)', obs)\n            if m:\n                obj_name = f\"{obj_type} {m.group(1)}\"\n                env.step(f\"take {obj_name} from {rec}\")\n                break\n\n            env.step(f\"open {rec}\")\n            obs = env.observation\n            m = re.search(rf'{obj_type} (\\d+)', obs)\n            if m:\n                obj_name = f\"{obj_type} {m.group(1)}\"\n                env.step(f\"take {obj_name} from {rec}\")\n                break\n\n    if obj_name is None:\n        obj_name = obj_type\n\n    # Find a receptacle of the requested type.\n    target = None\n    for t, n in items:\n        if t == rec_type:\n            target = f\"{t} {n}\"\n            break\n\n    if target:\n        env.step(f\"go to {target}\")\n        env.step(f\"open {target}\")\n        env.step(f\"move {obj_name} to {target}\")\n",
+  "code_sha": "f468ad68f6828a93df2c4acb92236cd2c3d7fbacb528cd9b5b4b6b9fbb4d9fac",
+  "compiled": true,
+  "completion_tokens": 26109,
+  "discovery_game": "json_2.1.1/train/pick_and_place_simple-Kettle-None-Shelf-1/trial_T20190907_011711_519188/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "stop",
+  "id": "clover-pick_and_place_simple-documented-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_and_place_simple"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_and_place_simple-PepperShaker-None-Shelf-20/trial_T20190907_162334_232853/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_and_place_simple-documented-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_and_place_simple"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_and_place_simple-Book-None-Dresser-319/trial_T20190906_204235_124843/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_and_place_simple-documented-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_and_place_simple"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "95550c8414dd9a202e1d9a102af4a46d74df32202a5e7bc21d160fd7cc0b7606",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 3
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 55911,
+  "discovery_game": "json_2.1.1/train/pick_and_place_simple-KeyChain-None-SideTable-322/trial_T20190909_091659_910683/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_and_place_simple-sparse-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_and_place_simple"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "d19ac64985ef3335012e6d44682b1bbfdc2d86dc5ce96fc6a6d34dd448e2aab6",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 34
+   },
+   {
+    "code_sha": "0a4730eddf2bc9180b75a2a7d9770cefe7a944414fbfc6b5a26d649353e32c4a",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 34
+   },
+   {
+    "code_sha": "75d5c5006cd201edfee6085e764e380c43a7452f94e868828dc816e55903145e",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 34
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 44268,
+  "discovery_game": "json_2.1.1/train/pick_and_place_simple-Kettle-None-Shelf-1/trial_T20190907_011711_519188/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_and_place_simple-sparse-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_and_place_simple"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "d90036411eb294b9a2f87213923744e6e1e2ec3f0e5552e4cc7e3a51c2c9dab2",
+    "end": "won",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 19
+   }
+  ],
+  "code": "import re\n\ndef solve(env, goal):\n    # Parse the goal to extract object and target receptacle names\n    match = re.search(r'put a (.+?) in (\\w+)\\.', goal, re.IGNORECASE)\n    if not match:\n        match = re.search(r'put a (.+?) in (\\w+)', goal, re.IGNORECASE)\n    if not match:\n        # Fallback: assume simple format\n        parts = goal.lower().split()\n        obj_idx = parts.index('put') + 2 if 'put' in parts else -1\n        obj_key = ' '.join(parts[obj_idx:obj_idx + 2]) if obj_idx != -1 else ''\n        parts_after = goal.lower().split(' in ')\n        target_key = parts_after[1].strip().split()[0] if len(parts_after) > 1 else ''\n    else:\n        obj_key = match.group(1).strip()\n        target_key = match.group(2).strip()\n\n    # Get initial room description (first observation)\n    room_desc = env.observation\n    # Extract all items (receptacles and objects) from room description\n    items = re.findall(r'a (.+?) (\\d+)', room_desc)\n    receptacle_names = [' '.join((name, num)) for name, num in items]\n\n    # Find target receptacle (first match to target_key)\n    target_name = None\n    for name, num in items:\n        if target_key.lower() in name.lower():\n            target_name = ' '.join((name, num))\n            break\n    if target_name is None:\n        # Try matching the last word of target_key\n        for name, num in items:\n            if target_key.split()[-1].lower() in name.lower():\n                target_name = ' '.join((name, num))\n                break\n\n    # Iterate through receptacles to find the object\n    object_name = None\n    object_loc = None\n    for rname in receptacle_names:\n        env.step(f\"go to {rname}\")\n        obs = env.observation\n        on_items = re.findall(r'a (.+?) (\\d+)', obs)\n        for name, num in on_items:\n            # Check if object_key matches the item name (substring or last-word match)\n            if obj_key.lower() in name.lower() or obj_key.split()[-1].lower() in name.lower():\n                object_name = ' '.join((name, num))\n                object_loc = rname\n                break\n        if object_name:\n            break\n\n    # If not found anywhere, it may be on the floor; try taking it directly\n    if object_name is None:\n        # Attempt to take the object by its key (may fail if not present)\n        env.step(f\"take {obj_key}\")\n        # After taking, we assume it's in hand; we still need a name for the move command\n        object_name = obj_key\n\n    # Take the object from its location\n    if object_loc:\n        env.step(f\"take {object_name} from {object_loc}\")\n    else:\n        # Already in hand, skip take\n        pass\n\n    # Go to the target receptacle\n    if target_name:\n        env.step(f\"go to {target_name}\")\n    else:\n        # Fallback: try to go to the target key directly\n        env.step(f\"go to {target_key}\")\n\n    # Move the object to the target receptacle\n    env.step(f\"move {object_name} to {target_name if target_name else target_key}\")\n",
+  "code_sha": "d90036411eb294b9a2f87213923744e6e1e2ec3f0e5552e4cc7e3a51c2c9dab2",
+  "compiled": true,
+  "completion_tokens": 62700,
+  "discovery_game": "json_2.1.1/train/pick_and_place_simple-PepperShaker-None-Shelf-20/trial_T20190907_162334_232853/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_and_place_simple-sparse-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_and_place_simple"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_and_place_simple-Book-None-Dresser-319/trial_T20190906_204235_124843/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_and_place_simple-sparse-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_and_place_simple"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/look_at_obj_in_light-Pillow-None-DeskLamp-303/trial_T20190907_034918_885162/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-look_at_obj_in_light-documented-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "look_at_obj_in_light"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/look_at_obj_in_light-Pencil-None-DeskLamp-319/trial_T20190908_135012_910702/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-look_at_obj_in_light-documented-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "look_at_obj_in_light"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/look_at_obj_in_light-Book-None-DeskLamp-304/trial_T20190908_083358_621419/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-look_at_obj_in_light-documented-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "look_at_obj_in_light"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "b478fbac994ed92728d0dc4f8e898f231ae49397c81517781dcaae8870600978",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 34
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 62527,
+  "discovery_game": "json_2.1.1/train/look_at_obj_in_light-Mug-None-DeskLamp-323/trial_T20190907_041032_086791/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-look_at_obj_in_light-documented-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "look_at_obj_in_light"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": "a0354c31a0c8f8eff14a690466c0d95b1ec0dbc43d6b5354ef53d1827a5606ff",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 1
+   },
+   {
+    "code_sha": "25e1b11b69248bcf2a101430ff0b70fd864bdf2ef0587b2f73986f2054eafe3a",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 27
+   },
+   {
+    "code_sha": "c9404672501288e94e1480739ba47f0512a6cbb403e1b99194a8a9318968ed58",
+    "end": "won",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 27
+   }
+  ],
+  "code": "import re\n\ndef solve(env, goal):\n    match = re.search(r'examine the (\\w+) with the (\\w+)', goal)\n    if not match:\n        return\n    obj1 = match.group(1)\n    obj2 = match.group(2)\n    \n    admissible = env.admissible()\n    go_commands = [cmd for cmd in admissible if cmd.startswith(\"go to\")]\n    \n    current_container = None\n    \n    env.step(\"look\")\n    \n    for cmd in go_commands:\n        env.step(cmd)\n        m = re.match(r'go to (\\S+) (\\d+)', cmd)\n        if m:\n            current_container = f\"{m.group(1)} {m.group(2)}\"\n        \n        obs = env.observation\n        objects = [(m.group(1), m.group(2)) for m in re.finditer(r' a (\\w+) (\\d+)', obs)]\n        for n, i in objects:\n            if n == obj1:\n                env.step(f\"take {n} {i} from {current_container}\")\n                break\n    \n    for cmd in go_commands:\n        env.step(cmd)\n        m = re.match(r'go to (\\S+) (\\d+)', cmd)\n        if m:\n            current_container = f\"{m.group(1)} {m.group(2)}\"\n        \n        obs = env.observation\n        objects = [(m.group(1), m.group(2)) for m in re.finditer(r' a (\\w+) (\\d+)', obs)]\n        for n, i in objects:\n            if n == obj2:\n                env.step(f\"use {n} {i}\")\n                return\n",
+  "code_sha": "c9404672501288e94e1480739ba47f0512a6cbb403e1b99194a8a9318968ed58",
+  "compiled": true,
+  "completion_tokens": 36085,
+  "discovery_game": "json_2.1.1/train/look_at_obj_in_light-Pillow-None-DeskLamp-303/trial_T20190907_034918_885162/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-look_at_obj_in_light-sparse-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "look_at_obj_in_light"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": "cb6ece45b407d8b4b310cfcc374ba0c8e9140979817e723f38581ce5b81a91a0",
+    "end": "won",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 17
+   }
+  ],
+  "code": "import re\n\ndef solve(env, goal):\n    # Parse goal to extract the object and tool\n    match = re.search(r'examine the (\\w+) (?:with|using) the (\\w+)', goal, re.IGNORECASE)\n    if not match:\n        raise ValueError(\"Could not parse goal\")\n    obj_name = match.group(1)\n    tool_name = match.group(2)\n\n    # Helper to parse items listed after \"you see\"\n    def parse_items(obs):\n        idx = obs.lower().find(\"you see\")\n        if idx == -1:\n            return []\n        after = obs[idx + len(\"you see\"):].strip()\n        if after.endswith('.'):\n            after = after[:-1]\n        if after == \"nothing\":\n            return []\n        items = [item.strip() for item in after.split(',')]\n        result = []\n        for item in items:\n            m = re.match(r'(?:a\\s+)?(\\w+)\\s+(\\d+)', item)\n            if m:\n                result.append((m.group(1), m.group(2)))\n        return result\n\n    # Initial observation lists all receptacles in the room\n    room_desc = env.observation\n    receptacles = parse_items(room_desc)\n\n    obj_item = None\n    obj_receptacle = None\n    tool_item = None\n    tool_receptacle = None\n    current = None\n\n    # Scan receptacles until we find both the object and the tool\n    for name, num in receptacles:\n        cmd = f\"go to {name} {num}\"\n        obs = env.step(cmd)\n        current = (name, num)\n        items_on = parse_items(obs)\n        for it_type, it_num in items_on:\n            if it_type == obj_name and obj_item is None:\n                obj_item = (it_type, it_num)\n                obj_receptacle = (name, num)\n            if it_type == tool_name and tool_item is None:\n                tool_item = (it_type, it_num)\n                tool_receptacle = (name, num)\n        if obj_item is not None and tool_item is not None:\n            break\n\n    # Take the object from its receptacle\n    if obj_item is not None:\n        if current != obj_receptacle:\n            cmd = f\"go to {obj_receptacle[0]} {obj_receptacle[1]}\"\n            env.step(cmd)\n            current = obj_receptacle\n        it_type, it_num = obj_item\n        rec_type, rec_num = obj_receptacle\n        cmd_take = f\"take {it_type} {it_num} from {rec_type} {rec_num}\"\n        env.step(cmd_take)\n\n    # Go to the tool and use it\n    if tool_item is not None:\n        if current != tool_receptacle:\n            cmd = f\"go to {tool_receptacle[0]} {tool_receptacle[1]}\"\n            env.step(cmd)\n            current = tool_receptacle\n        it_type, it_num = tool_item\n        cmd_use = f\"use {it_type} {it_num}\"\n        env.step(cmd_use)\n",
+  "code_sha": "cb6ece45b407d8b4b310cfcc374ba0c8e9140979817e723f38581ce5b81a91a0",
+  "compiled": true,
+  "completion_tokens": 15197,
+  "discovery_game": "json_2.1.1/train/look_at_obj_in_light-Pencil-None-DeskLamp-319/trial_T20190908_135012_910702/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-look_at_obj_in_light-sparse-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "look_at_obj_in_light"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": "193760b1cb89f44f5a7692105fff52e64a671f52ceabe6a8e46a92754ddf9608",
+    "end": "won",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 11
+   }
+  ],
+  "code": "import re\n\ndef solve(env, goal):\n    # Parse the goal to find the object and the light source.\n    m = re.search(r'look at (\\w+) under the (\\w+)', goal, re.IGNORECASE)\n    if not m:\n        # Fallback: split and take the word after \"look at\" and after \"under the\"\n        parts = goal.split()\n        try:\n            obj_idx = parts.index('look') + 2\n            light_idx = parts.index('under') + 2\n            obj_name = parts[obj_idx].rstrip('.,')\n            light_name = parts[light_idx].rstrip('.,')\n        except (IndexError, ValueError):\n            return\n    else:\n        obj_name = m.group(1)\n        light_name = m.group(2)\n\n    # Extract all receptacles in the room from the initial observation.\n    receptacles = re.findall(r'\\ba (\\w+) (\\d+)\\b', env.observation)\n    receptacles = [(name, num) for name, num in receptacles]\n\n    # Explore each receptacle to find the object and light source.\n    loc_contents = {}\n    obj_loc = None\n    light_loc = None\n    visited = set()\n    current_loc = None\n\n    for rec in receptacles:\n        rec_key = tuple(rec)\n        if rec_key in visited:\n            continue\n        visited.add(rec_key)\n        env.step(f\"go to {rec[0]} {rec[1]}\")\n        current_loc = rec_key\n        items = re.findall(r'\\ba (\\w+) (\\d+)\\b', env.observation)\n        loc_contents[rec_key] = items\n        for item_name, item_num in items:\n            if item_name == light_name:\n                light_loc = rec_key\n            if item_name == obj_name:\n                obj_loc = rec_key\n\n    # If we didn't find both, we cannot complete the task.\n    if obj_loc is None or light_loc is None:\n        return\n\n    # Ensure we are at the object's location to take it.\n    if current_loc != obj_loc:\n        env.step(f\"go to {obj_loc[0]} {obj_loc[1]}\")\n        current_loc = obj_loc\n\n    # Take the object from its receptacle.\n    obj_item = None\n    for item_name, item_num in loc_contents.get(obj_loc, []):\n        if item_name == obj_name:\n            obj_item = (item_name, item_num)\n            break\n    if obj_item:\n        env.step(f\"take {obj_item[0]} {obj_item[1]} from {obj_loc[0]} {obj_loc[1]}\")\n\n    # Go to the light source's location.\n    if current_loc != light_loc:\n        env.step(f\"go to {light_loc[0]} {light_loc[1]}\")\n        current_loc = light_loc\n\n    # Use the light source.\n    light_item = None\n    for item_name, item_num in loc_contents.get(light_loc, []):\n        if item_name == light_name:\n            light_item = (item_name, item_num)\n            break\n    if light_item:\n        env.step(f\"use {light_item[0]} {light_item[1]}\")\n\n    # The task is now complete.\n",
+  "code_sha": "193760b1cb89f44f5a7692105fff52e64a671f52ceabe6a8e46a92754ddf9608",
+  "compiled": true,
+  "completion_tokens": 14686,
+  "discovery_game": "json_2.1.1/train/look_at_obj_in_light-Book-None-DeskLamp-304/trial_T20190908_083358_621419/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-look_at_obj_in_light-sparse-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "look_at_obj_in_light"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/look_at_obj_in_light-Mug-None-DeskLamp-323/trial_T20190907_041032_086791/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-look_at_obj_in_light-sparse-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "look_at_obj_in_light"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "77bca1a65388f85680477afbc29a9a14ccb8d2ad1cf44428d6aea85cae7b65bf",
+    "end": "step_budget",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 50
+   },
+   {
+    "code_sha": "994d96fca1f900e1cdc6ffdcad4b4a41f57ecbc2416f9e82a217cc0d5d81bb61",
+    "end": "won",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 15
+   }
+  ],
+  "code": "import re\n\ndef solve(env, goal):\n    # Parse goal to extract object type and target container type.\n    m1 = re.search(r'put\\s+(?:a\\s+)?clean\\s+(\\w+)', goal)\n    object_type = m1.group(1)\n    m2 = re.search(r'(?:in|on)\\s+(\\w+)', goal)\n    container_type = m2.group(1)\n\n    def parse_items(obs):\n        return re.findall(r'([a-z]+)\\s+(\\d+)', obs)\n\n    # Initial room description (before any commands).\n    room_items = parse_items(env.observation)\n\n    # Find the sinkbasin and the target container in the room description.\n    sinkbasin = None\n    target_container = None\n    for name, num in room_items:\n        if name == 'sinkbasin':\n            sinkbasin = f\"{name} {num}\"\n        if name == container_type:\n            target_container = f\"{name} {num}\"\n\n    # Search for the requested object among all room items.\n    object_name = None\n    object_num = None\n    for name, num in room_items:\n        item_key = f\"{name} {num}\"\n        env.step(f\"go to {item_key}\")\n        obs = env.observation\n\n        # If the item is closed, open it to reveal its contents.\n        if 'is closed' in obs:\n            env.step(f\"open {item_key}\")\n            obs = env.observation\n\n        # Look for the object among the items visible in this location.\n        for obj_name, obj_num in parse_items(obs):\n            if obj_name == object_type:\n                object_name, object_num = obj_name, obj_num\n                env.step(f\"take {obj_name} {obj_num} from {item_key}\")\n                break\n        if object_name:\n            break\n\n    # Clean the object with the sinkbasin.\n    if sinkbasin is not None:\n        env.step(f\"go to {sinkbasin}\")\n        env.step(f\"clean {object_name} {object_num} with {sinkbasin}\")\n\n    # Move the object to the target container, opening it if necessary.\n    if target_container is not None:\n        env.step(f\"go to {target_container}\")\n        obs = env.observation\n        if 'is closed' in obs:\n            env.step(f\"open {target_container}\")\n        env.step(f\"move {object_name} {object_num} to {target_container}\")\n",
+  "code_sha": "994d96fca1f900e1cdc6ffdcad4b4a41f57ecbc2416f9e82a217cc0d5d81bb61",
+  "compiled": true,
+  "completion_tokens": 33643,
+  "discovery_game": "json_2.1.1/train/pick_clean_then_place_in_recep-ButterKnife-None-SideTable-21/trial_T20190907_162153_244284/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "stop",
+  "id": "clover-pick_clean_then_place_in_recep-documented-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_clean_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_clean_then_place_in_recep-Plate-None-Shelf-1/trial_T20190907_114717_584270/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_clean_then_place_in_recep-documented-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_clean_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "411a156ac883634d42da45c4b20ce5ac2cc3394b0a65a212e5a951527dc3d869",
+    "end": "won",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 20
+   }
+  ],
+  "code": "import re\n\ndef solve(env, goal):\n    # Parse goal: \"put a clean bowl in fridge\" -> object=bowl, container=fridge\n    m = re.search(r'put\\s+(?:a\\s+)?(?:clean\\s+)?(\\w+)\\s+(?:in|on)\\s+(\\w+)\\.?$', goal, re.I)\n    if not m:\n        m = re.search(r'(?:put|place|store)\\s+(?:a\\s+)?(?:clean\\s+)?(\\w+)\\s+(?:in|on)\\s+(\\w+)\\.?$', goal, re.I)\n    if not m:\n        return\n    obj_type = m.group(1)\n    cont_type = m.group(2)\n\n    receptacles = ['cabinet', 'drawer', 'fridge', 'microwave', 'safe',\n                   'countertop', 'stoveburner', 'sinkbasin', 'toaster', 'coffeemachine']\n\n    # Get room description\n    obs = env.observation\n    all_items = re.findall(r'a\\s+(\\w+)\\s+(\\d+)', obs)\n    receptacle_list = [(n, num) for n, num in all_items if n in receptacles]\n\n    # Search each receptacle for the target object\n    found = None\n    for rname, rnum in receptacle_list:\n        env.step(f\"go to {rname} {rnum}\")\n        obs = env.observation\n\n        # Open if closed\n        if 'closed' in obs and 'open' not in obs:\n            env.step(f\"open {rname} {rnum}\")\n            obs = env.observation\n\n        # Find items\n        items_here = re.findall(r'a\\s+(\\w+)\\s+(\\d+)', obs)\n        for iname, inum in items_here:\n            if iname not in receptacles and iname.lower() == obj_type.lower():\n                found = (iname, inum, rname, rnum)\n                break\n        if found:\n            break\n\n    if not found:\n        # Object might be lying in room\n        env.step(\"look\")\n        obs = env.observation\n        items_here = re.findall(r'a\\s+(\\w+)\\s+(\\d+)', obs)\n        for iname, inum in items_here:\n            if iname not in receptacles and iname.lower() == obj_type.lower():\n                found = (iname, inum, None, None)\n                break\n\n    if not found:\n        return\n\n    obj_name, obj_num, rname, rnum = found\n\n    # Take the object\n    if rname:\n        env.step(f\"take {obj_name} {obj_num} from {rname} {rnum}\")\n    else:\n        env.step(f\"take {obj_name} {obj_num}\")\n\n    # Clean with sinkbasin\n    env.step(\"go to sinkbasin 1\")\n    env.step(f\"clean {obj_name} {obj_num} with sinkbasin 1\")\n\n    # Move to target container\n    env.step(f\"go to {cont_type} 1\")\n    obs = env.observation\n    if 'closed' in obs and 'open' not in obs:\n        env.step(f\"open {cont_type} 1\")\n    env.step(f\"move {obj_name} {obj_num} to {cont_type} 1\")\n",
+  "code_sha": "411a156ac883634d42da45c4b20ce5ac2cc3394b0a65a212e5a951527dc3d869",
+  "compiled": true,
+  "completion_tokens": 52485,
+  "discovery_game": "json_2.1.1/train/pick_clean_then_place_in_recep-Bowl-None-Fridge-6/trial_T20190908_081813_754018/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "stop",
+  "id": "clover-pick_clean_then_place_in_recep-documented-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_clean_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_clean_then_place_in_recep-SoapBar-None-GarbageCan-407/trial_T20190907_222235_383777/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_clean_then_place_in_recep-documented-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_clean_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "d704b4be1429e71e54e8f617b80ed1cc88d3abf4ba55bccc80a1b8057fa166e3",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 0
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 64335,
+  "discovery_game": "json_2.1.1/train/pick_clean_then_place_in_recep-ButterKnife-None-SideTable-21/trial_T20190907_162153_244284/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_clean_then_place_in_recep-sparse-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_clean_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_clean_then_place_in_recep-Plate-None-Shelf-1/trial_T20190907_114717_584270/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_clean_then_place_in_recep-sparse-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_clean_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_clean_then_place_in_recep-Bowl-None-Fridge-6/trial_T20190908_081813_754018/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_clean_then_place_in_recep-sparse-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_clean_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_clean_then_place_in_recep-SoapBar-None-GarbageCan-407/trial_T20190907_222235_383777/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_clean_then_place_in_recep-sparse-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_clean_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "8f23be7095a43d5feaa8b270240b0027ce085fbe210b72802ec05fbd8950cf8c",
+    "end": "error:SyntaxError",
+    "error": "SyntaxError: 'break' outside loop (line 211)",
+    "finish_reason": "stop",
+    "steps": 0
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "011b237e4413aa7b63f800d2abc15adda528bc39a9885114fccd3e7c5f0b57b2",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 1
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 37815,
+  "discovery_game": "json_2.1.1/train/pick_heat_then_place_in_recep-Apple-None-Fridge-30/trial_T20190908_114847_958679/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "stop",
+  "id": "clover-pick_heat_then_place_in_recep-documented-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_heat_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "22a976b8195c3149fe70d01caaedd4426c321960dfa5daaebf7bb687e3ae837b",
+    "end": "step_budget",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 50
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 58138,
+  "discovery_game": "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-GarbageCan-12/trial_T20190908_181854_326947/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "stop",
+  "id": "clover-pick_heat_then_place_in_recep-documented-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_heat_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_heat_then_place_in_recep-Tomato-None-Fridge-18/trial_T20190907_193025_428000/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_heat_then_place_in_recep-documented-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_heat_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-Fridge-14/trial_T20190909_091415_283977/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_heat_then_place_in_recep-documented-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_heat_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_heat_then_place_in_recep-Apple-None-Fridge-30/trial_T20190908_114847_958679/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_heat_then_place_in_recep-sparse-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_heat_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-GarbageCan-12/trial_T20190908_181854_326947/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_heat_then_place_in_recep-sparse-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_heat_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "78955df95b831036e10e8d7ed923601b25701a0a20497ecfc97eddf087db91ac",
+    "end": "step_budget",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 50
+   },
+   {
+    "code_sha": "e6b1506cf1232e4fc90991d52f986e562295f4fc03acb80187854c2aebcea4bd",
+    "end": "step_budget",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 50
+   },
+   {
+    "code_sha": "2d7dc4b316e75b3210ad19cc445ce11bf6685bd7320b97d9ffc2181c426b3ee9",
+    "end": "won",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 9
+   }
+  ],
+  "code": "def solve(env, goal):\n    import re\n\n    goal_lower = goal.lower()\n    target_obj = None\n    container_name = None\n    clean_flag = False\n    heat_flag = False\n\n    # Parse common goal patterns\n    m = re.search(r'heat\\s+(?:some\\s+)?(\\w+)\\s+and\\s+put\\s+it\\s+in\\s+(\\w+)', goal_lower)\n    if m:\n        target_obj = m.group(1)\n        container_name = m.group(2)\n        heat_flag = True\n\n    m2 = re.search(r'put\\s+a\\s+clean\\s+(\\w+)\\s+in\\s+(\\w+)', goal_lower)\n    if m2:\n        target_obj = m2.group(1)\n        container_name = m2.group(2)\n        clean_flag = True\n\n    if target_obj is None:\n        m3 = re.search(r'put\\s+a\\s+(\\w+)\\s+in\\s+(\\w+)', goal_lower)\n        if m3:\n            target_obj = m3.group(1)\n            container_name = m3.group(2)\n        else:\n            return\n\n    # Ensure we have a room description\n    if \"You are in\" not in env.observation:\n        env.step(\"look\")\n    room_obs = env.observation\n\n    # Extract container/receptacle names from the room description\n    containers = []\n    container_types = {\n        'cabinet', 'countertop', 'diningtable', 'drawer', 'fridge',\n        'garbagecan', 'microwave', 'safe', 'sinkbasin', 'stoveburner', 'toaster'\n    }\n    for m in re.finditer(r'a (\\w+) (\\d+)', room_obs):\n        name = m.group(1)\n        num = m.group(2)\n        if name in container_types:\n            containers.append((name, num))\n\n    def parse_items(obs):\n        items = set()\n        for m in re.finditer(r'(?:a|an)\\s+(\\w+)\\s+(\\d+)', obs):\n            items.add(f\"{m.group(1)} {m.group(2)}\")\n        return items\n\n    # Prioritize open containers first, then closed ones\n    open_containers = {'countertop', 'diningtable', 'sinkbasin', 'stoveburner', 'toaster'}\n    closed_containers = {'cabinet', 'drawer', 'fridge', 'safe', 'microwave'}\n\n    # Exclude the target container (e.g., fridge) from search\n    search_containers = [(name, num) for name, num in containers if name != container_name]\n\n    target_item = None\n\n    # First, check open containers (surfaces)\n    for name, num in search_containers:\n        if name in open_containers:\n            cont = f\"{name} {num}\"\n            env.step(f\"go to {cont}\")\n            items = parse_items(env.observation)\n            for item in items:\n                if item.split()[0] == target_obj:\n                    target_item = item\n                    break\n            if target_item:\n                env.step(f\"take {target_item} from {cont}\")\n                break\n\n    # If not found, check closed containers\n    if target_item is None:\n        for name, num in search_containers:\n            if name in closed_containers:\n                cont = f\"{name} {num}\"\n                env.step(f\"go to {cont}\")\n                if \"is closed\" in env.observation:\n                    env.step(f\"open {cont}\")\n                items = parse_items(env.observation)\n                for item in items:\n                    if item.split()[0] == target_obj:\n                        target_item = item\n                        break\n                if target_item:\n                    env.step(f\"take {target_item} from {cont}\")\n                    break\n\n    if target_item is None:\n        return\n\n    # Clean the object if needed\n    if clean_flag:\n        sink = None\n        for name, num in containers:\n            if name == \"sinkbasin\":\n                sink = f\"{name} {num}\"\n                break\n        if sink:\n            env.step(f\"go to {sink}\")\n            cmd = f\"clean {target_item} with {sink}\"\n            if cmd not in env.admissible():\n                cmd = f\"wash {target_item} with {sink}\"\n            env.step(cmd)\n\n    # Heat the object if needed\n    if heat_flag:\n        heat_src = None\n        for name, num in containers:\n            if name in ('microwave', 'oven', 'stoveburner'):\n                heat_src = f\"{name} {num}\"\n                break\n        if heat_src:\n            env.step(f\"go to {heat_src}\")\n            cmd = f\"heat {target_item} with {heat_src}\"\n            if cmd in env.admissible():\n                env.step(cmd)\n\n    # Put the object into the container (e.g., fridge)\n    dest = None\n    for name, num in containers:\n        if name == container_name:\n            dest = f\"{name} {num}\"\n            break\n    if dest is None:\n        return\n\n    env.step(f\"go to {dest}\")\n    if \"is closed\" in env.observation:\n        env.step(f\"open {dest}\")\n    if f\"move {target_item} to {dest}\" in env.admissible():\n        env.step(f\"move {target_item} to {dest}\")\n    elif f\"put {target_item} in {dest}\" in env.admissible():\n        env.step(f\"put {target_item} in {dest}\")\n    else:\n        env.step(f\"move {target_item} to {dest}\")\n",
+  "code_sha": "2d7dc4b316e75b3210ad19cc445ce11bf6685bd7320b97d9ffc2181c426b3ee9",
+  "compiled": true,
+  "completion_tokens": 47281,
+  "discovery_game": "json_2.1.1/train/pick_heat_then_place_in_recep-Tomato-None-Fridge-18/trial_T20190907_193025_428000/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_heat_then_place_in_recep-sparse-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_heat_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "626fc9b66382edaf7a2cd72f15c75993cafe52d4e2bd9564fef0df85619450a1",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 6
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 58595,
+  "discovery_game": "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-Fridge-14/trial_T20190909_091415_283977/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_heat_then_place_in_recep-sparse-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_heat_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "0d23a3805a0ab5cf95b0ccdf550f91d5c23149de4686ec650ef7eb1670487e5f",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 1
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 50115,
+  "discovery_game": "json_2.1.1/train/pick_cool_then_place_in_recep-Bowl-None-Shelf-5/trial_T20190907_170219_219243/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "stop",
+  "id": "clover-pick_cool_then_place_in_recep-documented-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_cool_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "stop"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 56207,
+  "discovery_game": "json_2.1.1/train/pick_cool_then_place_in_recep-WineBottle-None-GarbageCan-16/trial_T20190907_015045_510934/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_cool_then_place_in_recep-documented-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_cool_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_cool_then_place_in_recep-Potato-None-SideTable-21/trial_T20190907_040229_877234/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_cool_then_place_in_recep-documented-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_cool_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_cool_then_place_in_recep-Potato-None-GarbageCan-17/trial_T20190908_204111_799665/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_cool_then_place_in_recep-documented-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_cool_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_cool_then_place_in_recep-Bowl-None-Shelf-5/trial_T20190907_170219_219243/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_cool_then_place_in_recep-sparse-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_cool_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "fb1ef075b10e17a97c9d5119fc1c1b07c190fe582919e107a31a0b3772d51a29",
+    "end": "error:StopIteration",
+    "error": "StopIteration:  (line 12)",
+    "finish_reason": "stop",
+    "steps": 1
+   },
+   {
+    "code_sha": "9eb0c3a26223c2204dab1eb91bddaa6c71d42ff10a2d1e0a10eb4f70562b7db2",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 35
+   },
+   {
+    "code_sha": "b696df42452c8ad03e800d1c7aea5610da2cdc3c1801a558d57364b9d21708cb",
+    "end": "error:StopIteration",
+    "error": "StopIteration:  (line 11)",
+    "finish_reason": "stop",
+    "steps": 1
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 34773,
+  "discovery_game": "json_2.1.1/train/pick_cool_then_place_in_recep-WineBottle-None-GarbageCan-16/trial_T20190907_015045_510934/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_cool_then_place_in_recep-sparse-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_cool_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_cool_then_place_in_recep-Potato-None-SideTable-21/trial_T20190907_040229_877234/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_cool_then_place_in_recep-sparse-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_cool_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": "ca0a9e90acbb0b16a1482b322024e2a1060a1724aeb7430b8c42a1e1c4c46be2",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 7
+   },
+   {
+    "code_sha": "1cdbc7478a20a6bcdcc0bdb8990d954714d0a78fc37554d9e9b41940e538560e",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 7
+   },
+   {
+    "code_sha": "2838c78f57327968052321bc297ed14b5a2082787a9cffef551dcbb274d32384",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 7
+   },
+   {
+    "code_sha": "3a8139590b81214337e68c8a2f3fcc842f083f7bbafa121b77b61ea38acf1888",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 39
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 24484,
+  "discovery_game": "json_2.1.1/train/pick_cool_then_place_in_recep-Potato-None-GarbageCan-17/trial_T20190908_204111_799665/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_cool_then_place_in_recep-sparse-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_cool_then_place_in_recep"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_two_obj_and_place-CreditCard-None-Sofa-206/trial_T20190906_203503_354880/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_two_obj_and_place-documented-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_two_obj_and_place"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_two_obj_and_place-CreditCard-None-CoffeeTable-217/trial_T20190911_185442_429428/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_two_obj_and_place-documented-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_two_obj_and_place"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_two_obj_and_place-SprayBottle-None-GarbageCan-423/trial_T20190909_012941_820281/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "length",
+  "id": "clover-pick_two_obj_and_place-documented-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_two_obj_and_place"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "95496594eaf436f45cfcf2248bb308b38487a890b1688155e9f3d0ed483e7150",
+    "end": "step_budget",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 50
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 50196,
+  "discovery_game": "json_2.1.1/train/pick_two_obj_and_place-Pillow-None-ArmChair-321/trial_T20190907_121735_217785/game.tw-pddl",
+  "docs": "documented",
+  "finish_reason": "stop",
+  "id": "clover-pick_two_obj_and_place-documented-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_two_obj_and_place"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "7a913bf8944451b4c63b50bfdeeb90b37842bf34e03479fd8daac79b4d325627",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 1
+   },
+   {
+    "code_sha": "970579552f3c8c142fc88a83f894b08cc039c24b6b12cba14fe39836479fad99",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 41
+   },
+   {
+    "code_sha": "4340b21eabf1c5b6cbbb8435456467a3893c1ca900afb295d2f53060a821d626",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 41
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 33459,
+  "discovery_game": "json_2.1.1/train/pick_two_obj_and_place-CreditCard-None-Sofa-206/trial_T20190906_203503_354880/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_two_obj_and_place-sparse-0",
+  "model": "clover",
+  "sample": 0,
+  "task_type": "pick_two_obj_and_place"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_two_obj_and_place-CreditCard-None-CoffeeTable-217/trial_T20190911_185442_429428/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_two_obj_and_place-sparse-1",
+  "model": "clover",
+  "sample": 1,
+  "task_type": "pick_two_obj_and_place"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "ce73048fa459e1f5b8bfb49cf2477744b916308ea395057619f5e7b77d6e57d7",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 2
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": "3fd50bc21d0b64617186223da7b16dbad6dddf0493d69c89cf55b34709578bfa",
+    "end": "returned",
+    "error": null,
+    "finish_reason": "stop",
+    "steps": 10
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 48484,
+  "discovery_game": "json_2.1.1/train/pick_two_obj_and_place-SprayBottle-None-GarbageCan-423/trial_T20190909_012941_820281/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "id": "clover-pick_two_obj_and_place-sparse-2",
+  "model": "clover",
+  "sample": 2,
+  "task_type": "pick_two_obj_and_place"
+ },
+ {
+  "attempts": [
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   },
+   {
+    "code_sha": null,
+    "end": "no_code",
+    "finish_reason": "length"
+   }
+  ],
+  "code": null,
+  "code_sha": null,
+  "compiled": false,
+  "completion_tokens": 65536,
+  "discovery_game": "json_2.1.1/train/pick_two_obj_and_place-Pillow-None-ArmChair-321/trial_T20190907_121735_217785/game.tw-pddl",
+  "docs": "sparse",
+  "finish_reason": "length",
+  "id": "clover-pick_two_obj_and_place-sparse-3",
+  "model": "clover",
+  "sample": 3,
+  "task_type": "pick_two_obj_and_place"
+ }
+]

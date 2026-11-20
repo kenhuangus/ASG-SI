@@ -1,0 +1,33 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nEnvironment rules:\n  Commands: \"go to X\", \"open X\", \"close X\", \"take O from X\", \"move O to X\", \"heat O with X\", \"cool O with X\",\n  \"clean O with X\", \"use X\", \"examine X\", \"inventory\", \"look\". Invalid commands return \"Nothing happens.\"\n  Objects and receptacles carry instance numbers (\"apple 2\", \"drawer 3\"); goals name only their types.\n  An object may be on any receptacle, including inside closed ones (drawers, cabinets, fridge, microwave, safe);\n  a closed receptacle must be opened to see and take its contents. The agent holds at most one object.\n  Heating uses a microwave, cooling a fridge, cleaning a sink basin, and lamps are turned on with \"use\".\n\nThe skill must handle every task of this kind: find an object of the requested type, cool it with a fridge, and put it in or on a receptacle of the requested type. Goal wording varies between tasks of the same kind.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a cabinet 27, a cabinet 26, a cabinet 25, a cabinet 24, a cabinet 23, a cabinet 22, a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\nGoal: cool some winebottle and put it in garbagecan.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to garbagecan 1\nYou arrive at garbagecan 1. On the garbagecan 1, you see a papertowelroll 1.\n> go to fridge 1\nYou arrive at fridge 1. The fridge 1 is closed.\n> open fridge 1\nYou open the fridge 1. The fridge 1 is open. In it, you see a bowl 3, a bowl 1, a glassbottle 1, a mug 2, a potato 2, and a tomato 2.\n> close fridge 1\nYou close the fridge 1.\n> go to diningtable 1\nYou arrive at diningtable 1. On the diningtable 1, you see a bread 3, a bread 2, a butterknife 1, a cup 1, a pan 2, a peppershaker 1, a plate 2, a plate 1, a potato 1, a saltshaker 1, a soapbottle 3, and a soapbottle 2.\n> go to countertop 1\nYou arrive at countertop 1. On the countertop 1, you see a bread 1, a dishsponge 1, a egg 1, a houseplant 2, a houseplant 1, a pan 3, a pan 1, a pot 1, a soapbottle 1, a spatula 1, a tomato 1, a winebottle 2, and a winebottle 1.\n> take winebottle 1 from countertop 1\nYou pick up the winebottle 1 from the countertop 1.\n> go to fridge 1\nYou arrive at fridge 1. The fridge 1 is closed.\n> cool winebottle 1 with fridge 1\nYou cool the winebottle 1 using the fridge 1.\n> go to garbagecan 1\nYou arrive at garbagecan 1. On the garbagecan 1, you see a papertowelroll 1.\n> move winebottle 1 to garbagecan 1\nYou move the winebottle 1 to the garbagecan 1."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 1,
+ "content": "",
+ "finish_reason": "length",
+ "prompt_tokens": 1347,
+ "completion_tokens": 16384,
+ "seconds": 483.909
+}

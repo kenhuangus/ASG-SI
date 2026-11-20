@@ -1,0 +1,41 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nEnvironment rules:\n  Commands: \"go to X\", \"open X\", \"close X\", \"take O from X\", \"move O to X\", \"heat O with X\", \"cool O with X\",\n  \"clean O with X\", \"use X\", \"examine X\", \"inventory\", \"look\". Invalid commands return \"Nothing happens.\"\n  Objects and receptacles carry instance numbers (\"apple 2\", \"drawer 3\"); goals name only their types.\n  An object may be on any receptacle, including inside closed ones (drawers, cabinets, fridge, microwave, safe);\n  a closed receptacle must be opened to see and take its contents. The agent holds at most one object.\n  Heating uses a microwave, cooling a fridge, cleaning a sink basin, and lamps are turned on with \"use\".\n\nThe skill must handle every task of this kind: find an object of the requested type and examine it under a lamp of the requested type by holding it and turning the lamp on. Goal wording varies between tasks of the same kind.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a bed 2, a bed 1, a desk 1, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, and a shelf 1.\nGoal: look at book under the desklamp.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to shelf 1\nYou arrive at shelf 1. On the shelf 1, you see a alarmclock 1, a book 1, a creditcard 3, a desklamp 1, a keychain 3, a keychain 2, a pencil 2, and a pencil 1.\n> take book 1 from shelf 1\nYou pick up the book 1 from the shelf 1.\n> use desklamp 1\nYou turn on the desklamp 1."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 2,
+ "content": "",
+ "finish_reason": "length",
+ "prompt_tokens": 783,
+ "completion_tokens": 16384,
+ "seconds": 369.555
+}

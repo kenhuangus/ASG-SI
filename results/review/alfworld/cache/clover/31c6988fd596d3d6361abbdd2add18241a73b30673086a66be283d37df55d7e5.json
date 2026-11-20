@@ -1,0 +1,33 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nEnvironment rules:\n  Commands: \"go to X\", \"open X\", \"close X\", \"take O from X\", \"move O to X\", \"heat O with X\", \"cool O with X\",\n  \"clean O with X\", \"use X\", \"examine X\", \"inventory\", \"look\". Invalid commands return \"Nothing happens.\"\n  Objects and receptacles carry instance numbers (\"apple 2\", \"drawer 3\"); goals name only their types.\n  An object may be on any receptacle, including inside closed ones (drawers, cabinets, fridge, microwave, safe);\n  a closed receptacle must be opened to see and take its contents. The agent holds at most one object.\n  Heating uses a microwave, cooling a fridge, cleaning a sink basin, and lamps are turned on with \"use\".\n\nThe skill must handle every task of this kind: find an object of the requested type, clean it with a sink basin, and put it in or on a receptacle of the requested type. Goal wording varies between tasks of the same kind.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\nGoal: clean some plate and put it in shelf.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to toaster 1\nYou arrive at toaster 1. On the toaster 1, you see nothing.\n> go to stoveburner 1\nYou arrive at stoveburner 1. On the stoveburner 1, you see a pot 2.\n> look\nYou are facing the stoveburner 2, and stoveburner 1. Next to it, you see nothing.\n> go to shelf 3\nYou arrive at shelf 3. On the shelf 3, you see nothing.\n> go to stoveburner 2\nYou arrive at stoveburner 2. On the stoveburner 2, you see nothing.\n> go to stoveburner 3\nYou arrive at stoveburner 3. On the stoveburner 3, you see a pot 3.\n> look\nYou are facing the stoveburner 4, and stoveburner 3. Next to it, you see nothing.\n> go to cabinet 3\nYou arrive at cabinet 3. The cabinet 3 is closed.\n> open cabinet 3\nYou open the cabinet 3. The cabinet 3 is open. In it, you see a glassbottle 1, and a saltshaker 1.\n> close cabinet 3\nYou close the cabinet 3.\n> go to stoveburner 4\nYou arrive at stoveburner 4. On the stoveburner 4, you see nothing.\n> go to sinkbasin 1\nYou arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.\n> go to shelf 1\nYou arrive at shelf 1. On the shelf 1, you see nothing.\n> go to shelf 2\nYou arrive at shelf 2. On the shelf 2, you see nothing.\n> go to microwave 1\nYou arrive at microwave 1. The microwave 1 is closed.\n> open microwave 1\nYou open the microwave 1. The microwave 1 is open. In it, you see nothing.\n> close microwave 1\nYou close the microwave 1.\n> go to garbagecan 1\nYou arrive at garbagecan 1. On the garbagecan 1, you see a potato 1, a soapbottle 3, and a soapbottle 2.\n> go to fridge 1\nYou arrive at fridge 1. The fridge 1 is closed.\n> open fridge 1\nYou open the fridge 1. The fridge 1 is open. In it, you see a plate 2, a pot 1, and a tomato 2.\n> take plate 2 from fridge 1\nYou pick up the plate 2 from the fridge 1.\n> go to sinkbasin 1\nYou arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.\n> clean plate 2 with sinkbasin 1\nYou clean the plate 2 using the sinkbasin 1.\n> look\nYou are facing the sinkbasin 1. Next to it, you see nothing.\n> go to shelf 1\nYou arrive at shelf 1. On the shelf 1, you see nothing.\n> move plate 2 to shelf 1\nYou move the plate 2 to the shelf 1."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 1,
+ "content": "",
+ "finish_reason": "length",
+ "prompt_tokens": 1487,
+ "completion_tokens": 16384,
+ "seconds": 327.172
+}

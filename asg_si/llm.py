@@ -39,9 +39,13 @@ class ChatClient:
         self.offline, self.timeout, self.max_retries = offline, timeout, max_retries
         self.stats = {"calls": 0, "cache_hits": 0, "prompt_tokens": 0, "completion_tokens": 0, "seconds": 0.0, "errors": 0}
 
-    def chat(self, messages, *, temperature=0.0, max_tokens=2048, sample=0):
-        """`sample` distinguishes repeated draws of an identical request at temperature > 0."""
+    def chat(self, messages, *, temperature=0.0, max_tokens=2048, sample=0, extra=None):
+        """`sample` distinguishes repeated draws of an identical request at temperature > 0.
+        `extra` adds server-specific request fields (for example chat_template_kwargs); requests without
+        it keep their original cache keys."""
         request = {"model": self.model, "messages": messages, "temperature": temperature, "max_tokens": max_tokens}
+        if extra:
+            request.update(extra)
         key = digest({"request": request, "sample": sample})
         path = self.cache / f"{key}.json"
         if path.is_file():

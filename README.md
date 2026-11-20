@@ -137,12 +137,19 @@ every table in the revised paper from those files.
 | `experiments.selection` | Four selection rules in libraries of 10, 50, and 200 skills, with and without the gate | `selection.json` |
 | `experiments.tamper` | Which defence (hashes, external anchor, HMAC signature, audit re-execution) detects which evidence attack; a latent poisoned skill | `tamper.json` |
 | `experiments.retention` | A silent tool upgrade with no pins, with pins, and with revocation plus re-verification | `retention.json` |
+| `experiments.alfworld_skills` | Model-written `solve(env, goal)` skills for the six ALFWorld task types, repaired from discovery-episode feedback, admitted by first success, LLM self-verification, SmartSnap-style evidence verification, or replay on ten held-out games, and adjudicated on all 274 validation games | `alfworld/summary_<model>.json` |
 
 The language-model experiment calls OpenAI-compatible endpoints configured by `CLOVER_BASE_URL`
 and `DEEPSEEK_BASE_URL`. Every request and response is cached under `runs/llm/llm_cache/` by the
 SHA-256 of the request; the cache is published in `results/review/llm_cache.zip`, and `--offline`
 re-runs the experiment from it without model access. Bundles can be signed with an HMAC key held
 outside the run directory (`write_bundle(..., signing_key=...)`, `read_bundle(..., signing_key=...)`).
+
+The ALFWorld experiment runs episodes under Linux (`alfworld` 0.4.2 with the ALFWorld data in
+`$ALFWORLD_DATA`); on Windows it runs them in WSL through stdin and stdout. Its stages are
+`prepare`, `generate`, `execute`, `judge`, and `analyze`; `generate` and `judge` accept `--offline`
+to replay the response cache in `results/review/alfworld/cache/`, and `analyze` needs only the
+recorded files in `results/review/alfworld/`.
 
 ## Compatibility demo
 

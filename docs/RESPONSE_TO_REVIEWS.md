@@ -10,7 +10,7 @@ the revised paper (`paper/paper.md`). Experiment code and result files are named
 |---|---|---|---|
 | AC-1 | Method unclear to the point of irreproducibility | Definitions, notation table, three algorithms; every table regenerated from published raw evidence; audit command re-executes decisions | §4, Table 2, Alg. 1–3, App. A |
 | AC-2 | Insufficient positioning in the literature | Related work rewritten into five groups with 28 verified references and a comparison table | §2, Table 1 |
-| AC-3 | Limited results: domain difficulty and baselines | Seven experiments, including candidates from two frozen LLMs (three runs), stochastic tools, composition depth, selection at scale, attacks, retention; baselines include LLM self-verification and a SmartSnap-style evidence verifier | §6 |
+| AC-3 | Limited results: domain difficulty and baselines | Eight experiments, including candidates from two frozen LLMs (three runs), stochastic tools, composition depth, selection at scale, attacks, retention, and model-written skills on ALFWorld; baselines include LLM self-verification and a SmartSnap-style evidence verifier | §6 |
 
 ## Reviewer iMLt
 
@@ -20,7 +20,7 @@ the revised paper (`paper/paper.md`). Experiment code and result files are named
 | iMLt-2 | Base model not described | Two frozen models (one sampled in two independent runs) with sizes, quantization, hardware, and serving stack; all responses cached by request hash | §5 Models |
 | iMLt-3 | External verifier not described | Algorithm 2 (exact replay), Algorithm 3 (statistical), reason codes, separate worker | §4.3 |
 | iMLt-4 | Skill extraction not described | Algorithm 1 and its limits | §4.2 |
-| iMLt-5 | Toy tasks solvable out of the box; results saturated | Models write candidates and frequently produce faults that pass one example (Table 4); stochastic tools give non-saturated gate behaviour (Table 6); larger libraries (Table 8). The task remains small and synthetic, stated as a limitation | §6.2–6.5, §7 |
+| iMLt-5 | Toy tasks solvable out of the box; results saturated | Models write candidates and frequently produce faults that pass one example (Table 4); stochastic tools give non-saturated gate behaviour (Table 6); larger libraries (Table 8); model-written skills on the ALFWorld benchmark, where 1 of 19 working programs was adequate and only replay admitted it without admitting an inadequate one (Table 11). The other tasks remain small and synthetic, stated as a limitation | §6.2–6.5, §6.8, §7 |
 | iMLt-6 | No baseline comparisons | First success, LLM self-verification, SmartSnap-style evidence verification, in-process checking, independent replay, replay with composition checks, flat library, end-to-end chain replay, four selection rules | Tables 3, 5, 7, 8 |
 | iMLt-7 | Figures 1 and 2 identical; Figure 4 lacks detail | All figures redrawn with distinct content: architecture, interface propagation, lifecycle | Figures 1–3 |
 | iMLt-8 | Undefined terms (evidence-store integrity, evidence-based checks, canonical programs) | Defined in Table 2 and §4.6; vague terms removed | §4.1, §4.6 |
@@ -31,7 +31,7 @@ the revised paper (`paper/paper.md`). Experiment code and result files are named
 
 | ID | Comment | Response | Where |
 |---|---|---|---|
-| Df4u-1 | Only three small deterministic tasks | Stochastic and partially observable tool experiment; model-written candidates | §6.2, §6.3 |
+| Df4u-1 | Only three small deterministic tasks | Stochastic and partially observable tool experiment; model-written candidates; ALFWorld, an established partially observable text benchmark | §6.2, §6.3, §6.8 |
 | Df4u-2 | No comparison with SmartSnap, SuperIntelliAgent | Both have public code (verified) but target Android GUI control and diffusion training. Their admission rule (LLM verifier over evidence, proposer-curated in SmartSnap) was re-implemented in the same harness and compared | §2, §5, Table 5 |
 | Df4u-3 | Missing literature on self-verification and continual adaptation | Reflexion, CRITIC, Huang et al., SmartSnap, SuperIntelliAgent, SWE-Bench-CL, MEM1, Memory-R1 | §2 |
 | Df4u-4 | Claims of scalability and governance aspirational | Claims narrowed; scope box; limitations list | §3, §7 |

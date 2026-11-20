@@ -1,0 +1,130 @@
+{
+ "clover-look_at_obj_in_light-sparse-0": {
+  "completion_tokens": {
+   "evidence": 12510,
+   "self": 2729
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill fails on goals that do not match its regex pattern (e.g., \"look at pillow under the desklamp\") and may not handle objects inside closed receptacles.",
+  "evidence_tasks": [
+   0,
+   5,
+   6
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill cannot handle objects inside closed receptacles and doesn't check if the object is already in inventory before attempting to take it.",
+  "self_verification": "REJECT"
+ },
+ "clover-look_at_obj_in_light-sparse-1": {
+  "completion_tokens": {
+   "evidence": 16384,
+   "self": 275
+  },
+  "evidence_all_completed": null,
+  "evidence_reason": "no usable test choice",
+  "evidence_tasks": [],
+  "evidence_verification": "UNPARSEABLE",
+  "self_reason": "The skill never executes the required examine command and does not handle closed receptacles containing the object or lamp.",
+  "self_verification": "REJECT"
+ },
+ "clover-look_at_obj_in_light-sparse-2": {
+  "completion_tokens": {
+   "evidence": 3279,
+   "self": 1435
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill's goal parser expects \"look at ... under ...\" but the tasks use \"examine ... with ...\", so it returns immediately without issuing any commands.",
+  "evidence_tasks": [
+   3,
+   4,
+   5
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill fails when the object or lamp is inside a closed receptacle and never calls examine, so it cannot reliably complete the task.",
+  "self_verification": "REJECT"
+ },
+ "clover-pick_and_place_simple-documented-0": {
+  "completion_tokens": {
+   "evidence": 16384,
+   "self": 6715
+  },
+  "evidence_all_completed": null,
+  "evidence_reason": "no usable test choice",
+  "evidence_tasks": [],
+  "evidence_verification": "UNPARSEABLE",
+  "self_reason": "The skill relies on a fragile regex to parse the room description and a hardcoded container list, so it may fail to locate objects or open containers in other rooms.",
+  "self_verification": "REJECT"
+ },
+ "clover-pick_and_place_simple-documented-1": {
+  "completion_tokens": {
+   "evidence": 9627,
+   "self": 3996
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill never takes the found object because it checks for it before opening closed receptacles and never re-checks after opening, so it fails to complete the task.",
+  "evidence_tasks": [
+   0,
+   1,
+   2
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The goal parser fails on goals with adjectives (e.g., \"put a clean apple in fridge.\"), so it may not identify the target object type correctly.",
+  "self_verification": "REJECT"
+ },
+ "clover-pick_and_place_simple-sparse-2": {
+  "completion_tokens": {
+   "evidence": 9250,
+   "self": 1005
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill fails on tasks with non-standard goal phrasing (e.g., 'put some book on sidetable.') and does not open closed receptacles to locate objects inside.",
+  "evidence_tasks": [
+   0,
+   3,
+   4
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill never opens closed receptacles to inspect their contents, so it cannot retrieve objects hidden inside them and may fail to complete many tasks of this kind.",
+  "self_verification": "REJECT"
+ },
+ "clover-pick_clean_then_place_in_recep-documented-0": {
+  "completion_tokens": {
+   "evidence": 16384,
+   "self": 16384
+  },
+  "evidence_all_completed": null,
+  "evidence_reason": "no usable test choice",
+  "evidence_tasks": [],
+  "evidence_verification": "UNPARSEABLE",
+  "self_reason": null,
+  "self_verification": "UNPARSEABLE"
+ },
+ "clover-pick_clean_then_place_in_recep-documented-2": {
+  "completion_tokens": {
+   "evidence": 16384,
+   "self": 2108
+  },
+  "evidence_all_completed": null,
+  "evidence_reason": "no usable test choice",
+  "evidence_tasks": [],
+  "evidence_verification": "UNPARSEABLE",
+  "self_reason": "The skill assumes the target container is instance 1, only searches a hardcoded subset of receptacles, and fails to parse goals with 'a' before the container, so it may miss the object or target in other rooms.",
+  "self_verification": "REJECT"
+ },
+ "clover-pick_heat_then_place_in_recep-sparse-2": {
+  "completion_tokens": {
+   "evidence": 3925,
+   "self": 5594
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The evidence shows the skill stopped after heating the mug and never placed it in the shelf, and the other tasks have no commands executed.",
+  "evidence_tasks": [
+   3,
+   4,
+   5
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill fails to search inside the target container and ignores containers like garbagecans, so it may miss the requested object.",
+  "self_verification": "REJECT"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nEnvironment rules:\n  Commands: \"go to X\", \"open X\", \"close X\", \"take O from X\", \"move O to X\", \"heat O with X\", \"cool O with X\",\n  \"clean O with X\", \"use X\", \"examine X\", \"inventory\", \"look\". Invalid commands return \"Nothing happens.\"\n  Objects and receptacles carry instance numbers (\"apple 2\", \"drawer 3\"); goals name only their types.\n  An object may be on any receptacle, including inside closed ones (drawers, cabinets, fridge, microwave, safe);\n  a closed receptacle must be opened to see and take its contents. The agent holds at most one object.\n  Heating uses a microwave, cooling a fridge, cleaning a sink basin, and lamps are turned on with \"use\".\n\nThe skill must handle every task of this kind: find two objects of the requested type and put both in or on a receptacle of the requested type. Goal wording varies between tasks of the same kind.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a garbagecan 1, a shelf 14, a shelf 13, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sofa 1, a tvstand 2, and a tvstand 1.\nGoal: put two creditcard in sofa.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to sofa 1\nYou arrive at sofa 1. On the sofa 1, you see a keychain 1, a laptop 1, a pillow 1, and a remotecontrol 2.\n> go to shelf 1\nYou arrive at shelf 1. On the shelf 1, you see nothing.\n> go to shelf 2\nYou arrive at shelf 2. On the shelf 2, you see nothing.\n> go to shelf 3\nYou arrive at shelf 3. On the shelf 3, you see nothing.\n> go to shelf 4\nYou arrive at shelf 4. On the shelf 4, you see nothing.\n> go to shelf 5\nYou arrive at shelf 5. On the shelf 5, you see a statue 2.\n> go to shelf 6\nYou arrive at shelf 6. On the shelf 6, you see nothing.\n> go to shelf 7\nYou arrive at shelf 7. On the shelf 7, you see a vase 4, and a vase 2.\n> go to shelf 8\nYou arrive at shelf 8. On the shelf 8, you see nothing.\n> go to shelf 9\nYou arrive at shelf 9. On the shelf 9, you see nothing.\n> go to shelf 10\nYou arrive at shelf 10. On the shelf 10, you see nothing.\n> go to shelf 11\nYou arrive at shelf 11. On the shelf 11, you see a bowl 2.\n> go to shelf 12\nYou arrive at shelf 12. On the shelf 12, you see nothing.\n> go to shelf 13\nYou arrive at shelf 13. On the shelf 13, you see nothing.\n> go to shelf 14\nYou arrive at shelf 14. On the shelf 14, you see nothing.\n> go to coffeetable 1\nYou arrive at coffeetable 1. On the coffeetable 1, you see a creditcard 3, a creditcard 1, a laptop 2, and a statue 1.\n> take creditcard 3 from coffeetable 1\nYou pick up the creditcard 3 from the coffeetable 1.\n> go to sofa 1\nYou arrive at sofa 1. On the sofa 1, you see a keychain 1, a laptop 1, a pillow 1, and a remotecontrol 2.\n> move creditcard 3 to sofa 1\nYou move the creditcard 3 to the sofa 1.\n> go to coffeetable 1\nYou arrive at coffeetable 1. On the coffeetable 1, you see a creditcard 1, a laptop 2, and a statue 1.\n> take creditcard 1 from coffeetable 1\nYou pick up the creditcard 1 from the coffeetable 1.\n> go to sofa 1\nYou arrive at sofa 1. On the sofa 1, you see a creditcard 3, a keychain 1, a laptop 1, a pillow 1, and a remotecontrol 2.\n> look\nYou are facing the sofa 1. Next to it, you see nothing.\n> go to shelf 7\nYou arrive at shelf 7. On the shelf 7, you see a vase 4, and a vase 2.\n> go to sofa 1\nYou arrive at sofa 1. On the sofa 1, you see a creditcard 3, a keychain 1, a laptop 1, a pillow 1, and a remotecontrol 2.\n> look\nYou are facing the sofa 1. Next to it, you see nothing.\n> move creditcard 1 to sofa 1\nYou move the creditcard 1 to the sofa 1."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 0,
+ "content": "",
+ "finish_reason": "length",
+ "prompt_tokens": 1538,
+ "completion_tokens": 16384,
+ "seconds": 451.296
+}

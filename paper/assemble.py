@@ -106,6 +106,65 @@ def table_llm_admit():
                     "Table 5: Admission of model-written candidates, mean over five seeds (LLM verdicts do not depend on the seed). Counts are unique compiled candidates; success uses each admitted library with uniform selection on 30 evaluation tasks per seed")
 
 
+ALF = (("clover", "Clover"), ("deepseek", "DeepSeek (748B)"))
+ALF_METHODS = ("first_success", "llm_self_verification", "llm_evidence_verification", "independent_replay")
+
+
+def alf(model, kind):
+    return load(f"alfworld/{kind}_{model}.json")
+
+
+def alf_gen_stats(model):
+    cands, judge = alf(model, "candidates"), alf(model, "judge")
+    attempts = [a for c in cands for a in c["attempts"]]
+    return {"samples": len(cands), "compiled": sum(c["compiled"] for c in cands), "attempts": len(attempts),
+            "truncated": sum(a["end"] == "no_code" and a["finish_reason"] == "length" for a in attempts),
+            "never_code": sum(all(a["end"] == "no_code" for a in c["attempts"]) for c in cands),
+            "judged": len(judge),
+            "unparsed_self": sum(v["self_verification"] == "UNPARSEABLE" for v in judge.values()),
+            "unparsed_evidence": sum(v["evidence_verification"] == "UNPARSEABLE" for v in judge.values())}
+
+
+def table_alfworld():
+    rows = []
+    for key, name in ALF:
+        s = alf(key, "summary")
+        for m in ALF_METHODS:
+            v = s["methods"][m]
+            lo, hi = v["library_success_range"]
+            lib = pct(v["library_success_mean"]) + ("" if hi - lo < 1e-12 else f" ({100 * lo:.1f}–{100 * hi:.1f})")
+            rows.append([name, METHOD_NAMES[m], f"{v['admitted']} / {s['compiled']}",
+                         f"{v['admitted_inadequate']} / {s['inadequate_compiled']}",
+                         f"{v['rejected_adequate']} / {s['adequate_compiled']}", lib])
+    return md_table(["Model", "Admission method", "Admitted", "Inadequate admitted", "Adequate rejected", "Library success (range over seeds)"],
+                    rows, [1.0, 1.75, 0.7, 0.8, 0.8, 1.25],
+                    "Table 11: Admission of model-written ALFWorld skills. A skill is adequate if it completes at least 80 % of the 274 "
+                    "validation games of its type. Library success is the share of all 274 games completed by a library holding the "
+                    "first admitted skill per type, in a seeded random order, mean over five seeds")
+
+
+def text_alfworld_gen():
+    c, d = alf_gen_stats("clover"), alf_gen_stats("deepseek")
+    sc, sd = alf("clover", "summary"), alf("deepseek", "summary")
+    best_d = max(v["best_eval_success"] or 0 for v in sd["by_type"].values())
+    return (f"DeepSeek produced a program that completed its discovery game for {d['compiled']} of {d['samples']} candidates, "
+            f"and Clover for {c['compiled']} of {c['samples']}. Clover's count is limited by its output budget: {c['truncated']} of "
+            f"its {c['attempts']} attempts used all 16,384 tokens in reasoning and returned no program, and {c['never_code']} "
+            f"candidates never received one. Neither model produced a working program for pick_two_obj_and_place. On the "
+            f"validation games, {sc['adequate_compiled']} of {c['compiled']} Clover programs and {sd['adequate_compiled']} of "
+            f"{d['compiled']} DeepSeek programs were adequate; the best DeepSeek program completed {pct(best_d)} of its type. "
+            f"The model-written faults were not planted: the programs searched only the receptacles named in the room "
+            f"description, never opened closed receptacles, misparsed goal phrasings, or hard-coded a destination.")
+
+
+def text_alfworld_judge():
+    c = alf_gen_stats("clover")
+    return (f"For {c['unparsed_self']} of {c['judged']} Clover self-verifications and {c['unparsed_evidence']} of {c['judged']} "
+            f"Clover evidence verifications the reasoning used the whole budget and no verdict or test choice was returned; these count "
+            f"as rejections. One of them is the evidence verification of the adequate Clover skill, so its rejection by that "
+            f"method reflects the budget as much as the method. DeepSeek returned a verdict in every case.")
+
+
 def table_stoch():
     s = load("stochastic.json")
     names = {"single_read": "one read", "two_reads": "two reads", "three_reads": "three reads", "unit_blind_three_reads": "three reads, ignores units"}
@@ -211,7 +270,8 @@ def main():
             texts[name.strip()] = content.strip()
     fills = {"TABLE_MAIN": table_main, "TABLE_LLM_GEN": table_llm_gen, "TABLE_LLM_ADMIT": table_llm_admit,
              "TABLE_STOCH": table_stoch, "TABLE_DEPTH": table_depth, "TABLE_SEL": table_sel, "TABLE_TAMPER": table_tamper,
-             "TABLE_RET": table_ret, "POISON_VIOL": poison_violations, "WORKER_OVERHEAD": worker_overhead}
+             "TABLE_RET": table_ret, "TABLE_ALFWORLD": table_alfworld, "TEXT_ALFWORLD_GEN": text_alfworld_gen,
+             "TEXT_ALFWORLD_JUDGE": text_alfworld_judge, "POISON_VIOL": poison_violations, "WORKER_OVERHEAD": worker_overhead}
     for k, fn in fills.items():
         body = body.replace("{{" + k + "}}", fn())
     for k, v in texts.items():

@@ -1,0 +1,750 @@
+[
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "returned": 17,
+   "step_budget": 25,
+   "won": 17
+  },
+  "eval_n": 59,
+  "eval_success": 0.288135593220339,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-pick_and_place_simple-documented-0",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 3
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_and_place_simple-documented-1",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_and_place_simple-documented-2",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_and_place_simple-sparse-0",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_and_place_simple-sparse-1",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_and_place_simple-sparse-2",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": true,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "returned": 12,
+   "won": 19
+  },
+  "eval_n": 31,
+  "eval_success": 0.6129032258064516,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-look_at_obj_in_light-documented-0",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": true,
+   "evidence_verification": "ACCEPT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 5
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "returned": 12,
+   "won": 19
+  },
+  "eval_n": 31,
+  "eval_success": 0.6129032258064516,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-look_at_obj_in_light-documented-1",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 4
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-look_at_obj_in_light-documented-2",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-look_at_obj_in_light-sparse-0",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-look_at_obj_in_light-sparse-1",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-look_at_obj_in_light-sparse-2",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "returned": 24,
+   "step_budget": 7,
+   "won": 27
+  },
+  "eval_n": 58,
+  "eval_success": 0.46551724137931033,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-pick_clean_then_place_in_recep-documented-0",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 5
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "returned": 29,
+   "step_budget": 12,
+   "won": 17
+  },
+  "eval_n": 58,
+  "eval_success": 0.29310344827586204,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-pick_clean_then_place_in_recep-documented-1",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 2
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_clean_then_place_in_recep-documented-2",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "sparse",
+  "eval_ends": {
+   "returned": 37,
+   "wall_timeout": 2,
+   "won": 19
+  },
+  "eval_n": 58,
+  "eval_success": 0.3275862068965517,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-pick_clean_then_place_in_recep-sparse-0",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 3
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "sparse",
+  "eval_ends": {
+   "returned": 3,
+   "step_budget": 7,
+   "wall_timeout": 4,
+   "won": 44
+  },
+  "eval_n": 58,
+  "eval_success": 0.7586206896551724,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-pick_clean_then_place_in_recep-sparse-1",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 8
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_clean_then_place_in_recep-sparse-2",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "returned": 20,
+   "step_budget": 5,
+   "won": 14
+  },
+  "eval_n": 39,
+  "eval_success": 0.358974358974359,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-pick_heat_then_place_in_recep-documented-0",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 4
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "returned": 15,
+   "step_budget": 5,
+   "wall_timeout": 1,
+   "won": 18
+  },
+  "eval_n": 39,
+  "eval_success": 0.46153846153846156,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-pick_heat_then_place_in_recep-documented-1",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 5
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_heat_then_place_in_recep-documented-2",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_heat_then_place_in_recep-sparse-0",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_heat_then_place_in_recep-sparse-1",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_heat_then_place_in_recep-sparse-2",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_cool_then_place_in_recep-documented-0",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_cool_then_place_in_recep-documented-1",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_cool_then_place_in_recep-documented-2",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_cool_then_place_in_recep-sparse-0",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "sparse",
+  "eval_ends": {
+   "error:TypeError": 22,
+   "returned": 22,
+   "won": 2
+  },
+  "eval_n": 46,
+  "eval_success": 0.043478260869565216,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "deepseek-pick_cool_then_place_in_recep-sparse-1",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 0
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_cool_then_place_in_recep-sparse-2",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_two_obj_and_place-documented-0",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_two_obj_and_place-documented-1",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_two_obj_and_place-documented-2",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_two_obj_and_place-sparse-0",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_two_obj_and_place-sparse-1",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "deepseek-pick_two_obj_and_place-sparse-2",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ }
+]

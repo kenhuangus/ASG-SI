@@ -1,0 +1,49 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nEnvironment rules:\n  Commands: \"go to X\", \"open X\", \"close X\", \"take O from X\", \"move O to X\", \"heat O with X\", \"cool O with X\",\n  \"clean O with X\", \"use X\", \"examine X\", \"inventory\", \"look\". Invalid commands return \"Nothing happens.\"\n  Objects and receptacles carry instance numbers (\"apple 2\", \"drawer 3\"); goals name only their types.\n  An object may be on any receptacle, including inside closed ones (drawers, cabinets, fridge, microwave, safe);\n  a closed receptacle must be opened to see and take its contents. The agent holds at most one object.\n  Heating uses a microwave, cooling a fridge, cleaning a sink basin, and lamps are turned on with \"use\".\n\nThe skill must handle every task of this kind: find two objects of the requested type and put both in or on a receptacle of the requested type. Goal wording varies between tasks of the same kind.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a armchair 1, a bed 1, a diningtable 1, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, and a sidetable 1.\nGoal: find two pillow and put them in armchair.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to bed 1\nYou arrive at bed 1. On the bed 1, you see a book 2, a book 1, a pillow 4, a pillow 3, a pillow 2, and a pillow 1.\n> take pillow 3 from bed 1\nYou pick up the pillow 3 from the bed 1.\n> go to armchair 1\nYou arrive at armchair 1. On the armchair 1, you see a keychain 1.\n> move pillow 3 to armchair 1\nYou move the pillow 3 to the armchair 1.\n> go to bed 1\nYou arrive at bed 1. On the bed 1, you see a book 2, a book 1, a pillow 4, a pillow 2, and a pillow 1.\n> take pillow 4 from bed 1\nYou pick up the pillow 4 from the bed 1.\n> go to armchair 1\nYou arrive at armchair 1. On the armchair 1, you see a keychain 1, and a pillow 3.\n> look\nYou are facing the armchair 1. Next to it, you see nothing.\n> help\nAvailable commands: look: look around your current location inventory: check your current inventory go to (receptacle): move to a receptacle open (receptacle): open a receptacle close (receptacle): close a receptacle take (object) from (receptacle): take an object from a receptacle move (object) to (receptacle): place an object in or on a receptacle examine (something): examine a receptacle or an object use (object): use an object heat (object) with (receptacle): heat an object using a receptacle clean (object) with (receptacle): clean an object using a receptacle cool (object) with (receptacle): cool an object using a receptacle slice (object) with (object): slice an object using a sharp object\n> look\nYou are facing the armchair 1. Next to it, you see nothing.\n> go to garbagecan 1\nYou arrive at garbagecan 1. On the garbagecan 1, you see a pencil 1.\n> go to armchair 1\nYou arrive at armchair 1. On the armchair 1, you see a keychain 1, and a pillow 3.\n> look\nYou are facing the armchair 1. Next to it, you see nothing.\n> go to bed 1\nYou arrive at bed 1. On the bed 1, you see a book 2, a book 1, a pillow 2, and a pillow 1.\n> go to armchair 1\nYou arrive at armchair 1. On the armchair 1, you see a keychain 1, and a pillow 3.\n> look\nYou are facing the armchair 1. Next to it, you see nothing.\n> go to drawer 2\nYou arrive at drawer 2. The drawer 2 is closed.\n> open drawer 2\nYou open the drawer 2. The drawer 2 is open. In it, you see a cd 1.\n> close drawer 2\nYou close the drawer 2.\n> go to armchair 1\nYou arrive at armchair 1. On the armchair 1, you see a keychain 1, and a pillow 3.\n> look\nYou are facing the armchair 1. Next to it, you see nothing.\n> move pillow 4 to armchair 1\nYou move the pillow 4 to the armchair 1."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 3,
+ "content": "```python\nimport re\nfrom collections import defaultdict\n\ndef solve(env, goal):\n    # Parse goal: find two <obj_type> and put them in/on <receptacle_type>\n    m = re.search(r\"two\\s+(\\w+)\", goal)\n    if not m:\n        # Sometimes goal says \"find two X and put them in/on Y\"\n        pass\n    obj_type = m.group(1)  # e.g. \"pillow\"\n    # find target receptacle: \"in/on\" + type\n    m2 = re.search(r\"(?:in|on)\\s+(\\w[\\w\\s]*?)(?:\\b|$)\", goal)\n    if m2:\n        receptacle_type = m2.group(1).strip()\n    else:\n        # fallback: last noun phrase after \"in\" or \"on\"\n        m2 = re.search(r\"(?:in|on)\\s+(\\w[\\w\\s]*)\", goal)\n        receptacle_type = m2.group(1).strip() if m2 else None\n\n    # Track known locations\n    items = defaultdict(list)         # item_type -> [instance nums seen]\n    receptacles_seen = {}             # \"room_name\" -> [receptacle types]\n    current_room = None\n    held = None\n\n    def observe():\n        nonlocal current_room\n        obs = env.observation\n        # Extract room name from first sentence\n        room_match = re.search(r\"You are in the middle of a room\\. Looking\", obs)\n        if room_match:\n            # parse receptacles from \"you see a X, a Y, ...\"\n            pass\n        # extract items from \"you see a X 1, a Y 2, ...\"\n        item_matches = re.findall(r\"a\\s+(\\w+)\\s+(\\d+)\", obs)\n        for typ, num in item_matches:\n            items[typ].append(num)\n        return obs\n\n    def go_to(receptacle_id):\n        # receptacle_id like \"bed 1\"\n        env.step(f\"go to {receptacle_id}\")\n\n    def take(obj_id):\n        env.step(f\"take {obj_id} from {current_receptacle}\")\n\n    def move_to(obj_id, dest):\n        env.step(f\"move {obj_id} to {dest}\")\n\n    # We'll do a simple DFS to find items\n    # For simplicity, maintain a set of \"known places to look\"\n    known_places = []\n    visited = set()\n    count = 0\n    target_count = 2\n\n    while True:\n        obs = env.observation\n        current_room = \"middle of a room\"\n        # Try to identify what's around\n        items_here = re.findall(r\"a\\s+(\\w+)\\s+(\\d+)\", obs)\n        receptacle_here = re.findall(r\"you see a\\s+(\\w[\\w\\s]*\\s+\\d+)\", obs) or []\n\n        # If we see the object type, take it\n        for typ, num in items_here:\n            if typ == obj_type and held is None:\n                env.step(f\"take {typ} {num} from {receptacle_here[0] if receptacle_here else 'here'}\")\n                held = f\"{typ} {num}\"\n                break\n            elif typ == obj_type:\n                # already have it, skip\n                pass\n\n        # Check if we need to move to a receptacle\n        if held is None:\n            # Need to find a receptacle\n            # Simple: try go to a known place\n            if not known_places:\n                # default: go to first receptacle found\n                for r, n in items_here:\n                    if r in (\"bed\", \"armchair\", \"sidetable\", \"diningtable\", \"drawer\", \"garbagecan\", \"cabinet\", \"microwave\"):\n                        known_places.append(f\"{r} {n}\")\n                        break\n            if known_places:\n                place = known_places[0]\n                env.step(f\"go to {place}\")\n                visited.add(place)\n            else:\n                # just try \"look\"\n                env.step(\"look\")\n        else:\n            # Move held object to target receptacle\n            # First, go to target\n            if receptacle_type:\n                env.step(f\"go to {receptacle_type}\")\n            env.step(f\"move {held} to {receptacle_type}\")\n            held = None\n            count += 1\n            if count >= target_count:\n                break\n\n    # After loop, ensure we're at the target receptacle\n    env.step(f\"go to {receptacle_type}\")\n```",
+ "finish_reason": "stop",
+ "prompt_tokens": 1513,
+ "completion_tokens": 1044,
+ "seconds": 23.996
+}

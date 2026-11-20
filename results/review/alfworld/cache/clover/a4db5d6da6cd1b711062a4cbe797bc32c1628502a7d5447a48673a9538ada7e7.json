@@ -1,0 +1,25 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You verify skills from execution evidence. Reply with a single JSON object and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Environment rules:\n  Commands: \"go to X\", \"open X\", \"close X\", \"take O from X\", \"move O to X\", \"heat O with X\", \"cool O with X\",\n  \"clean O with X\", \"use X\", \"examine X\", \"inventory\", \"look\". Invalid commands return \"Nothing happens.\"\n  Objects and receptacles carry instance numbers (\"apple 2\", \"drawer 3\"); goals name only their types.\n  An object may be on any receptacle, including inside closed ones (drawers, cabinets, fridge, microwave, safe);\n  a closed receptacle must be opened to see and take its contents. The agent holds at most one object.\n  Heating uses a microwave, cooling a fridge, cleaning a sink basin, and lamps are turned on with \"use\".\n\nTask kind: find an object of the requested type and examine it under a lamp of the requested type by holding it and turning the lamp on.\n\nSkill:\n```python\nimport re\n\ndef solve(env, goal):\n    # Parse the goal to find the object and the light source.\n    m = re.search(r'look at (\\w+) under the (\\w+)', goal, re.IGNORECASE)\n    if not m:\n        # Fallback: split and take the word after \"look at\" and after \"under the\"\n        parts = goal.split()\n        try:\n            obj_idx = parts.index('look') + 2\n            light_idx = parts.index('under') + 2\n            obj_name = parts[obj_idx].rstrip('.,')\n            light_name = parts[light_idx].rstrip('.,')\n        except (IndexError, ValueError):\n            return\n    else:\n        obj_name = m.group(1)\n        light_name = m.group(2)\n\n    # Extract all receptacles in the room from the initial observation.\n    receptacles = re.findall(r'\\ba (\\w+) (\\d+)\\b', env.observation)\n    receptacles = [(name, num) for name, num in receptacles]\n\n    # Explore each receptacle to find the object and light source.\n    loc_contents = {}\n    obj_loc = None\n    light_loc = None\n    visited = set()\n    current_loc = None\n\n    for rec in receptacles:\n        rec_key = tuple(rec)\n        if rec_key in visited:\n            continue\n        visited.add(rec_key)\n        env.step(f\"go to {rec[0]} {rec[1]}\")\n        current_loc = rec_key\n        items = re.findall(r'\\ba (\\w+) (\\d+)\\b', env.observation)\n        loc_contents[rec_key] = items\n        for item_name, item_num in items:\n            if item_name == light_name:\n                light_loc = rec_key\n            if item_name == obj_name:\n                obj_loc = rec_key\n\n    # If we didn't find both, we cannot complete the task.\n    if obj_loc is None or light_loc is None:\n        return\n\n    # Ensure we are at the object's location to take it.\n    if current_loc != obj_loc:\n        env.step(f\"go to {obj_loc[0]} {obj_loc[1]}\")\n        current_loc = obj_loc\n\n    # Take the object from its receptacle.\n    obj_item = None\n    for item_name, item_num in loc_contents.get(obj_loc, []):\n        if item_name == obj_name:\n            obj_item = (item_name, item_num)\n            break\n    if obj_item:\n        env.step(f\"take {obj_item[0]} {obj_item[1]} from {obj_loc[0]} {obj_loc[1]}\")\n\n    # Go to the light source's location.\n    if current_loc != light_loc:\n        env.step(f\"go to {light_loc[0]} {light_loc[1]}\")\n        current_loc = light_loc\n\n    # Use the light source.\n    light_item = None\n    for item_name, item_num in loc_contents.get(light_loc, []):\n        if item_name == light_name:\n            light_item = (item_name, item_num)\n            break\n    if light_item:\n        env.step(f\"use {light_item[0]} {light_item[1]}\")\n\n    # The task is now complete.\n```\n\nEvidence (tasks chosen by the skill's author, with the skill's actual episodes):\nTask 3 (goal: examine the box with the desklamp.); episode ended by: returned; commands used: 0\n\n\nTask 4 (goal: examine the pillow with the desklamp.); episode ended by: returned; commands used: 0\n\n\nTask 5 (goal: examine the book with the desklamp.); episode ended by: returned; commands used: 0\n\n\nDid the skill complete each task? Should it be stored for reuse on every task of this kind? Reply {\"verdict\": \"ACCEPT\" or \"REJECT\", \"reason\": \"<one sentence>\"}."
+   }
+  ],
+  "temperature": 0.0,
+  "max_tokens": 16384
+ },
+ "sample": 0,
+ "content": "{\"verdict\": \"REJECT\", \"reason\": \"The skill's goal parser expects \\\"look at ... under ...\\\" but the tasks use \\\"examine ... with ...\\\", so it returns immediately without issuing any commands.\"}",
+ "finish_reason": "stop",
+ "prompt_tokens": 1113,
+ "completion_tokens": 167,
+ "seconds": 7.345
+}
