@@ -1,0 +1,2864 @@
+{
+ "pools": {
+  "look_at_obj_in_light": {
+   "discovery": [
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Pillow-None-DeskLamp-303/trial_T20190907_034918_885162/game.tw-pddl",
+     "goal": "examine the pillow with the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, and a sidetable 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to bed 1",
+       "You arrive at bed 1. On the bed 1, you see a book 1, a laptop 2, and a pillow 1."
+      ],
+      [
+       "take pillow 1 from bed 1",
+       "You pick up the pillow 1 from the bed 1."
+      ],
+      [
+       "go to sidetable 1",
+       "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 1, and a pencil 1."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see nothing."
+      ],
+      [
+       "go to shelf 2",
+       "You arrive at shelf 2. On the shelf 2, you see nothing."
+      ],
+      [
+       "go to shelf 3",
+       "You arrive at shelf 3. On the shelf 3, you see nothing."
+      ],
+      [
+       "look",
+       "You are facing the shelf 4, and shelf 3. Next to it, you see nothing."
+      ],
+      [
+       "go to shelf 7",
+       "You arrive at shelf 7. On the shelf 7, you see a mug 3."
+      ],
+      [
+       "go to shelf 4",
+       "You arrive at shelf 4. On the shelf 4, you see a mug 2, and a mug 1."
+      ],
+      [
+       "go to shelf 5",
+       "You arrive at shelf 5. On the shelf 5, you see nothing."
+      ],
+      [
+       "go to shelf 6",
+       "You arrive at shelf 6. On the shelf 6, you see nothing."
+      ],
+      [
+       "go to shelf 8",
+       "You arrive at shelf 8. On the shelf 8, you see nothing."
+      ],
+      [
+       "go to shelf 9",
+       "You arrive at shelf 9. On the shelf 9, you see a creditcard 1."
+      ],
+      [
+       "look",
+       "You are facing the shelf 10, and shelf 9. Next to it, you see nothing."
+      ],
+      [
+       "go to shelf 8",
+       "You arrive at shelf 8. On the shelf 8, you see nothing."
+      ],
+      [
+       "go to shelf 10",
+       "You arrive at shelf 10. On the shelf 10, you see nothing."
+      ],
+      [
+       "go to shelf 11",
+       "You arrive at shelf 11. On the shelf 11, you see nothing."
+      ],
+      [
+       "go to shelf 12",
+       "You arrive at shelf 12. On the shelf 12, you see nothing."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see nothing."
+      ],
+      [
+       "go to dresser 1",
+       "You arrive at dresser 1. On the dresser 1, you see a creditcard 3, a pen 1, a vase 2, a vase 1, and a window 1."
+      ],
+      [
+       "look",
+       "You are facing the drawer 2, drawer 1, and dresser 1. Next to it, you see nothing."
+      ],
+      [
+       "go to shelf 3",
+       "You arrive at shelf 3. On the shelf 3, you see nothing."
+      ],
+      [
+       "go to drawer 1",
+       "You arrive at drawer 1. On the drawer 1, you see a cd 1, and a creditcard 2."
+      ],
+      [
+       "look",
+       "You are facing the drawer 2, drawer 1, and dresser 1. Next to it, you see nothing."
+      ],
+      [
+       "go to shelf 8",
+       "You arrive at shelf 8. On the shelf 8, you see nothing."
+      ],
+      [
+       "go to drawer 2",
+       "You arrive at drawer 2. On the drawer 2, you see nothing."
+      ],
+      [
+       "go to drawer 3",
+       "You arrive at drawer 3. The drawer 3 is closed."
+      ],
+      [
+       "open drawer 3",
+       "You open the drawer 3. The drawer 3 is open. In it, you see a pencil 2."
+      ],
+      [
+       "close drawer 3",
+       "You close the drawer 3."
+      ],
+      [
+       "go to drawer 4",
+       "You arrive at drawer 4. The drawer 4 is closed."
+      ],
+      [
+       "open drawer 4",
+       "You open the drawer 4. The drawer 4 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 4",
+       "You close the drawer 4."
+      ],
+      [
+       "go to drawer 5",
+       "You arrive at drawer 5. The drawer 5 is closed."
+      ],
+      [
+       "open drawer 5",
+       "You open the drawer 5. The drawer 5 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 5",
+       "You close the drawer 5."
+      ],
+      [
+       "go to desk 1",
+       "You arrive at desk 1. On the desk 1, you see a cd 2, a cellphone 1, a desklamp 1, a keychain 1, a laptop 1, and a pen 2."
+      ],
+      [
+       "use desklamp 1",
+       "You turn on the desklamp 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Pencil-None-DeskLamp-319/trial_T20190908_135012_910702/game.tw-pddl",
+     "goal": "examine the pencil with the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see a cellphone 3, and a creditcard 3."
+      ],
+      [
+       "go to shelf 2",
+       "You arrive at shelf 2. On the shelf 2, you see nothing."
+      ],
+      [
+       "go to shelf 3",
+       "You arrive at shelf 3. On the shelf 3, you see a pen 3."
+      ],
+      [
+       "go to shelf 4",
+       "You arrive at shelf 4. On the shelf 4, you see a houseplant 1."
+      ],
+      [
+       "go to shelf 5",
+       "You arrive at shelf 5. On the shelf 5, you see nothing."
+      ],
+      [
+       "go to shelf 6",
+       "You arrive at shelf 6. On the shelf 6, you see nothing."
+      ],
+      [
+       "go to shelf 7",
+       "You arrive at shelf 7. On the shelf 7, you see nothing."
+      ],
+      [
+       "go to shelf 8",
+       "You arrive at shelf 8. On the shelf 8, you see nothing."
+      ],
+      [
+       "go to shelf 9",
+       "You arrive at shelf 9. On the shelf 9, you see a pencil 1."
+      ],
+      [
+       "take pencil 1 from shelf 9",
+       "You pick up the pencil 1 from the shelf 9."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see a cellphone 3, and a creditcard 3."
+      ],
+      [
+       "go to shelf 2",
+       "You arrive at shelf 2. On the shelf 2, you see nothing."
+      ],
+      [
+       "go to shelf 3",
+       "You arrive at shelf 3. On the shelf 3, you see a pen 3."
+      ],
+      [
+       "go to shelf 4",
+       "You arrive at shelf 4. On the shelf 4, you see a houseplant 1."
+      ],
+      [
+       "go to shelf 5",
+       "You arrive at shelf 5. On the shelf 5, you see nothing."
+      ],
+      [
+       "go to shelf 6",
+       "You arrive at shelf 6. On the shelf 6, you see nothing."
+      ],
+      [
+       "go to shelf 7",
+       "You arrive at shelf 7. On the shelf 7, you see nothing."
+      ],
+      [
+       "go to shelf 8",
+       "You arrive at shelf 8. On the shelf 8, you see nothing."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see nothing."
+      ],
+      [
+       "go to dresser 1",
+       "You arrive at dresser 1. On the dresser 1, you see a alarmclock 1, a cd 2, a cd 1, a cellphone 2, a cellphone 1, a creditcard 2, a desklamp 1, a pen 1, and a statue 1."
+      ],
+      [
+       "use desklamp 1",
+       "You turn on the desklamp 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Book-None-DeskLamp-304/trial_T20190908_083358_621419/game.tw-pddl",
+     "goal": "look at book under the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 2, a bed 1, a desk 1, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, and a shelf 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see a alarmclock 1, a book 1, a creditcard 3, a desklamp 1, a keychain 3, a keychain 2, a pencil 2, and a pencil 1."
+      ],
+      [
+       "take book 1 from shelf 1",
+       "You pick up the book 1 from the shelf 1."
+      ],
+      [
+       "use desklamp 1",
+       "You turn on the desklamp 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Mug-None-DeskLamp-323/trial_T20190907_041032_086791/game.tw-pddl",
+     "goal": "look at mug under the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 2, a bed 1, a desk 1, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a sidetable 2, and a sidetable 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sidetable 1",
+       "You arrive at sidetable 1. On the sidetable 1, you see a alarmclock 1."
+      ],
+      [
+       "go to sidetable 2",
+       "You arrive at sidetable 2. On the sidetable 2, you see a creditcard 3, a creditcard 2, a desklamp 2, and a pen 3."
+      ],
+      [
+       "go to safe 1",
+       "You arrive at safe 1. The safe 1 is closed."
+      ],
+      [
+       "open safe 1",
+       "You open the safe 1. The safe 1 is open. In it, you see a cellphone 1."
+      ],
+      [
+       "close safe 1",
+       "You close the safe 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a pencil 2."
+      ],
+      [
+       "go to dresser 1",
+       "You arrive at dresser 1. On the dresser 1, you see a cd 1, a cellphone 1, a pen 1, and a pencil 1."
+      ],
+      [
+       "go to drawer 1",
+       "You arrive at drawer 1. The drawer 1 is closed."
+      ],
+      [
+       "open drawer 1",
+       "You open the drawer 1. The drawer 1 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 1",
+       "You close the drawer 1."
+      ],
+      [
+       "go to drawer 2",
+       "You arrive at drawer 2. The drawer 2 is closed."
+      ],
+      [
+       "open drawer 2",
+       "You open the drawer 2. The drawer 2 is open. In it, you see a cellphone 2."
+      ],
+      [
+       "close drawer 2",
+       "You close the drawer 2."
+      ],
+      [
+       "go to drawer 3",
+       "You arrive at drawer 3. The drawer 3 is closed."
+      ],
+      [
+       "open drawer 3",
+       "You open the drawer 3. The drawer 3 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 3",
+       "You close the drawer 3."
+      ],
+      [
+       "go to drawer 4",
+       "You arrive at drawer 4. The drawer 4 is closed."
+      ],
+      [
+       "open drawer 4",
+       "You open the drawer 4. The drawer 4 is open. In it, you see a pen 2."
+      ],
+      [
+       "close drawer 4",
+       "You close the drawer 4."
+      ],
+      [
+       "go to drawer 5",
+       "You arrive at drawer 5. The drawer 5 is closed."
+      ],
+      [
+       "open drawer 5",
+       "You open the drawer 5. The drawer 5 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 5",
+       "You close the drawer 5."
+      ],
+      [
+       "go to drawer 6",
+       "You arrive at drawer 6. The drawer 6 is closed."
+      ],
+      [
+       "open drawer 6",
+       "You open the drawer 6. The drawer 6 is open. In it, you see a book 1."
+      ],
+      [
+       "close drawer 6",
+       "You close the drawer 6."
+      ],
+      [
+       "look",
+       "You are facing the drawer 7, and drawer 6. Next to it, you see nothing."
+      ],
+      [
+       "go to drawer 8",
+       "You arrive at drawer 8. The drawer 8 is closed."
+      ],
+      [
+       "open drawer 8",
+       "You open the drawer 8. The drawer 8 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 8",
+       "You close the drawer 8."
+      ],
+      [
+       "go to drawer 7",
+       "You arrive at drawer 7. The drawer 7 is closed."
+      ],
+      [
+       "open drawer 7",
+       "You open the drawer 7. The drawer 7 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 7",
+       "You close the drawer 7."
+      ],
+      [
+       "go to drawer 9",
+       "You arrive at drawer 9. The drawer 9 is closed."
+      ],
+      [
+       "open drawer 9",
+       "You open the drawer 9. The drawer 9 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 9",
+       "You close the drawer 9."
+      ],
+      [
+       "go to drawer 10",
+       "You arrive at drawer 10. The drawer 10 is closed."
+      ],
+      [
+       "open drawer 10",
+       "You open the drawer 10. The drawer 10 is open. In it, you see a cd 3."
+      ],
+      [
+       "close drawer 10",
+       "You close the drawer 10."
+      ],
+      [
+       "go to drawer 11",
+       "You arrive at drawer 11. The drawer 11 is closed."
+      ],
+      [
+       "open drawer 11",
+       "You open the drawer 11. The drawer 11 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 11",
+       "You close the drawer 11."
+      ],
+      [
+       "go to desk 1",
+       "You arrive at desk 1. On the desk 1, you see a bowl 2, a bowl 1, a cd 2, a creditcard 1, a desklamp 1, a keychain 1, and a mug 1."
+      ],
+      [
+       "take mug 1 from desk 1",
+       "You pick up the mug 1 from the desk 1."
+      ],
+      [
+       "use desklamp 1",
+       "You turn on the desklamp 1."
+      ]
+     ],
+     "won": true
+    }
+   ],
+   "eval": [
+    "json_2.1.1/valid_seen/look_at_obj_in_light-AlarmClock-None-DeskLamp-323/trial_T20190909_044715_250790/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-Bowl-None-DeskLamp-301/trial_T20190909_150719_492274/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-Bowl-None-DeskLamp-316/trial_T20190908_230702_962704/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-Box-None-DeskLamp-205/trial_T20190907_074425_330493/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-CD-None-DeskLamp-302/trial_T20190907_154618_526741/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-CD-None-DeskLamp-314/trial_T20190907_114323_767231/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-CD-None-DeskLamp-320/trial_T20190907_224451_655673/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-KeyChain-None-DeskLamp-327/trial_T20190906_202601_548273/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-Laptop-None-DeskLamp-328/trial_T20190908_201550_622420/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-Pillow-None-DeskLamp-302/trial_T20190909_150916_682139/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-Pillow-None-DeskLamp-323/trial_T20190908_053153_077977/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-Statue-None-DeskLamp-216/trial_T20190909_193045_208933/game.tw-pddl",
+    "json_2.1.1/valid_seen/look_at_obj_in_light-Vase-None-DeskLamp-303/trial_T20190907_150418_457594/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222917_366542/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222933_607649/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222951_616606/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Book-None-DeskLamp-308/trial_T20190908_020029_636862/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Book-None-DeskLamp-308/trial_T20190908_020048_814402/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Book-None-DeskLamp-308/trial_T20190908_144951_587345/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Bowl-None-DeskLamp-308/trial_T20190907_133919_856963/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Bowl-None-DeskLamp-308/trial_T20190907_133935_066606/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Bowl-None-DeskLamp-308/trial_T20190907_133953_562557/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-CD-None-DeskLamp-308/trial_T20190908_141942_810052/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-CD-None-DeskLamp-308/trial_T20190908_141958_463362/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-CD-None-DeskLamp-308/trial_T20190908_142046_281296/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Mug-None-DeskLamp-308/trial_T20190908_161733_213242/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Mug-None-DeskLamp-308/trial_T20190908_201421_021646/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Mug-None-DeskLamp-308/trial_T20190908_201444_037645/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Pencil-None-DeskLamp-308/trial_T20190908_220545_153480/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Pencil-None-DeskLamp-308/trial_T20190908_220604_010430/game.tw-pddl",
+    "json_2.1.1/valid_unseen/look_at_obj_in_light-Pencil-None-DeskLamp-308/trial_T20190908_220656_510400/game.tw-pddl"
+   ],
+   "evidence": [
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Pillow-None-DeskLamp-301/trial_T20190908_012827_451848/game.tw-pddl",
+     "goal": "look at pillow under the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 17, a drawer 16, a drawer 15, a drawer 14, a drawer 13, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1."
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Pillow-None-DeskLamp-309/trial_T20190908_113843_792729/game.tw-pddl",
+     "goal": "look at pillow under the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 3, a armchair 2, a armchair 1, a bed 1, a cabinet 2, a cabinet 1, a desk 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, and a sidetable 1."
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Bowl-None-DeskLamp-327/trial_T20190907_094410_444756/game.tw-pddl",
+     "goal": "look at bowl under the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1."
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Box-None-DeskLamp-218/trial_T20190909_042617_850108/game.tw-pddl",
+     "goal": "examine the box with the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1."
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Pillow-None-DeskLamp-314/trial_T20190908_115823_954045/game.tw-pddl",
+     "goal": "examine the pillow with the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, and a garbagecan 1."
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Book-None-DeskLamp-303/trial_T20190909_085252_411891/game.tw-pddl",
+     "goal": "examine the book with the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, and a sidetable 1."
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-CD-None-DeskLamp-324/trial_T20190907_230854_854662/game.tw-pddl",
+     "goal": "examine the cd with the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1."
+    },
+    {
+     "game": "json_2.1.1/train/look_at_obj_in_light-Pillow-None-DeskLamp-216/trial_T20190907_220638_188496/game.tw-pddl",
+     "goal": "examine the pillow with the desklamp.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a shelf 1, a sidetable 3, a sidetable 2, a sidetable 1, and a sofa 1."
+    }
+   ],
+   "verify": [
+    "json_2.1.1/train/look_at_obj_in_light-Laptop-None-DeskLamp-216/trial_T20190907_185541_681881/game.tw-pddl",
+    "json_2.1.1/train/look_at_obj_in_light-Pencil-None-DeskLamp-328/trial_T20190906_201152_550531/game.tw-pddl",
+    "json_2.1.1/train/look_at_obj_in_light-Pillow-None-DeskLamp-305/trial_T20190909_110653_100811/game.tw-pddl",
+    "json_2.1.1/train/look_at_obj_in_light-CD-None-DeskLamp-317/trial_T20190908_032856_004482/game.tw-pddl",
+    "json_2.1.1/train/look_at_obj_in_light-Pen-None-DeskLamp-319/trial_T20190908_222409_540184/game.tw-pddl",
+    "json_2.1.1/train/look_at_obj_in_light-CellPhone-None-DeskLamp-320/trial_T20190908_093241_795263/game.tw-pddl",
+    "json_2.1.1/train/look_at_obj_in_light-CellPhone-None-DeskLamp-318/trial_T20190909_005855_117187/game.tw-pddl",
+    "json_2.1.1/train/look_at_obj_in_light-Pillow-None-DeskLamp-320/trial_T20190906_225859_247598/game.tw-pddl",
+    "json_2.1.1/train/look_at_obj_in_light-AlarmClock-None-DeskLamp-317/trial_T20190909_070740_947572/game.tw-pddl",
+    "json_2.1.1/train/look_at_obj_in_light-CellPhone-None-DeskLamp-320/trial_T20190908_093231_036941/game.tw-pddl"
+   ]
+  },
+  "pick_and_place_simple": {
+   "discovery": [
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-KeyChain-None-SideTable-322/trial_T20190909_091659_910683/game.tw-pddl",
+     "goal": "put a keychain in sidetable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 1, a bed 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, and a sidetable 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sidetable 1",
+       "You arrive at sidetable 1. On the sidetable 1, you see a creditcard 2, a creditcard 1, a mug 3, a pen 1, and a pencil 2."
+      ],
+      [
+       "go to sidetable 2",
+       "You arrive at sidetable 2. On the sidetable 2, you see a cellphone 2, and a pencil 3."
+      ],
+      [
+       "go to dresser 1",
+       "You arrive at dresser 1. On the dresser 1, you see a alarmclock 1, a book 1, a keychain 1, a laptop 1, a mug 1, and a pencil 1."
+      ],
+      [
+       "take keychain 1 from dresser 1",
+       "You pick up the keychain 1 from the dresser 1."
+      ],
+      [
+       "go to sidetable 1",
+       "You arrive at sidetable 1. On the sidetable 1, you see a creditcard 2, a creditcard 1, a mug 3, a pen 1, and a pencil 2."
+      ],
+      [
+       "move keychain 1 to sidetable 1",
+       "You move the keychain 1 to the sidetable 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-Kettle-None-Shelf-1/trial_T20190907_011711_519188/game.tw-pddl",
+     "goal": "put a kettle in shelf.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to stoveburner 1",
+       "You arrive at stoveburner 1. On the stoveburner 1, you see a kettle 2."
+      ],
+      [
+       "take kettle 2 from stoveburner 1",
+       "You pick up the kettle 2 from the stoveburner 1."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see a papertowelroll 1, a peppershaker 1, and a winebottle 1."
+      ],
+      [
+       "move kettle 2 to shelf 1",
+       "You move the kettle 2 to the shelf 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-PepperShaker-None-Shelf-20/trial_T20190907_162334_232853/game.tw-pddl",
+     "goal": "put a peppershaker in shelf.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see a saltshaker 1, and a winebottle 1."
+      ],
+      [
+       "go to shelf 2",
+       "You arrive at shelf 2. On the shelf 2, you see a mug 1."
+      ],
+      [
+       "go to shelf 3",
+       "You arrive at shelf 3. On the shelf 3, you see nothing."
+      ],
+      [
+       "go to drawer 1",
+       "You arrive at drawer 1. On the drawer 1, you see nothing."
+      ],
+      [
+       "go to diningtable 1",
+       "You arrive at diningtable 1. On the diningtable 1, you see a bowl 1, a bread 1, a butterknife 2, a fork 1, a knife 1, a ladle 2, a lettuce 3, a lettuce 2, a lettuce 1, a pan 2, a peppershaker 1, a pot 2, a saltshaker 3, a soapbottle 3, and a soapbottle 1."
+      ],
+      [
+       "take peppershaker 1 from diningtable 1",
+       "You pick up the peppershaker 1 from the diningtable 1."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see a saltshaker 1, and a winebottle 1."
+      ],
+      [
+       "move peppershaker 1 to shelf 1",
+       "You move the peppershaker 1 to the shelf 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-Book-None-Dresser-319/trial_T20190906_204235_124843/game.tw-pddl",
+     "goal": "put some book on dresser.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see a statue 1."
+      ],
+      [
+       "go to shelf 2",
+       "You arrive at shelf 2. On the shelf 2, you see a creditcard 1, and a keychain 3."
+      ],
+      [
+       "go to shelf 3",
+       "You arrive at shelf 3. On the shelf 3, you see nothing."
+      ],
+      [
+       "go to shelf 4",
+       "You arrive at shelf 4. On the shelf 4, you see a houseplant 1."
+      ],
+      [
+       "go to shelf 5",
+       "You arrive at shelf 5. On the shelf 5, you see a alarmclock 1, and a cd 3."
+      ],
+      [
+       "go to shelf 6",
+       "You arrive at shelf 6. On the shelf 6, you see nothing."
+      ],
+      [
+       "go to shelf 7",
+       "You arrive at shelf 7. On the shelf 7, you see nothing."
+      ],
+      [
+       "go to shelf 8",
+       "You arrive at shelf 8. On the shelf 8, you see a pencil 2."
+      ],
+      [
+       "go to shelf 9",
+       "You arrive at shelf 9. On the shelf 9, you see nothing."
+      ],
+      [
+       "go to dresser 1",
+       "You arrive at dresser 1. On the dresser 1, you see a cd 2, a cd 1, a desklamp 1, a keychain 2, a keychain 1, a pen 2, and a pen 1."
+      ],
+      [
+       "go to drawer 1",
+       "You arrive at drawer 1. The drawer 1 is closed."
+      ],
+      [
+       "open drawer 1",
+       "You open the drawer 1. The drawer 1 is open. In it, you see a pencil 1."
+      ],
+      [
+       "close drawer 1",
+       "You close the drawer 1."
+      ],
+      [
+       "go to drawer 2",
+       "You arrive at drawer 2. The drawer 2 is closed."
+      ],
+      [
+       "open drawer 2",
+       "You open the drawer 2. The drawer 2 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 2",
+       "You close the drawer 2."
+      ],
+      [
+       "go to drawer 3",
+       "You arrive at drawer 3. The drawer 3 is closed."
+      ],
+      [
+       "open drawer 3",
+       "You open the drawer 3. The drawer 3 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 3",
+       "You close the drawer 3."
+      ],
+      [
+       "go to drawer 4",
+       "You arrive at drawer 4. The drawer 4 is closed."
+      ],
+      [
+       "open drawer 4",
+       "You open the drawer 4. The drawer 4 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 4",
+       "You close the drawer 4."
+      ],
+      [
+       "go to drawer 5",
+       "You arrive at drawer 5. The drawer 5 is closed."
+      ],
+      [
+       "open drawer 5",
+       "You open the drawer 5. The drawer 5 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 5",
+       "You close the drawer 5."
+      ],
+      [
+       "go to drawer 6",
+       "You arrive at drawer 6. The drawer 6 is closed."
+      ],
+      [
+       "open drawer 6",
+       "You open the drawer 6. The drawer 6 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 6",
+       "You close the drawer 6."
+      ],
+      [
+       "go to drawer 7",
+       "You arrive at drawer 7. The drawer 7 is closed."
+      ],
+      [
+       "open drawer 7",
+       "You open the drawer 7. The drawer 7 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 7",
+       "You close the drawer 7."
+      ],
+      [
+       "go to drawer 8",
+       "You arrive at drawer 8. The drawer 8 is closed."
+      ],
+      [
+       "open drawer 8",
+       "You open the drawer 8. The drawer 8 is open. In it, you see a cellphone 1."
+      ],
+      [
+       "close drawer 8",
+       "You close the drawer 8."
+      ],
+      [
+       "go to drawer 9",
+       "You arrive at drawer 9. The drawer 9 is closed."
+      ],
+      [
+       "open drawer 9",
+       "You open the drawer 9. The drawer 9 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 9",
+       "You close the drawer 9."
+      ],
+      [
+       "go to drawer 10",
+       "You arrive at drawer 10. The drawer 10 is closed."
+      ],
+      [
+       "open drawer 10",
+       "You open the drawer 10. The drawer 10 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 10",
+       "You close the drawer 10."
+      ],
+      [
+       "go to bed 1",
+       "You arrive at bed 1. On the bed 1, you see a book 1, a cellphone 2, a laptop 1, a pillow 2, and a pillow 1."
+      ],
+      [
+       "take book 1 from bed 1",
+       "You pick up the book 1 from the bed 1."
+      ],
+      [
+       "go to dresser 1",
+       "You arrive at dresser 1. On the dresser 1, you see a cd 2, a cd 1, a desklamp 1, a keychain 2, a keychain 1, a pen 2, and a pen 1."
+      ],
+      [
+       "move book 1 to dresser 1",
+       "You move the book 1 to the dresser 1."
+      ]
+     ],
+     "won": true
+    }
+   ],
+   "eval": [
+    "json_2.1.1/valid_seen/pick_and_place_simple-Book-None-SideTable-329/trial_T20190908_050633_745514/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Book-None-Sofa-229/trial_T20190907_042856_259139/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Bowl-None-CoffeeTable-201/trial_T20190907_171639_045329/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Box-None-Dresser-224/trial_T20190907_164104_229696/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Candle-None-Cart-401/trial_T20190909_081908_677973/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Candle-None-Toilet-407/trial_T20190909_055248_059513/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Candle-None-Toilet-429/trial_T20190908_052232_887934/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-CellPhone-None-ArmChair-318/trial_T20190909_120047_968274/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-CellPhone-None-Bed-324/trial_T20190907_233817_198528/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-CreditCard-None-ArmChair-201/trial_T20190908_124340_258012/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-CreditCard-None-Drawer-227/trial_T20190909_010644_297017/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Egg-None-Microwave-4/trial_T20190906_234406_356490/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Knife-None-SideTable-3/trial_T20190918_184236_557252/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Mug-None-Dresser-311/trial_T20190909_152837_739016/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Mug-None-SideTable-329/trial_T20190909_032318_169393/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Mug-None-SideTable-329/trial_T20190909_032340_274147/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Newspaper-None-Sofa-224/trial_T20190909_111324_949106/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Pencil-None-Desk-310/trial_T20190909_113054_894334/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Pencil-None-Dresser-330/trial_T20190909_071128_012892/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-RemoteControl-None-ArmChair-230/trial_T20190909_021000_274398/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-RemoteControl-None-Sofa-207/trial_T20190909_153609_373481/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-SoapBar-None-Cart-401/trial_T20190907_054906_608944/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-SoapBottle-None-Cabinet-414/trial_T20190908_110131_524518/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-SoapBottle-None-CounterTop-417/trial_T20190910_112922_368384/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-SprayBottle-None-Cabinet-413/trial_T20190907_114931_692464/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-SprayBottle-None-GarbageCan-409/trial_T20190908_054742_818364/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-SprayBottle-None-Toilet-415/trial_T20190909_075955_678702/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-SprayBottle-None-Toilet-418/trial_T20190906_190942_706186/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-TissueBox-None-Toilet-426/trial_T20190910_155319_795672/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-ToiletPaper-None-ToiletPaperHanger-406/trial_T20190908_122858_883968/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-ToiletPaper-None-ToiletPaperHanger-415/trial_T20190908_050518_595510/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Tomato-None-Microwave-13/trial_T20190908_124829_632660/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Vase-None-CoffeeTable-207/trial_T20190909_091246_807206/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-Watch-None-SideTable-222/trial_T20190909_051813_197569/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_and_place_simple-WineBottle-None-Shelf-7/trial_T20190907_200154_378982/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Mug-None-Desk-308/trial_T20190908_125200_737896/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Mug-None-Desk-308/trial_T20190909_203041_433487/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Mug-None-Desk-308/trial_T20190909_210238_431966/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Pencil-None-Shelf-308/trial_T20190908_121952_610012/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Pencil-None-Shelf-308/trial_T20190908_122024_052056/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Pencil-None-Shelf-308/trial_T20190908_122154_042763/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190906_184021_215264/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190918_154326_823501/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190918_154424_844749/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Cabinet-10/trial_T20190906_191429_743650/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Cabinet-10/trial_T20190906_191445_723170/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Cabinet-10/trial_T20190906_191501_563086/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Drawer-10/trial_T20190909_021613_077537/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Drawer-10/trial_T20190909_021650_880235/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Drawer-10/trial_T20190909_021728_339782/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-SoapBottle-None-Toilet-424/trial_T20190907_004321_405868/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-SoapBottle-None-Toilet-424/trial_T20190907_004351_281384/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-SoapBottle-None-Toilet-424/trial_T20190907_004404_604165/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Vase-None-Safe-219/trial_T20190908_205204_244321/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Vase-None-Safe-219/trial_T20190908_205221_748352/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Vase-None-Safe-219/trial_T20190908_205246_776817/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Watch-None-Safe-219/trial_T20190907_074524_006355/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Watch-None-Safe-219/trial_T20190907_074556_124850/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_and_place_simple-Watch-None-Safe-219/trial_T20190907_074643_810052/game.tw-pddl"
+   ],
+   "evidence": [
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-Book-None-SideTable-329/trial_T20190908_050528_227725/game.tw-pddl",
+     "goal": "put some book on sidetable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, and a sidetable 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-Bowl-None-Fridge-6/trial_T20190906_231022_136645/game.tw-pddl",
+     "goal": "put some bowl on fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 4, a countertop 3, a countertop 2, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-Plate-None-Dresser-218/trial_T20190907_013508_041432/game.tw-pddl",
+     "goal": "put some plate on dresser.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-Pencil-None-SideTable-322/trial_T20190908_112624_358795/game.tw-pddl",
+     "goal": "put a pencil in sidetable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 1, a bed 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, and a sidetable 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-Statue-None-Dresser-319/trial_T20190909_122754_357020/game.tw-pddl",
+     "goal": "put a statue in dresser.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-Watch-None-CoffeeTable-213/trial_T20190909_010823_096862/game.tw-pddl",
+     "goal": "put a watch in coffeetable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 1, a diningtable 1, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 3, a sidetable 2, a sidetable 1, and a sofa 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-Book-None-Bed-312/trial_T20190908_103648_829231/game.tw-pddl",
+     "goal": "put a book in bed.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 2, a drawer 1, a garbagecan 1, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, and a sidetable 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_and_place_simple-HandTowel-None-CounterTop-421/trial_T20190909_145453_953814/game.tw-pddl",
+     "goal": "put a handtowel in countertop.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a countertop 1, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1."
+    }
+   ],
+   "verify": [
+    "json_2.1.1/train/pick_and_place_simple-Pen-None-Shelf-330/trial_T20190908_145416_946403/game.tw-pddl",
+    "json_2.1.1/train/pick_and_place_simple-Book-None-Dresser-319/trial_T20190906_204338_649353/game.tw-pddl",
+    "json_2.1.1/train/pick_and_place_simple-Candle-None-Cabinet-418/trial_T20190908_060717_673544/game.tw-pddl",
+    "json_2.1.1/train/pick_and_place_simple-CreditCard-None-DiningTable-329/trial_T20190909_013611_626994/game.tw-pddl",
+    "json_2.1.1/train/pick_and_place_simple-Laptop-None-Ottoman-210/trial_T20190909_021456_923505/game.tw-pddl",
+    "json_2.1.1/train/pick_and_place_simple-HandTowel-None-Cabinet-414/trial_T20190908_121329_452295/game.tw-pddl",
+    "json_2.1.1/train/pick_and_place_simple-Book-None-Desk-314/trial_T20190908_111952_629798/game.tw-pddl",
+    "json_2.1.1/train/pick_and_place_simple-Watch-None-DiningTable-326/trial_T20190912_074626_851427/game.tw-pddl",
+    "json_2.1.1/train/pick_and_place_simple-SoapBottle-None-Toilet-429/trial_T20190911_233539_300314/game.tw-pddl",
+    "json_2.1.1/train/pick_and_place_simple-Vase-None-SideTable-209/trial_T20190909_053413_979971/game.tw-pddl"
+   ]
+  },
+  "pick_clean_then_place_in_recep": {
+   "discovery": [
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-ButterKnife-None-SideTable-21/trial_T20190907_162153_244284/game.tw-pddl",
+     "goal": "put a clean butterknife in sidetable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see a apple 1, a potato 2, and a spatula 2."
+      ],
+      [
+       "go to sidetable 1",
+       "You arrive at sidetable 1. On the sidetable 1, you see a butterknife 2, a cup 2, a cup 1, a lettuce 3, a potato 1, a saltshaker 1, and a spoon 1."
+      ],
+      [
+       "take butterknife 2 from sidetable 1",
+       "You pick up the butterknife 2 from the sidetable 1."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see a apple 1, a potato 2, and a spatula 2."
+      ],
+      [
+       "clean butterknife 2 with sinkbasin 1",
+       "You clean the butterknife 2 using the sinkbasin 1."
+      ],
+      [
+       "go to sidetable 1",
+       "You arrive at sidetable 1. On the sidetable 1, you see a cup 2, a cup 1, a lettuce 3, a potato 1, a saltshaker 1, and a spoon 1."
+      ],
+      [
+       "move butterknife 2 to sidetable 1",
+       "You move the butterknife 2 to the sidetable 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-Plate-None-Shelf-1/trial_T20190907_114717_584270/game.tw-pddl",
+     "goal": "clean some plate and put it in shelf.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to toaster 1",
+       "You arrive at toaster 1. On the toaster 1, you see nothing."
+      ],
+      [
+       "go to stoveburner 1",
+       "You arrive at stoveburner 1. On the stoveburner 1, you see a pot 2."
+      ],
+      [
+       "look",
+       "You are facing the stoveburner 2, and stoveburner 1. Next to it, you see nothing."
+      ],
+      [
+       "go to shelf 3",
+       "You arrive at shelf 3. On the shelf 3, you see nothing."
+      ],
+      [
+       "go to stoveburner 2",
+       "You arrive at stoveburner 2. On the stoveburner 2, you see nothing."
+      ],
+      [
+       "go to stoveburner 3",
+       "You arrive at stoveburner 3. On the stoveburner 3, you see a pot 3."
+      ],
+      [
+       "look",
+       "You are facing the stoveburner 4, and stoveburner 3. Next to it, you see nothing."
+      ],
+      [
+       "go to cabinet 3",
+       "You arrive at cabinet 3. The cabinet 3 is closed."
+      ],
+      [
+       "open cabinet 3",
+       "You open the cabinet 3. The cabinet 3 is open. In it, you see a glassbottle 1, and a saltshaker 1."
+      ],
+      [
+       "close cabinet 3",
+       "You close the cabinet 3."
+      ],
+      [
+       "go to stoveburner 4",
+       "You arrive at stoveburner 4. On the stoveburner 4, you see nothing."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see nothing."
+      ],
+      [
+       "go to shelf 2",
+       "You arrive at shelf 2. On the shelf 2, you see nothing."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "open microwave 1",
+       "You open the microwave 1. The microwave 1 is open. In it, you see nothing."
+      ],
+      [
+       "close microwave 1",
+       "You close the microwave 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a potato 1, a soapbottle 3, and a soapbottle 2."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a plate 2, a pot 1, and a tomato 2."
+      ],
+      [
+       "take plate 2 from fridge 1",
+       "You pick up the plate 2 from the fridge 1."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing."
+      ],
+      [
+       "clean plate 2 with sinkbasin 1",
+       "You clean the plate 2 using the sinkbasin 1."
+      ],
+      [
+       "look",
+       "You are facing the sinkbasin 1. Next to it, you see nothing."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see nothing."
+      ],
+      [
+       "move plate 2 to shelf 1",
+       "You move the plate 2 to the shelf 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-Bowl-None-Fridge-6/trial_T20190908_081813_754018/game.tw-pddl",
+     "goal": "put a clean bowl in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 4, a countertop 3, a countertop 2, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to toaster 1",
+       "You arrive at toaster 1. On the toaster 1, you see nothing."
+      ],
+      [
+       "go to stoveburner 1",
+       "You arrive at stoveburner 1. On the stoveburner 1, you see a pot 1."
+      ],
+      [
+       "go to stoveburner 2",
+       "You arrive at stoveburner 2. On the stoveburner 2, you see a pot 2."
+      ],
+      [
+       "go to stoveburner 3",
+       "You arrive at stoveburner 3. On the stoveburner 3, you see a pot 3."
+      ],
+      [
+       "go to stoveburner 4",
+       "You arrive at stoveburner 4. On the stoveburner 4, you see nothing."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "open microwave 1",
+       "You open the microwave 1. The microwave 1 is open. In it, you see nothing."
+      ],
+      [
+       "close microwave 1",
+       "You close the microwave 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a knife 1, and a soapbottle 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a egg 1, a potato 1, a tomato 3, and a tomato 2."
+      ],
+      [
+       "close fridge 1",
+       "You close the fridge 1."
+      ],
+      [
+       "go to drawer 1",
+       "You arrive at drawer 1. The drawer 1 is closed."
+      ],
+      [
+       "open drawer 1",
+       "You open the drawer 1. The drawer 1 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 1",
+       "You close the drawer 1."
+      ],
+      [
+       "go to drawer 2",
+       "You arrive at drawer 2. The drawer 2 is closed."
+      ],
+      [
+       "open drawer 2",
+       "You open the drawer 2. The drawer 2 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 2",
+       "You close the drawer 2."
+      ],
+      [
+       "go to drawer 3",
+       "You arrive at drawer 3. The drawer 3 is closed."
+      ],
+      [
+       "open drawer 3",
+       "You open the drawer 3. The drawer 3 is open. In it, you see a dishsponge 1, and a spatula 2."
+      ],
+      [
+       "close drawer 3",
+       "You close the drawer 3."
+      ],
+      [
+       "go to drawer 4",
+       "You arrive at drawer 4. The drawer 4 is closed."
+      ],
+      [
+       "open drawer 4",
+       "You open the drawer 4. The drawer 4 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 4",
+       "You close the drawer 4."
+      ],
+      [
+       "go to countertop 1",
+       "You arrive at countertop 1. On the countertop 1, you see a apple 1."
+      ],
+      [
+       "go to countertop 2",
+       "You arrive at countertop 2. On the countertop 2, you see a apple 2, a butterknife 1, a kettle 1, a mug 1, a papertowelroll 1, a saltshaker 1, a spatula 1, and a spoon 1."
+      ],
+      [
+       "go to countertop 3",
+       "You arrive at countertop 3. On the countertop 3, you see a bowl 2, a bread 2, a cup 1, a knife 3, a lettuce 1, and a mug 2."
+      ],
+      [
+       "take bowl 2 from countertop 3",
+       "You pick up the bowl 2 from the countertop 3."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing."
+      ],
+      [
+       "clean bowl 2 with sinkbasin 1",
+       "You clean the bowl 2 using the sinkbasin 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a egg 1, a potato 1, a tomato 3, and a tomato 2."
+      ],
+      [
+       "move bowl 2 to fridge 1",
+       "You move the bowl 2 to the fridge 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-SoapBar-None-GarbageCan-407/trial_T20190907_222235_383777/game.tw-pddl",
+     "goal": "put a clean soapbar in garbagecan.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to toilet 1",
+       "You arrive at toilet 1. On the toilet 1, you see a candle 1, a spraybottle 1, a toiletpaper 3, and a toiletpaper 2."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing."
+      ],
+      [
+       "go to sinkbasin 2",
+       "You arrive at sinkbasin 2. On the sinkbasin 2, you see nothing."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see nothing."
+      ],
+      [
+       "go to countertop 1",
+       "You arrive at countertop 1. On the countertop 1, you see a mirror 1, a spraybottle 2, and a toiletpaper 1."
+      ],
+      [
+       "go to cabinet 1",
+       "You arrive at cabinet 1. The cabinet 1 is closed."
+      ],
+      [
+       "open cabinet 1",
+       "You open the cabinet 1. The cabinet 1 is open. In it, you see nothing."
+      ],
+      [
+       "close cabinet 1",
+       "You close the cabinet 1."
+      ],
+      [
+       "go to cabinet 2",
+       "You arrive at cabinet 2. The cabinet 2 is closed."
+      ],
+      [
+       "open cabinet 2",
+       "You open the cabinet 2. The cabinet 2 is open. In it, you see a candle 2, and a soapbar 3."
+      ],
+      [
+       "take soapbar 3 from cabinet 2",
+       "You pick up the soapbar 3 from the cabinet 2."
+      ],
+      [
+       "go to sinkbasin 2",
+       "You arrive at sinkbasin 2. On the sinkbasin 2, you see nothing."
+      ],
+      [
+       "clean soapbar 3 with sinkbasin 2",
+       "You clean the soapbar 3 using the sinkbasin 2."
+      ],
+      [
+       "look",
+       "You are facing the sinkbasin 2. Next to it, you see nothing."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see nothing."
+      ],
+      [
+       "move soapbar 3 to garbagecan 1",
+       "You move the soapbar 3 to the garbagecan 1."
+      ]
+     ],
+     "won": true
+    }
+   ],
+   "eval": [
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-ButterKnife-None-CounterTop-8/trial_T20190909_105559_983897/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-ButterKnife-None-DiningTable-16/trial_T20190909_114508_617301/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-ButterKnife-None-Drawer-2/trial_T20190908_121728_511866/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-ButterKnife-None-Drawer-30/trial_T20190908_052007_212776/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-ButterKnife-None-Drawer-8/trial_T20190909_124425_112757/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Cloth-None-Cabinet-405/trial_T20190907_080903_889497/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Cloth-None-Drawer-423/trial_T20190908_140701_251653/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-DishSponge-None-Cart-401/trial_T20190907_024634_972453/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-DishSponge-None-CounterTop-403/trial_T20190908_144357_621068/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Fork-None-CounterTop-23/trial_T20190908_233922_171295/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Fork-None-Drawer-8/trial_T20190908_132152_999725/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Ladle-None-CounterTop-14/trial_T20190909_113844_191747/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Ladle-None-CounterTop-8/trial_T20190909_121908_219603/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Ladle-None-DiningTable-16/trial_T20190909_183724_205399/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Ladle-None-DiningTable-27/trial_T20190911_131350_027076/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Ladle-None-DiningTable-4/trial_T20190909_164840_568811/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Lettuce-None-CounterTop-16/trial_T20190909_051630_092360/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Lettuce-None-Fridge-19/trial_T20190908_100138_446072/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-26/trial_T20190907_233056_022802/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Plate-None-CounterTop-19/trial_T20190908_212725_836398/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Plate-None-Fridge-5/trial_T20190909_112854_740612/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-SoapBar-None-Cabinet-402/trial_T20190908_055221_984342/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-SoapBar-None-Drawer-423/trial_T20190906_202340_749336/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-SoapBar-None-Toilet-410/trial_T20190906_201106_979461/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-SoapBar-None-Toilet-428/trial_T20190907_041436_588106/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Spatula-None-DiningTable-4/trial_T20190909_002804_564168/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Tomato-None-CounterTop-25/trial_T20190909_012550_586494/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Bowl-None-Cabinet-10/trial_T20190909_061130_844814/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Bowl-None-Cabinet-10/trial_T20190909_061158_110530/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Bowl-None-Cabinet-10/trial_T20190909_061232_368489/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Cloth-None-Cabinet-424/trial_T20190908_022321_380927/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Cloth-None-Cabinet-424/trial_T20190908_022436_073995/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Cloth-None-CounterTop-424/trial_T20190908_100632_546757/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Cloth-None-CounterTop-424/trial_T20190908_114340_674467/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Egg-None-Microwave-10/trial_T20190909_120554_888709/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Egg-None-Microwave-10/trial_T20190909_120632_691361/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Egg-None-Microwave-10/trial_T20190909_120712_273910/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Knife-None-CounterTop-10/trial_T20190909_110347_624008/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Knife-None-CounterTop-10/trial_T20190909_110445_675754/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Knife-None-CounterTop-10/trial_T20190909_110531_148235/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_221208_560499/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_221300_362511/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_221355_558505/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_032434_013084/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_032518_891433/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_032543_712058/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Plate-None-CounterTop-10/trial_T20190908_213356_017769/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Plate-None-CounterTop-10/trial_T20190908_213420_728917/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Plate-None-CounterTop-10/trial_T20190908_213533_897289/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-SoapBar-None-Cabinet-424/trial_T20190908_214926_337906/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-SoapBar-None-Cabinet-424/trial_T20190908_214946_567644/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-SoapBar-None-Cabinet-424/trial_T20190908_215019_162873/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-SoapBar-None-CounterTop-424/trial_T20190907_074045_109439/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-SoapBar-None-CounterTop-424/trial_T20190907_074106_050405/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-SoapBar-None-CounterTop-424/trial_T20190907_074124_966890/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Spatula-None-Drawer-10/trial_T20190907_080730_211959/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Spatula-None-Drawer-10/trial_T20190907_080800_275989/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Spatula-None-Drawer-10/trial_T20190907_080825_222432/game.tw-pddl"
+   ],
+   "evidence": [
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-Kettle-None-StoveBurner-18/trial_T20190907_153921_393288/game.tw-pddl",
+     "goal": "clean some kettle and put it in stoveburner.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a safe 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-Egg-None-DiningTable-23/trial_T20190908_083830_429005/game.tw-pddl",
+     "goal": "clean some egg and put it in diningtable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-Egg-None-DiningTable-11/trial_T20190908_021917_263280/game.tw-pddl",
+     "goal": "put a clean egg in diningtable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-ButterKnife-None-CounterTop-25/trial_T20190907_211941_014478/game.tw-pddl",
+     "goal": "clean some butterknife and put it in countertop.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-Ladle-None-Cabinet-16/trial_T20190910_022155_266935/game.tw-pddl",
+     "goal": "put a clean ladle in cabinet.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 27, a cabinet 26, a cabinet 25, a cabinet 24, a cabinet 23, a cabinet 22, a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-Lettuce-None-CounterTop-13/trial_T20190909_035118_268695/game.tw-pddl",
+     "goal": "clean some lettuce and put it in countertop.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 26, a cabinet 25, a cabinet 24, a cabinet 23, a cabinet 22, a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-Spatula-None-DiningTable-4/trial_T20190909_002715_673638/game.tw-pddl",
+     "goal": "clean some spatula and put it in diningtable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_clean_then_place_in_recep-Kettle-None-StoveBurner-15/trial_T20190908_082135_179964/game.tw-pddl",
+     "goal": "put a clean kettle in stoveburner.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    }
+   ],
+   "verify": [
+    "json_2.1.1/train/pick_clean_then_place_in_recep-SoapBar-None-Toilet-408/trial_T20190908_122506_504898/game.tw-pddl",
+    "json_2.1.1/train/pick_clean_then_place_in_recep-Bowl-None-DiningTable-21/trial_T20190907_000053_568571/game.tw-pddl",
+    "json_2.1.1/train/pick_clean_then_place_in_recep-Pot-None-Shelf-1/trial_T20190908_001818_534745/game.tw-pddl",
+    "json_2.1.1/train/pick_clean_then_place_in_recep-Egg-None-SideTable-21/trial_T20190908_033911_286565/game.tw-pddl",
+    "json_2.1.1/train/pick_clean_then_place_in_recep-SoapBar-None-GarbageCan-416/trial_T20190907_024631_400025/game.tw-pddl",
+    "json_2.1.1/train/pick_clean_then_place_in_recep-Knife-None-Drawer-22/trial_T20190907_224827_746945/game.tw-pddl",
+    "json_2.1.1/train/pick_clean_then_place_in_recep-Cloth-None-Toilet-402/trial_T20190906_201408_789070/game.tw-pddl",
+    "json_2.1.1/train/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-25/trial_T20190907_224032_931193/game.tw-pddl",
+    "json_2.1.1/train/pick_clean_then_place_in_recep-Pot-None-Fridge-4/trial_T20190908_153216_036779/game.tw-pddl",
+    "json_2.1.1/train/pick_clean_then_place_in_recep-Cloth-None-Drawer-411/trial_T20190907_202148_426436/game.tw-pddl"
+   ]
+  },
+  "pick_cool_then_place_in_recep": {
+   "discovery": [
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Bowl-None-Shelf-5/trial_T20190907_170219_219243/game.tw-pddl",
+     "goal": "cool some bowl and put it in shelf.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to toaster 1",
+       "You arrive at toaster 1. On the toaster 1, you see nothing."
+      ],
+      [
+       "go to stoveburner 1",
+       "You arrive at stoveburner 1. On the stoveburner 1, you see a pot 1."
+      ],
+      [
+       "go to stoveburner 2",
+       "You arrive at stoveburner 2. On the stoveburner 2, you see a pan 1."
+      ],
+      [
+       "go to stoveburner 3",
+       "You arrive at stoveburner 3. On the stoveburner 3, you see a pot 2, and a pot 1."
+      ],
+      [
+       "go to stoveburner 4",
+       "You arrive at stoveburner 4. On the stoveburner 4, you see a pan 2, and a pan 1."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see a cup 1, a knife 3, a ladle 2, and a tomato 3."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see a bowl 1, and a dishsponge 1."
+      ],
+      [
+       "take bowl 1 from shelf 1",
+       "You pick up the bowl 1 from the shelf 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "cool bowl 1 with fridge 1",
+       "You cool the bowl 1 using the fridge 1."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see a dishsponge 1."
+      ],
+      [
+       "move bowl 1 to shelf 1",
+       "You move the bowl 1 to the shelf 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-WineBottle-None-GarbageCan-16/trial_T20190907_015045_510934/game.tw-pddl",
+     "goal": "cool some winebottle and put it in garbagecan.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 27, a cabinet 26, a cabinet 25, a cabinet 24, a cabinet 23, a cabinet 22, a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a papertowelroll 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a bowl 3, a bowl 1, a glassbottle 1, a mug 2, a potato 2, and a tomato 2."
+      ],
+      [
+       "close fridge 1",
+       "You close the fridge 1."
+      ],
+      [
+       "go to diningtable 1",
+       "You arrive at diningtable 1. On the diningtable 1, you see a bread 3, a bread 2, a butterknife 1, a cup 1, a pan 2, a peppershaker 1, a plate 2, a plate 1, a potato 1, a saltshaker 1, a soapbottle 3, and a soapbottle 2."
+      ],
+      [
+       "go to countertop 1",
+       "You arrive at countertop 1. On the countertop 1, you see a bread 1, a dishsponge 1, a egg 1, a houseplant 2, a houseplant 1, a pan 3, a pan 1, a pot 1, a soapbottle 1, a spatula 1, a tomato 1, a winebottle 2, and a winebottle 1."
+      ],
+      [
+       "take winebottle 1 from countertop 1",
+       "You pick up the winebottle 1 from the countertop 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "cool winebottle 1 with fridge 1",
+       "You cool the winebottle 1 using the fridge 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a papertowelroll 1."
+      ],
+      [
+       "move winebottle 1 to garbagecan 1",
+       "You move the winebottle 1 to the garbagecan 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Potato-None-SideTable-21/trial_T20190907_040229_877234/game.tw-pddl",
+     "goal": "put a cool potato in sidetable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see a apple 1, a egg 1, and a mug 1."
+      ],
+      [
+       "go to sidetable 1",
+       "You arrive at sidetable 1. On the sidetable 1, you see a lettuce 1, a potato 1, a saltshaker 1, a spatula 1, and a spoon 1."
+      ],
+      [
+       "take potato 1 from sidetable 1",
+       "You pick up the potato 1 from the sidetable 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "cool potato 1 with fridge 1",
+       "You cool the potato 1 using the fridge 1."
+      ],
+      [
+       "go to sidetable 1",
+       "You arrive at sidetable 1. On the sidetable 1, you see a lettuce 1, a saltshaker 1, a spatula 1, and a spoon 1."
+      ],
+      [
+       "move potato 1 to sidetable 1",
+       "You move the potato 1 to the sidetable 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Potato-None-GarbageCan-17/trial_T20190908_204111_799665/game.tw-pddl",
+     "goal": "put a cool potato in garbagecan.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 2, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see a dishsponge 2, and a lettuce 3."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "open microwave 1",
+       "You open the microwave 1. The microwave 1 is open. In it, you see a apple 1."
+      ],
+      [
+       "close microwave 1",
+       "You close the microwave 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a winebottle 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a bread 3, a egg 1, a glassbottle 3, a mug 2, a pan 2, a tomato 2, and a winebottle 2."
+      ],
+      [
+       "close fridge 1",
+       "You close the fridge 1."
+      ],
+      [
+       "go to diningtable 1",
+       "You arrive at diningtable 1. On the diningtable 1, you see a bread 2, a cellphone 2, a knife 2, a knife 1, a lettuce 1, a mug 1, a peppershaker 1, a soapbottle 1, a spatula 1, a spoon 2, and a tomato 1."
+      ],
+      [
+       "go to diningtable 2",
+       "You arrive at diningtable 2. On the diningtable 2, you see a bowl 2, a fork 1, a knife 3, a lettuce 2, a saltshaker 2, a soapbottle 3, a soapbottle 2, a spatula 3, and a spatula 2."
+      ],
+      [
+       "go to countertop 1",
+       "You arrive at countertop 1. On the countertop 1, you see a bowl 1, a bread 1, a butterknife 1, a cellphone 1, a glassbottle 2, a potato 1, a saltshaker 1, a spoon 1, and a spraybottle 1."
+      ],
+      [
+       "take potato 1 from countertop 1",
+       "You pick up the potato 1 from the countertop 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "cool potato 1 with fridge 1",
+       "You cool the potato 1 using the fridge 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a winebottle 1."
+      ],
+      [
+       "move potato 1 to garbagecan 1",
+       "You move the potato 1 to the garbagecan 1."
+      ]
+     ],
+     "won": true
+    }
+   ],
+   "eval": [
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Apple-None-CounterTop-14/trial_T20190909_044933_815840/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Apple-None-GarbageCan-2/trial_T20190906_195943_081289/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Apple-None-Microwave-19/trial_T20190906_210937_878489/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Apple-None-Microwave-5/trial_T20190908_150807_823817/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Bowl-None-Cabinet-20/trial_T20190909_112912_154874/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Bread-None-CounterTop-7/trial_T20190909_045605_307949/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Cup-None-Microwave-17/trial_T20190906_192817_654400/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Cup-None-SideTable-21/trial_T20190906_192823_237997/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Egg-None-Microwave-24/trial_T20190908_234112_645480/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Lettuce-None-CounterTop-1/trial_T20190908_042713_075616/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Lettuce-None-CounterTop-11/trial_T20190908_222555_651605/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-16/trial_T20190908_184242_348366/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Pan-None-DiningTable-7/trial_T20190908_232648_241836/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Pan-None-StoveBurner-18/trial_T20190906_181023_216915/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Pan-None-StoveBurner-23/trial_T20190906_215856_374127/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Plate-None-Cabinet-27/trial_T20190906_173120_350651/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Plate-None-Cabinet-7/trial_T20190907_231206_512424/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Plate-None-CounterTop-1/trial_T20190906_205324_559361/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Pot-None-DiningTable-21/trial_T20190909_004531_429065/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Tomato-None-CounterTop-12/trial_T20190909_063754_216554/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Tomato-None-CounterTop-12/trial_T20190909_063844_274181/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Tomato-None-GarbageCan-6/trial_T20190909_082934_483899/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Tomato-None-Microwave-13/trial_T20190910_173916_331859/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Tomato-None-Microwave-18/trial_T20190909_012524_159092/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_cool_then_place_in_recep-WineBottle-None-DiningTable-17/trial_T20190908_024426_412044/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Bread-None-CounterTop-10/trial_T20190908_091747_866951/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Bread-None-CounterTop-10/trial_T20190908_091811_414150/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Bread-None-CounterTop-10/trial_T20190908_091835_825830/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Lettuce-None-CounterTop-10/trial_T20190909_123133_763972/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Lettuce-None-CounterTop-10/trial_T20190909_174807_646433/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Lettuce-None-CounterTop-10/trial_T20190909_174840_771703/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Mug-None-Cabinet-10/trial_T20190909_121559_082363/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Mug-None-Cabinet-10/trial_T20190909_121635_622676/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Mug-None-Cabinet-10/trial_T20190909_121710_650938/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_183715_299073/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_183807_477267/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_183853_958104/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_114545_244903/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_114622_738670/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_114656_768805/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Potato-None-Microwave-10/trial_T20190907_033157_424297/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Potato-None-Microwave-10/trial_T20190907_033228_194678/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Potato-None-Microwave-10/trial_T20190907_033306_962974/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Tomato-None-Microwave-10/trial_T20190909_102608_318800/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Tomato-None-Microwave-10/trial_T20190909_102644_926781/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Tomato-None-Microwave-10/trial_T20190909_102710_795182/game.tw-pddl"
+   ],
+   "evidence": [
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Lettuce-None-GarbageCan-20/trial_T20190907_204440_642169/game.tw-pddl",
+     "goal": "put a cool lettuce in garbagecan.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Apple-None-Microwave-6/trial_T20190908_114037_636483/game.tw-pddl",
+     "goal": "cool some apple and put it in microwave.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 4, a countertop 3, a countertop 2, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-WineBottle-None-Cabinet-17/trial_T20190907_064240_113879/game.tw-pddl",
+     "goal": "put a cool winebottle in cabinet.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 2, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Apple-None-Microwave-11/trial_T20190909_012317_645496/game.tw-pddl",
+     "goal": "cool some apple and put it in microwave.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a diningtable 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Apple-None-DiningTable-15/trial_T20190906_192043_926936/game.tw-pddl",
+     "goal": "cool some apple and put it in diningtable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Apple-None-Microwave-19/trial_T20190906_210805_698141/game.tw-pddl",
+     "goal": "put a cool apple in microwave.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Egg-None-Microwave-18/trial_T20190909_113913_547975/game.tw-pddl",
+     "goal": "put a cool egg in microwave.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a safe 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_cool_then_place_in_recep-Apple-None-SideTable-21/trial_T20190907_180711_700359/game.tw-pddl",
+     "goal": "put a cool apple in sidetable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    }
+   ],
+   "verify": [
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Pan-None-DiningTable-23/trial_T20190909_005801_641557/game.tw-pddl",
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Cup-None-Microwave-14/trial_T20190908_093224_944397/game.tw-pddl",
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Plate-None-Cabinet-22/trial_T20190908_084019_408981/game.tw-pddl",
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Bread-None-DiningTable-15/trial_T20190908_195722_260654/game.tw-pddl",
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Pot-None-StoveBurner-1/trial_T20190907_165908_445437/game.tw-pddl",
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Pan-None-DiningTable-15/trial_T20190909_003937_964362/game.tw-pddl",
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Pan-None-CounterTop-7/trial_T20190909_072619_689367/game.tw-pddl",
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Tomato-None-Microwave-17/trial_T20190912_065413_070433/game.tw-pddl",
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-19/trial_T20190907_162039_724874/game.tw-pddl",
+    "json_2.1.1/train/pick_cool_then_place_in_recep-Cup-None-Microwave-17/trial_T20190906_192709_651069/game.tw-pddl"
+   ]
+  },
+  "pick_heat_then_place_in_recep": {
+   "discovery": [
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Apple-None-Fridge-30/trial_T20190908_114847_958679/game.tw-pddl",
+     "goal": "heat some apple and put it in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 4, a countertop 3, a countertop 2, a countertop 1, a drawer 27, a drawer 26, a drawer 25, a drawer 24, a drawer 23, a drawer 22, a drawer 21, a drawer 20, a drawer 19, a drawer 18, a drawer 17, a drawer 16, a drawer 15, a drawer 14, a drawer 13, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see a butterknife 2."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "open microwave 1",
+       "You open the microwave 1. The microwave 1 is open. In it, you see nothing."
+      ],
+      [
+       "close microwave 1",
+       "You close the microwave 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a tomato 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a mug 1, a potato 1, and a tomato 2."
+      ],
+      [
+       "close fridge 1",
+       "You close the fridge 1."
+      ],
+      [
+       "go to countertop 1",
+       "You arrive at countertop 1. On the countertop 1, you see a butterknife 1, a houseplant 1, a lettuce 1, a peppershaker 2, a peppershaker 1, a saltshaker 1, and a spatula 1."
+      ],
+      [
+       "go to countertop 2",
+       "You arrive at countertop 2. On the countertop 2, you see a apple 1, a bowl 3, a butterknife 3, a cellphone 1, a cup 2, a dishsponge 3, a dishsponge 2, a fork 2, a pot 1, and a potato 2."
+      ],
+      [
+       "take apple 1 from countertop 2",
+       "You pick up the apple 1 from the countertop 2."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "heat apple 1 with microwave 1",
+       "You heat the apple 1 using the microwave 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a mug 1, a potato 1, and a tomato 2."
+      ],
+      [
+       "move apple 1 to fridge 1",
+       "You move the apple 1 to the fridge 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-GarbageCan-12/trial_T20190908_181854_326947/game.tw-pddl",
+     "goal": "heat some egg and put it in garbagecan.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "open microwave 1",
+       "You open the microwave 1. The microwave 1 is open. In it, you see nothing."
+      ],
+      [
+       "close microwave 1",
+       "You close the microwave 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a apple 2, and a apple 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a mug 3, a pan 2, and a tomato 1."
+      ],
+      [
+       "close fridge 1",
+       "You close the fridge 1."
+      ],
+      [
+       "go to countertop 1",
+       "You arrive at countertop 1. On the countertop 1, you see a mug 1, a potato 1, a soapbottle 1, and a spatula 1."
+      ],
+      [
+       "go to countertop 2",
+       "You arrive at countertop 2. On the countertop 2, you see a bread 1, a dishsponge 2, and a saltshaker 2."
+      ],
+      [
+       "go to countertop 3",
+       "You arrive at countertop 3. On the countertop 3, you see a apple 3, a butterknife 3, a butterknife 2, a butterknife 1, a egg 3, a egg 2, a fork 1, a potato 2, a saltshaker 1, and a spoon 2."
+      ],
+      [
+       "take egg 2 from countertop 3",
+       "You pick up the egg 2 from the countertop 3."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "heat egg 2 with microwave 1",
+       "You heat the egg 2 using the microwave 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a apple 2, and a apple 1."
+      ],
+      [
+       "move egg 2 to garbagecan 1",
+       "You move the egg 2 to the garbagecan 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Tomato-None-Fridge-18/trial_T20190907_193025_428000/game.tw-pddl",
+     "goal": "heat some tomato and put it in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a safe 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see a cup 2, and a tomato 1."
+      ],
+      [
+       "take tomato 1 from sinkbasin 1",
+       "You pick up the tomato 1 from the sinkbasin 1."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "heat tomato 1 with microwave 1",
+       "You heat the tomato 1 using the microwave 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a apple 1, a cup 1, a egg 1, and a potato 1."
+      ],
+      [
+       "move tomato 1 to fridge 1",
+       "You move the tomato 1 to the fridge 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-Fridge-14/trial_T20190909_091415_283977/game.tw-pddl",
+     "goal": "heat some egg and put it in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sinkbasin 1",
+       "You arrive at sinkbasin 1. On the sinkbasin 1, you see a dishsponge 3, a dishsponge 2, and a knife 2."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "open microwave 1",
+       "You open the microwave 1. The microwave 1 is open. In it, you see a mug 3, and a mug 2."
+      ],
+      [
+       "close microwave 1",
+       "You close the microwave 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a apple 3, and a apple 2."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a cup 1."
+      ],
+      [
+       "close fridge 1",
+       "You close the fridge 1."
+      ],
+      [
+       "go to countertop 1",
+       "You arrive at countertop 1. On the countertop 1, you see a bowl 1, a bread 1, a butterknife 2, a butterknife 1, a egg 1, a fork 2, a ladle 1, a lettuce 2, a peppershaker 1, a saltshaker 1, a soapbottle 1, a spoon 2, a spoon 1, and a tomato 2."
+      ],
+      [
+       "take egg 1 from countertop 1",
+       "You pick up the egg 1 from the countertop 1."
+      ],
+      [
+       "go to microwave 1",
+       "You arrive at microwave 1. The microwave 1 is closed."
+      ],
+      [
+       "heat egg 1 with microwave 1",
+       "You heat the egg 1 using the microwave 1."
+      ],
+      [
+       "go to fridge 1",
+       "You arrive at fridge 1. The fridge 1 is closed."
+      ],
+      [
+       "open fridge 1",
+       "You open the fridge 1. The fridge 1 is open. In it, you see a cup 1."
+      ],
+      [
+       "move egg 1 to fridge 1",
+       "You move the egg 1 to the fridge 1."
+      ]
+     ],
+     "won": true
+    }
+   ],
+   "eval": [
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Apple-None-DiningTable-26/trial_T20190907_060234_011675/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Cup-None-Cabinet-22/trial_T20190907_173251_960848/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Egg-None-CounterTop-2/trial_T20190908_122951_021026/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Egg-None-Fridge-14/trial_T20190909_091314_636733/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Mug-None-Cabinet-26/trial_T20190909_062333_424779/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Mug-None-Cabinet-3/trial_T20190909_014639_335717/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-1/trial_T20190907_222640_487432/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Mug-None-SideTable-21/trial_T20190909_090729_088825/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Plate-None-Cabinet-1/trial_T20190908_070946_578973/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Plate-None-DiningTable-28/trial_T20190908_001247_096796/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Potato-None-Fridge-11/trial_T20190909_011341_436523/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Potato-None-Fridge-12/trial_T20190908_014451_271080/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Tomato-None-DiningTable-16/trial_T20190907_201243_698086/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Tomato-None-Fridge-15/trial_T20190909_020200_054379/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Tomato-None-Fridge-23/trial_T20190909_082320_103350/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Tomato-None-Fridge-24/trial_T20190908_033721_967359/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-Fridge-10/trial_T20190906_182259_116320/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-Fridge-10/trial_T20190906_182353_418140/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-Fridge-10/trial_T20190906_182435_622538/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-GarbageCan-10/trial_T20190908_145050_918567/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-GarbageCan-10/trial_T20190908_145143_820541/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-GarbageCan-10/trial_T20190908_145356_918528/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Cup-None-Cabinet-10/trial_T20190907_083346_800823/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Cup-None-Cabinet-10/trial_T20190907_083429_887065/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Cup-None-Cabinet-10/trial_T20190907_083507_594820/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Egg-None-GarbageCan-10/trial_T20190908_113432_673307/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Egg-None-GarbageCan-10/trial_T20190908_113523_123938/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Egg-None-GarbageCan-10/trial_T20190908_113610_425142/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Mug-None-Cabinet-10/trial_T20190909_021100_341887/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Mug-None-Cabinet-10/trial_T20190909_021200_669381/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Mug-None-Cabinet-10/trial_T20190909_021247_306737/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_171806_406231/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_171850_960211/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_171933_349922/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Potato-None-GarbageCan-10/trial_T20190907_161745_664033/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Potato-None-GarbageCan-10/trial_T20190907_161853_945788/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Tomato-None-GarbageCan-10/trial_T20190908_225046_020282/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Tomato-None-GarbageCan-10/trial_T20190908_225359_617900/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Tomato-None-GarbageCan-10/trial_T20190908_225453_272533/game.tw-pddl"
+   ],
+   "evidence": [
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-Cabinet-19/trial_T20190907_152738_415962/game.tw-pddl",
+     "goal": "heat some mug and put it in cabinet.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Cup-None-Fridge-12/trial_T20190908_095945_179137/game.tw-pddl",
+     "goal": "heat some cup and put it in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-GarbageCan-2/trial_T20190909_101128_479012/game.tw-pddl",
+     "goal": "heat some egg and put it in garbagecan.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a drawer 13, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 6, a stoveburner 5, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-Shelf-7/trial_T20190907_022430_495851/game.tw-pddl",
+     "goal": "heat some mug and put it in shelf.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Apple-None-CounterTop-30/trial_T20190908_103828_466550/game.tw-pddl",
+     "goal": "put a hot apple in countertop.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 4, a countertop 3, a countertop 2, a countertop 1, a drawer 27, a drawer 26, a drawer 25, a drawer 24, a drawer 23, a drawer 22, a drawer 21, a drawer 20, a drawer 19, a drawer 18, a drawer 17, a drawer 16, a drawer 15, a drawer 14, a drawer 13, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Cup-None-Fridge-13/trial_T20190908_070444_960595/game.tw-pddl",
+     "goal": "put a hot cup in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 26, a cabinet 25, a cabinet 24, a cabinet 23, a cabinet 22, a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Cup-None-Fridge-12/trial_T20190908_095835_636521/game.tw-pddl",
+     "goal": "put a hot cup in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-Fridge-13/trial_T20190907_151855_542663/game.tw-pddl",
+     "goal": "heat some egg and put it in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 26, a cabinet 25, a cabinet 24, a cabinet 23, a cabinet 22, a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    }
+   ],
+   "verify": [
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Potato-None-DiningTable-11/trial_T20190909_101318_361403/game.tw-pddl",
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-Cabinet-25/trial_T20190909_095428_061064/game.tw-pddl",
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-23/trial_T20190906_194152_150964/game.tw-pddl",
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Plate-None-Shelf-7/trial_T20190906_193929_080179/game.tw-pddl",
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-7/trial_T20190908_105411_917940/game.tw-pddl",
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Cup-None-DiningTable-23/trial_T20190908_082046_159993/game.tw-pddl",
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-GarbageCan-20/trial_T20190909_114130_123227/game.tw-pddl",
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Egg-None-GarbageCan-1/trial_T20190908_132914_241547/game.tw-pddl",
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Potato-None-CounterTop-8/trial_T20190906_180641_973990/game.tw-pddl",
+    "json_2.1.1/train/pick_heat_then_place_in_recep-Tomato-None-GarbageCan-2/trial_T20190908_111609_426536/game.tw-pddl"
+   ]
+  },
+  "pick_two_obj_and_place": {
+   "discovery": [
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-CreditCard-None-Sofa-206/trial_T20190906_203503_354880/game.tw-pddl",
+     "goal": "put two creditcard in sofa.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a garbagecan 1, a shelf 14, a shelf 13, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sofa 1, a tvstand 2, and a tvstand 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sofa 1",
+       "You arrive at sofa 1. On the sofa 1, you see a keychain 1, a laptop 1, a pillow 1, and a remotecontrol 2."
+      ],
+      [
+       "go to shelf 1",
+       "You arrive at shelf 1. On the shelf 1, you see nothing."
+      ],
+      [
+       "go to shelf 2",
+       "You arrive at shelf 2. On the shelf 2, you see nothing."
+      ],
+      [
+       "go to shelf 3",
+       "You arrive at shelf 3. On the shelf 3, you see nothing."
+      ],
+      [
+       "go to shelf 4",
+       "You arrive at shelf 4. On the shelf 4, you see nothing."
+      ],
+      [
+       "go to shelf 5",
+       "You arrive at shelf 5. On the shelf 5, you see a statue 2."
+      ],
+      [
+       "go to shelf 6",
+       "You arrive at shelf 6. On the shelf 6, you see nothing."
+      ],
+      [
+       "go to shelf 7",
+       "You arrive at shelf 7. On the shelf 7, you see a vase 4, and a vase 2."
+      ],
+      [
+       "go to shelf 8",
+       "You arrive at shelf 8. On the shelf 8, you see nothing."
+      ],
+      [
+       "go to shelf 9",
+       "You arrive at shelf 9. On the shelf 9, you see nothing."
+      ],
+      [
+       "go to shelf 10",
+       "You arrive at shelf 10. On the shelf 10, you see nothing."
+      ],
+      [
+       "go to shelf 11",
+       "You arrive at shelf 11. On the shelf 11, you see a bowl 2."
+      ],
+      [
+       "go to shelf 12",
+       "You arrive at shelf 12. On the shelf 12, you see nothing."
+      ],
+      [
+       "go to shelf 13",
+       "You arrive at shelf 13. On the shelf 13, you see nothing."
+      ],
+      [
+       "go to shelf 14",
+       "You arrive at shelf 14. On the shelf 14, you see nothing."
+      ],
+      [
+       "go to coffeetable 1",
+       "You arrive at coffeetable 1. On the coffeetable 1, you see a creditcard 3, a creditcard 1, a laptop 2, and a statue 1."
+      ],
+      [
+       "take creditcard 3 from coffeetable 1",
+       "You pick up the creditcard 3 from the coffeetable 1."
+      ],
+      [
+       "go to sofa 1",
+       "You arrive at sofa 1. On the sofa 1, you see a keychain 1, a laptop 1, a pillow 1, and a remotecontrol 2."
+      ],
+      [
+       "move creditcard 3 to sofa 1",
+       "You move the creditcard 3 to the sofa 1."
+      ],
+      [
+       "go to coffeetable 1",
+       "You arrive at coffeetable 1. On the coffeetable 1, you see a creditcard 1, a laptop 2, and a statue 1."
+      ],
+      [
+       "take creditcard 1 from coffeetable 1",
+       "You pick up the creditcard 1 from the coffeetable 1."
+      ],
+      [
+       "go to sofa 1",
+       "You arrive at sofa 1. On the sofa 1, you see a creditcard 3, a keychain 1, a laptop 1, a pillow 1, and a remotecontrol 2."
+      ],
+      [
+       "look",
+       "You are facing the sofa 1. Next to it, you see nothing."
+      ],
+      [
+       "go to shelf 7",
+       "You arrive at shelf 7. On the shelf 7, you see a vase 4, and a vase 2."
+      ],
+      [
+       "go to sofa 1",
+       "You arrive at sofa 1. On the sofa 1, you see a creditcard 3, a keychain 1, a laptop 1, a pillow 1, and a remotecontrol 2."
+      ],
+      [
+       "look",
+       "You are facing the sofa 1. Next to it, you see nothing."
+      ],
+      [
+       "move creditcard 1 to sofa 1",
+       "You move the creditcard 1 to the sofa 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-CreditCard-None-CoffeeTable-217/trial_T20190911_185442_429428/game.tw-pddl",
+     "goal": "find two creditcard and put them in coffeetable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 1, and a sofa 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to sofa 1",
+       "You arrive at sofa 1. On the sofa 1, you see a pillow 1."
+      ],
+      [
+       "go to sidetable 1",
+       "You arrive at sidetable 1. On the sidetable 1, you see a watch 1."
+      ],
+      [
+       "go to dresser 1",
+       "You arrive at dresser 1. On the dresser 1, you see a creditcard 2, a creditcard 1, a houseplant 1, a laptop 1, a statue 1, and a television 1."
+      ],
+      [
+       "take creditcard 2 from dresser 1",
+       "You pick up the creditcard 2 from the dresser 1."
+      ],
+      [
+       "go to coffeetable 1",
+       "You arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3."
+      ],
+      [
+       "move creditcard 2 to coffeetable 1",
+       "You move the creditcard 2 to the coffeetable 1."
+      ],
+      [
+       "go to dresser 1",
+       "You arrive at dresser 1. On the dresser 1, you see a creditcard 1, a houseplant 1, a laptop 1, a statue 1, and a television 1."
+      ],
+      [
+       "take creditcard 1 from dresser 1",
+       "You pick up the creditcard 1 from the dresser 1."
+      ],
+      [
+       "go to coffeetable 1",
+       "You arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3."
+      ],
+      [
+       "look",
+       "You are facing the coffeetable 1. Next to it, you see nothing."
+      ],
+      [
+       "go to cabinet 4",
+       "You arrive at cabinet 4. The cabinet 4 is closed."
+      ],
+      [
+       "open cabinet 4",
+       "You open the cabinet 4. The cabinet 4 is open. In it, you see nothing."
+      ],
+      [
+       "close cabinet 4",
+       "You close the cabinet 4."
+      ],
+      [
+       "go to coffeetable 1",
+       "You arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3."
+      ],
+      [
+       "look",
+       "You are facing the coffeetable 1. Next to it, you see nothing."
+      ],
+      [
+       "go to drawer 3",
+       "You arrive at drawer 3. The drawer 3 is closed."
+      ],
+      [
+       "open drawer 3",
+       "You open the drawer 3. The drawer 3 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 3",
+       "You close the drawer 3."
+      ],
+      [
+       "go to coffeetable 1",
+       "You arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3."
+      ],
+      [
+       "look",
+       "You are facing the coffeetable 1. Next to it, you see nothing."
+      ],
+      [
+       "go to cabinet 4",
+       "You arrive at cabinet 4. The cabinet 4 is closed."
+      ],
+      [
+       "open cabinet 4",
+       "You open the cabinet 4. The cabinet 4 is open. In it, you see nothing."
+      ],
+      [
+       "close cabinet 4",
+       "You close the cabinet 4."
+      ],
+      [
+       "go to coffeetable 1",
+       "You arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3."
+      ],
+      [
+       "look",
+       "You are facing the coffeetable 1. Next to it, you see nothing."
+      ],
+      [
+       "go to drawer 3",
+       "You arrive at drawer 3. The drawer 3 is closed."
+      ],
+      [
+       "open drawer 3",
+       "You open the drawer 3. The drawer 3 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 3",
+       "You close the drawer 3."
+      ],
+      [
+       "go to coffeetable 1",
+       "You arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3."
+      ],
+      [
+       "look",
+       "You are facing the coffeetable 1. Next to it, you see nothing."
+      ],
+      [
+       "go to drawer 1",
+       "You arrive at drawer 1. The drawer 1 is closed."
+      ],
+      [
+       "open drawer 1",
+       "You open the drawer 1. The drawer 1 is open. In it, you see a watch 2."
+      ],
+      [
+       "close drawer 1",
+       "You close the drawer 1."
+      ],
+      [
+       "go to coffeetable 1",
+       "You arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3."
+      ],
+      [
+       "look",
+       "You are facing the coffeetable 1. Next to it, you see nothing."
+      ],
+      [
+       "inventory",
+       "You are carrying: a creditcard 1."
+      ],
+      [
+       "look",
+       "You are facing the coffeetable 1. Next to it, you see nothing."
+      ],
+      [
+       "move creditcard 1 to coffeetable 1",
+       "You move the creditcard 1 to the coffeetable 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-SprayBottle-None-GarbageCan-423/trial_T20190909_012941_820281/game.tw-pddl",
+     "goal": "put two spraybottle in garbagecan.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a countertop 2, a countertop 1, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a handtowelholder 4, a handtowelholder 3, a handtowelholder 2, a handtowelholder 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, and a towelholder 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to toilet 1",
+       "You arrive at toilet 1. On the toilet 1, you see a spraybottle 1."
+      ],
+      [
+       "take spraybottle 1 from toilet 1",
+       "You pick up the spraybottle 1 from the toilet 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a soapbar 1."
+      ],
+      [
+       "move spraybottle 1 to garbagecan 1",
+       "You move the spraybottle 1 to the garbagecan 1."
+      ],
+      [
+       "go to toilet 1",
+       "You arrive at toilet 1. On the toilet 1, you see nothing."
+      ],
+      [
+       "look",
+       "You are facing the toilet 1. Next to it, you see nothing."
+      ],
+      [
+       "go to bathtubbasin 1",
+       "You arrive at bathtubbasin 1. On the bathtubbasin 1, you see nothing."
+      ],
+      [
+       "go to toilet 1",
+       "You arrive at toilet 1. On the toilet 1, you see nothing."
+      ],
+      [
+       "look",
+       "You are facing the toilet 1. Next to it, you see nothing."
+      ],
+      [
+       "go to handtowelholder 2",
+       "You arrive at handtowelholder 2. On the handtowelholder 2, you see nothing."
+      ],
+      [
+       "go to toilet 1",
+       "You arrive at toilet 1. On the toilet 1, you see nothing."
+      ],
+      [
+       "look",
+       "You are facing the toilet 1. Next to it, you see nothing."
+      ],
+      [
+       "go to handtowelholder 1",
+       "You arrive at handtowelholder 1. On the handtowelholder 1, you see nothing."
+      ],
+      [
+       "go to toilet 1",
+       "You arrive at toilet 1. On the toilet 1, you see nothing."
+      ],
+      [
+       "look",
+       "You are facing the toilet 1. Next to it, you see nothing."
+      ],
+      [
+       "go to drawer 5",
+       "You arrive at drawer 5. The drawer 5 is closed."
+      ],
+      [
+       "go to toilet 1",
+       "You arrive at toilet 1. On the toilet 1, you see nothing."
+      ],
+      [
+       "look",
+       "You are facing the toilet 1. Next to it, you see nothing."
+      ],
+      [
+       "go to countertop 1",
+       "You arrive at countertop 1. On the countertop 1, you see a candle 1, a spraybottle 3, a spraybottle 2, and a toiletpaper 1."
+      ],
+      [
+       "take spraybottle 3 from countertop 1",
+       "You pick up the spraybottle 3 from the countertop 1."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a soapbar 1, and a spraybottle 1."
+      ],
+      [
+       "look",
+       "You are facing the garbagecan 1. Next to it, you see nothing."
+      ],
+      [
+       "go to toiletpaperhanger 1",
+       "You arrive at toiletpaperhanger 1. On the toiletpaperhanger 1, you see nothing."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a soapbar 1, and a spraybottle 1."
+      ],
+      [
+       "look",
+       "You are facing the garbagecan 1. Next to it, you see nothing."
+      ],
+      [
+       "go to bathtubbasin 1",
+       "You arrive at bathtubbasin 1. On the bathtubbasin 1, you see nothing."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a soapbar 1, and a spraybottle 1."
+      ],
+      [
+       "look",
+       "You are facing the garbagecan 1. Next to it, you see nothing."
+      ],
+      [
+       "examine garbagecan 1",
+       "On the garbagecan 1, you see a soapbar 1, and a spraybottle 1."
+      ],
+      [
+       "look",
+       "You are facing the garbagecan 1. Next to it, you see nothing."
+      ],
+      [
+       "go to drawer 6",
+       "You arrive at drawer 6. The drawer 6 is closed."
+      ],
+      [
+       "open drawer 6",
+       "You open the drawer 6. The drawer 6 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 6",
+       "You close the drawer 6."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a soapbar 1, and a spraybottle 1."
+      ],
+      [
+       "look",
+       "You are facing the garbagecan 1. Next to it, you see nothing."
+      ],
+      [
+       "inventory",
+       "You are carrying: a spraybottle 3."
+      ],
+      [
+       "look",
+       "You are facing the garbagecan 1. Next to it, you see nothing."
+      ],
+      [
+       "look",
+       "You are facing the garbagecan 1. Next to it, you see nothing."
+      ],
+      [
+       "go to drawer 6",
+       "You arrive at drawer 6. The drawer 6 is closed."
+      ],
+      [
+       "open drawer 6",
+       "You open the drawer 6. The drawer 6 is open. In it, you see nothing."
+      ],
+      [
+       "close drawer 6",
+       "You close the drawer 6."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a soapbar 1, and a spraybottle 1."
+      ],
+      [
+       "look",
+       "You are facing the garbagecan 1. Next to it, you see nothing."
+      ],
+      [
+       "go to countertop 2",
+       "You arrive at countertop 2. On the countertop 2, you see a candle 2, a cloth 1, and a soapbar 2."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a soapbar 1, and a spraybottle 1."
+      ],
+      [
+       "look",
+       "You are facing the garbagecan 1. Next to it, you see nothing."
+      ],
+      [
+       "move spraybottle 3 to garbagecan 1",
+       "You move the spraybottle 3 to the garbagecan 1."
+      ]
+     ],
+     "won": true
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-Pillow-None-ArmChair-321/trial_T20190907_121735_217785/game.tw-pddl",
+     "goal": "find two pillow and put them in armchair.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 1, a bed 1, a diningtable 1, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 2, and a sidetable 1.",
+     "steps": [
+      [
+       "look",
+       "You are in the middle of a room. Looking quickly around you, you see nothing."
+      ],
+      [
+       "go to bed 1",
+       "You arrive at bed 1. On the bed 1, you see a book 2, a book 1, a pillow 4, a pillow 3, a pillow 2, and a pillow 1."
+      ],
+      [
+       "take pillow 3 from bed 1",
+       "You pick up the pillow 3 from the bed 1."
+      ],
+      [
+       "go to armchair 1",
+       "You arrive at armchair 1. On the armchair 1, you see a keychain 1."
+      ],
+      [
+       "move pillow 3 to armchair 1",
+       "You move the pillow 3 to the armchair 1."
+      ],
+      [
+       "go to bed 1",
+       "You arrive at bed 1. On the bed 1, you see a book 2, a book 1, a pillow 4, a pillow 2, and a pillow 1."
+      ],
+      [
+       "take pillow 4 from bed 1",
+       "You pick up the pillow 4 from the bed 1."
+      ],
+      [
+       "go to armchair 1",
+       "You arrive at armchair 1. On the armchair 1, you see a keychain 1, and a pillow 3."
+      ],
+      [
+       "look",
+       "You are facing the armchair 1. Next to it, you see nothing."
+      ],
+      [
+       "help",
+       "Available commands:\n  look:                             look around your current location\n  inventory:                        check your current inventory\n  go to (receptacle):               move to a receptacle\n  open (receptacle):                open a receptacle\n  close (receptacle):               close a receptacle\n  take (object) from (receptacle):  take an object from a receptacle\n  move (object) to (receptacle):  place an object in or on a receptacle\n  examine (something):              examine a receptacle or an object\n  use (object):                     use an object\n  heat (object) with (receptacle):  heat an object using a receptacle\n  clean (object) with (receptacle): clean an object using a receptacle\n  cool (object) with (receptacle):  cool an object using a receptacle\n  slice (object) with (object):     slice an object using a sharp object\n"
+      ],
+      [
+       "look",
+       "You are facing the armchair 1. Next to it, you see nothing."
+      ],
+      [
+       "go to garbagecan 1",
+       "You arrive at garbagecan 1. On the garbagecan 1, you see a pencil 1."
+      ],
+      [
+       "go to armchair 1",
+       "You arrive at armchair 1. On the armchair 1, you see a keychain 1, and a pillow 3."
+      ],
+      [
+       "look",
+       "You are facing the armchair 1. Next to it, you see nothing."
+      ],
+      [
+       "go to bed 1",
+       "You arrive at bed 1. On the bed 1, you see a book 2, a book 1, a pillow 2, and a pillow 1."
+      ],
+      [
+       "go to armchair 1",
+       "You arrive at armchair 1. On the armchair 1, you see a keychain 1, and a pillow 3."
+      ],
+      [
+       "look",
+       "You are facing the armchair 1. Next to it, you see nothing."
+      ],
+      [
+       "go to drawer 2",
+       "You arrive at drawer 2. The drawer 2 is closed."
+      ],
+      [
+       "open drawer 2",
+       "You open the drawer 2. The drawer 2 is open. In it, you see a cd 1."
+      ],
+      [
+       "close drawer 2",
+       "You close the drawer 2."
+      ],
+      [
+       "go to armchair 1",
+       "You arrive at armchair 1. On the armchair 1, you see a keychain 1, and a pillow 3."
+      ],
+      [
+       "look",
+       "You are facing the armchair 1. Next to it, you see nothing."
+      ],
+      [
+       "move pillow 4 to armchair 1",
+       "You move the pillow 4 to the armchair 1."
+      ]
+     ],
+     "won": true
+    }
+   ],
+   "eval": [
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-AlarmClock-None-Dresser-305/trial_T20190907_165826_194855/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Book-None-Desk-302/trial_T20190906_181233_363875/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Book-None-Desk-313/trial_T20190908_125930_920681/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Box-None-CoffeeTable-213/trial_T20190906_200927_069627/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-CD-None-Drawer-304/trial_T20190907_230232_832893/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-CreditCard-None-Dresser-311/trial_T20190907_201917_045715/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-CreditCard-None-Safe-323/trial_T20190907_001129_214240/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Glassbottle-None-Shelf-1/trial_T20190907_122204_941737/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Knife-None-Drawer-18/trial_T20190907_065232_689984/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Newspaper-None-Drawer-224/trial_T20190911_101248_326533/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Pan-None-CounterTop-14/trial_T20190907_012519_974044/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-RemoteControl-None-Ottoman-203/trial_T20190906_182952_858723/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-SoapBar-None-GarbageCan-418/trial_T20190909_055538_380023/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-SoapBar-None-GarbageCan-418/trial_T20190909_055649_717880/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Spatula-None-Drawer-13/trial_T20190908_183331_203888/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-SprayBottle-None-Cabinet-407/trial_T20190907_144556_144188/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-SprayBottle-None-GarbageCan-419/trial_T20190908_164236_518264/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-SprayBottle-None-Toilet-402/trial_T20190910_222914_814642/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-SprayBottle-None-Toilet-429/trial_T20190907_033843_707544/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-TissueBox-None-Toilet-426/trial_T20190909_044602_338962/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-ToiletPaper-None-Drawer-423/trial_T20190907_111251_461099/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-ToiletPaper-None-Toilet-408/trial_T20190909_080302_174780/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Vase-None-Desk-204/trial_T20190906_181531_703961/game.tw-pddl",
+    "json_2.1.1/valid_seen/pick_two_obj_and_place-Watch-None-Dresser-205/trial_T20190907_182211_592010/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-CD-None-Safe-308/trial_T20190907_050942_897916/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-CD-None-Safe-308/trial_T20190907_051013_060265/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-CD-None-Safe-308/trial_T20190907_051056_585414/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-KeyChain-None-Safe-219/trial_T20190909_011803_423115/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-KeyChain-None-Safe-219/trial_T20190909_012027_782483/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-PepperShaker-None-Drawer-10/trial_T20190908_010306_215435/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-PepperShaker-None-Drawer-10/trial_T20190912_221016_460197/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-PepperShaker-None-Drawer-10/trial_T20190912_221141_608117/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-Pillow-None-Sofa-219/trial_T20190907_163240_345855/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-Pillow-None-Sofa-219/trial_T20190907_163327_486300/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-Pillow-None-Sofa-219/trial_T20190907_163408_914117/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-SoapBar-None-Cabinet-424/trial_T20190909_081720_491733/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-SoapBar-None-Cabinet-424/trial_T20190909_081746_857594/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-SoapBar-None-GarbageCan-424/trial_T20190909_064053_839817/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-SoapBar-None-GarbageCan-424/trial_T20190909_064221_368939/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-SoapBar-None-GarbageCan-424/trial_T20190909_064309_357168/game.tw-pddl",
+    "json_2.1.1/valid_unseen/pick_two_obj_and_place-ToiletPaper-None-Cabinet-424/trial_T20190906_202926_527010/game.tw-pddl"
+   ],
+   "evidence": [
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-TissueBox-None-DiningTable-230/trial_T20190914_012602_275826/game.tw-pddl",
+     "goal": "put two tissuebox in diningtable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a coffeetable 2, a coffeetable 1, a diningtable 1, a garbagecan 1, a sidetable 2, a sidetable 1, and a sofa 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-Statue-None-CoffeeTable-223/trial_T20190907_174318_168269/game.tw-pddl",
+     "goal": "find two statue and put them in coffeetable.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 3, a armchair 2, a armchair 1, a coffeetable 1, a diningtable 2, a diningtable 1, a garbagecan 1, a sofa 1, and a tvstand 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-SaltShaker-None-Drawer-15/trial_T20190909_021339_652839/game.tw-pddl",
+     "goal": "find two saltshaker and put them in drawer.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-Lettuce-None-Fridge-1/trial_T20190918_212722_569040/game.tw-pddl",
+     "goal": "put two lettuce in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-Lettuce-None-Fridge-6/trial_T20190918_184629_005371/game.tw-pddl",
+     "goal": "find two lettuce and put them in fridge.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 4, a countertop 3, a countertop 2, a countertop 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-PepperShaker-None-Cabinet-8/trial_T20190907_193130_885033/game.tw-pddl",
+     "goal": "put two peppershaker in cabinet.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 4, a countertop 3, a countertop 2, a countertop 1, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-CellPhone-None-Sofa-224/trial_T20190907_194445_206988/game.tw-pddl",
+     "goal": "find two cellphone and put them in sofa.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a armchair 1, a cabinet 1, a drawer 21, a drawer 20, a drawer 19, a drawer 18, a drawer 17, a drawer 16, a drawer 15, a drawer 14, a drawer 13, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 5, a sidetable 4, a sidetable 3, a sidetable 2, a sidetable 1, and a sofa 1."
+    },
+    {
+     "game": "json_2.1.1/train/pick_two_obj_and_place-PepperShaker-None-Drawer-15/trial_T20190909_022815_179570/game.tw-pddl",
+     "goal": "put two peppershaker in drawer.",
+     "room": "You are in the middle of a room. Looking quickly around you, you see a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1."
+    }
+   ],
+   "verify": [
+    "json_2.1.1/train/pick_two_obj_and_place-Cup-None-Microwave-22/trial_T20190907_205322_779427/game.tw-pddl",
+    "json_2.1.1/train/pick_two_obj_and_place-ToiletPaper-None-Drawer-410/trial_T20190908_111502_284228/game.tw-pddl",
+    "json_2.1.1/train/pick_two_obj_and_place-RemoteControl-None-ArmChair-220/trial_T20190906_190318_357577/game.tw-pddl",
+    "json_2.1.1/train/pick_two_obj_and_place-SprayBottle-None-GarbageCan-423/trial_T20190909_013052_795655/game.tw-pddl",
+    "json_2.1.1/train/pick_two_obj_and_place-RemoteControl-None-ArmChair-208/trial_T20190908_000831_882007/game.tw-pddl",
+    "json_2.1.1/train/pick_two_obj_and_place-Newspaper-None-GarbageCan-218/trial_T20190907_225437_969645/game.tw-pddl",
+    "json_2.1.1/train/pick_two_obj_and_place-CreditCard-None-ArmChair-311/trial_T20190908_071711_986662/game.tw-pddl",
+    "json_2.1.1/train/pick_two_obj_and_place-Pencil-None-Desk-327/trial_T20190907_234611_599540/game.tw-pddl",
+    "json_2.1.1/train/pick_two_obj_and_place-CellPhone-None-Safe-302/trial_T20190909_043337_021738/game.tw-pddl",
+    "json_2.1.1/train/pick_two_obj_and_place-CellPhone-None-Bed-312/trial_T20190907_035112_615160/game.tw-pddl"
+   ]
+  }
+ },
+ "seed": 0,
+ "step_budget": 50
+}

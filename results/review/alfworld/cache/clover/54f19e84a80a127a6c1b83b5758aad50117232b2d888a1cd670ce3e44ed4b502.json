@@ -1,0 +1,33 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeetable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 1, and a sofa 1.\nGoal: find two creditcard and put them in coffeetable.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to sofa 1\nYou arrive at sofa 1. On the sofa 1, you see a pillow 1.\n> go to sidetable 1\nYou arrive at sidetable 1. On the sidetable 1, you see a watch 1.\n> go to dresser 1\nYou arrive at dresser 1. On the dresser 1, you see a creditcard 2, a creditcard 1, a houseplant 1, a laptop 1, a statue 1, and a television 1.\n> take creditcard 2 from dresser 1\nYou pick up the creditcard 2 from the dresser 1.\n> go to coffeetable 1\nYou arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3.\n> move creditcard 2 to coffeetable 1\nYou move the creditcard 2 to the coffeetable 1.\n> go to dresser 1\nYou arrive at dresser 1. On the dresser 1, you see a creditcard 1, a houseplant 1, a laptop 1, a statue 1, and a television 1.\n> take creditcard 1 from dresser 1\nYou pick up the creditcard 1 from the dresser 1.\n> go to coffeetable 1\nYou arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3.\n> look\nYou are facing the coffeetable 1. Next to it, you see nothing.\n> go to cabinet 4\nYou arrive at cabinet 4. The cabinet 4 is closed.\n> open cabinet 4\nYou open the cabinet 4. The cabinet 4 is open. In it, you see nothing.\n> close cabinet 4\nYou close the cabinet 4.\n> go to coffeetable 1\nYou arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3.\n> look\nYou are facing the coffeetable 1. Next to it, you see nothing.\n> go to drawer 3\nYou arrive at drawer 3. The drawer 3 is closed.\n> open drawer 3\nYou open the drawer 3. The drawer 3 is open. In it, you see nothing.\n> close drawer 3\nYou close the drawer 3.\n> go to coffeetable 1\nYou arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3.\n> look\nYou are facing the coffeetable 1. Next to it, you see nothing.\n> go to cabinet 4\nYou arrive at cabinet 4. The cabinet 4 is closed.\n> open cabinet 4\nYou open the cabinet 4. The cabinet 4 is open. In it, you see nothing.\n> close cabinet 4\nYou close the cabinet 4.\n> go to coffeetable 1\nYou arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3.\n> look\nYou are facing the coffeetable 1. Next to it, you see nothing.\n> go to drawer 3\nYou arrive at drawer 3. The drawer 3 is closed.\n> open drawer 3\nYou open the drawer 3. The drawer 3 is open. In it, you see nothing.\n> close drawer 3\nYou close the drawer 3.\n> go to coffeetable 1\nYou arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3.\n> look\nYou are facing the coffeetable 1. Next to it, you see nothing.\n> go to drawer 1\nYou arrive at drawer 1. The drawer 1 is closed.\n> open drawer 1\nYou open the drawer 1. The drawer 1 is open. In it, you see a watch 2.\n> close drawer 1\nYou close the drawer 1.\n> go to coffeetable 1\nYou arrive at coffeetable 1. On the coffeetable 1, you see a box 1, a creditcard 2, a remotecontrol 3, a remotecontrol 1, a statue 3, a statue 2, and a watch 3.\n> look\nYou are facing the coffeetable 1. Next to it, you see nothing.\n> inventory\nYou are carrying: a creditcard 1.\n> look\nYou are facing the coffeetable 1. Next to it, you see nothing.\n> move creditcard 1 to coffeetable 1\nYou move the creditcard 1 to the coffeetable 1."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 1,
+ "content": "",
+ "finish_reason": "length",
+ "prompt_tokens": 1675,
+ "completion_tokens": 16384,
+ "seconds": 455.221
+}

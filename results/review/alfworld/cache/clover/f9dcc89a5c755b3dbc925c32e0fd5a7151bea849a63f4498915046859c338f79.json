@@ -1,0 +1,33 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a armchair 1, a bed 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a sidetable 2, and a sidetable 1.\nGoal: put a keychain in sidetable.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to sidetable 1\nYou arrive at sidetable 1. On the sidetable 1, you see a creditcard 2, a creditcard 1, a mug 3, a pen 1, and a pencil 2.\n> go to sidetable 2\nYou arrive at sidetable 2. On the sidetable 2, you see a cellphone 2, and a pencil 3.\n> go to dresser 1\nYou arrive at dresser 1. On the dresser 1, you see a alarmclock 1, a book 1, a keychain 1, a laptop 1, a mug 1, and a pencil 1.\n> take keychain 1 from dresser 1\nYou pick up the keychain 1 from the dresser 1.\n> go to sidetable 1\nYou arrive at sidetable 1. On the sidetable 1, you see a creditcard 2, a creditcard 1, a mug 3, a pen 1, and a pencil 2.\n> move keychain 1 to sidetable 1\nYou move the keychain 1 to the sidetable 1."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 0,
+ "content": "",
+ "finish_reason": "length",
+ "prompt_tokens": 690,
+ "completion_tokens": 16384,
+ "seconds": 584.987
+}

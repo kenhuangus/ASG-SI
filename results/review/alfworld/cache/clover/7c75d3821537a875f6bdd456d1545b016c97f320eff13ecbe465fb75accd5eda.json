@@ -1,0 +1,49 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nEnvironment rules:\n  Commands: \"go to X\", \"open X\", \"close X\", \"take O from X\", \"move O to X\", \"heat O with X\", \"cool O with X\",\n  \"clean O with X\", \"use X\", \"examine X\", \"inventory\", \"look\". Invalid commands return \"Nothing happens.\"\n  Objects and receptacles carry instance numbers (\"apple 2\", \"drawer 3\"); goals name only their types.\n  An object may be on any receptacle, including inside closed ones (drawers, cabinets, fridge, microwave, safe);\n  a closed receptacle must be opened to see and take its contents. The agent holds at most one object.\n  Heating uses a microwave, cooling a fridge, cleaning a sink basin, and lamps are turned on with \"use\".\n\nThe skill must handle every task of this kind: find an object of the requested type, cool it with a fridge, and put it in or on a receptacle of the requested type. Goal wording varies between tasks of the same kind.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\nGoal: cool some bowl and put it in shelf.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to toaster 1\nYou arrive at toaster 1. On the toaster 1, you see nothing.\n> go to stoveburner 1\nYou arrive at stoveburner 1. On the stoveburner 1, you see a pot 1.\n> go to stoveburner 2\nYou arrive at stoveburner 2. On the stoveburner 2, you see a pan 1.\n> go to stoveburner 3\nYou arrive at stoveburner 3. On the stoveburner 3, you see a pot 2, and a pot 1.\n> go to stoveburner 4\nYou arrive at stoveburner 4. On the stoveburner 4, you see a pan 2, and a pan 1.\n> go to sinkbasin 1\nYou arrive at sinkbasin 1. On the sinkbasin 1, you see a cup 1, a knife 3, a ladle 2, and a tomato 3.\n> go to shelf 1\nYou arrive at shelf 1. On the shelf 1, you see a bowl 1, and a dishsponge 1.\n> take bowl 1 from shelf 1\nYou pick up the bowl 1 from the shelf 1.\n> go to fridge 1\nYou arrive at fridge 1. The fridge 1 is closed.\n> cool bowl 1 with fridge 1\nYou cool the bowl 1 using the fridge 1.\n> go to shelf 1\nYou arrive at shelf 1. On the shelf 1, you see a dishsponge 1.\n> move bowl 1 to shelf 1\nYou move the bowl 1 to the shelf 1."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\nimport re\n\ndef solve(env, goal):\n    goal_lower = goal.lower()\n    obj_m = re.search(r'cool\\s+(?:some|a|an|the)?\\s+(\\w+)', goal_lower)\n    if not obj_m:\n        obj_m = re.search(r'cool\\s+(\\w+)', goal_lower)\n    obj_type = obj_m.group(1) if obj_m else None\n\n    targ_m = re.search(r'put it (?:in|into)\\s+(?:some|a|an|the)?\\s+(\\w+)', goal_lower)\n    if not targ_m:\n        targ_m = re.search(r'(?:in|"
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 0,
+ "content": "```python\nimport re\n\ndef solve(env, goal):\n    goal_lower = goal.lower()\n    \n    # Find the object type to cool: \"cool [some] bowl\"\n    m_obj = re.search(r'cool\\s+(?:some|a|an|the)?\\s+(\\w+)', goal_lower)\n    if not m_obj:\n        m_obj = re.search(r'cool\\s+(\\w+)', goal_lower)\n    obj_type = m_obj.group(1) if m_obj else None\n    \n    # Find target receptacle type: \"put it in/on [some] shelf\"\n    m_targ = re.search(r'(?:in|into|onto)\\s+(?:some|a|an|the)?\\s+(\\w+)', goal_lower)\n    if not m_targ:\n        m_targ = re.search(r'(?:in|into|onto)\\s+(\\w+)', goal_lower)\n    targ_type = m_targ.group(1) if m_targ else None\n    \n    if obj_type and targ_type:\n        # Try to find the object in inventory\n        if obj_type in env.observation:\n            pass  # already found\n        # We need to find the object somewhere in the room\n        \n        def find_in_room():\n            inv = env.step(\"inventory\")\n            if obj_type in inv:\n                return True\n            return False\n        \n        # First try to find object\n        found = False\n        # Check inventory first\n        inv = env.step(\"inventory\")\n        if obj_type in inv:\n            found = True\n        \n        if not found:\n            # Search through all containers\n            # Go to each container and look\n            # We need to find which container has it\n            # Read room description to get list of containers\n            room_desc = env.observation\n            # Parse containers\n            containers = re.findall(r'(?:cabinet|drawer|shelf|fridge|microwave|toaster|sinkbasin|stoveburner|\\d+)', room_desc)\n            # Actually let's just try going to containers and looking\n            pass\n        \n        # Simple approach: iterate through all containers and look\n        # Get all containers from room description\n        # Pattern: \"a cabinet 1, a cabinet 2, ..., a drawer 1, ..., a fridge 1, ...\"\n        containers = re.findall(r'(?:cabinet|drawer|shelf|fridge|microwave|toaster|sinkbasin|stoveburner)\\s+\\d+', room_desc)\n        \n        obj_found = None\n        for cont_name in containers:\n            env.step(f\"go to {cont_name}\")\n            obs = env.observation\n            if obj_type in obs and obj_type not in \"nothing\":\n                # take the object\n                # find full object name\n                m = re.search(rf'\\b(\\w+\\s+\\d+)\\b', obs)\n                if m:\n                    obj_name = m.group(1)\n                    env.step(f\"take {obj_name} from {cont_name}\")\n                    obj_found = obj_name\n                    break\n        \n        if obj_found:\n            # Cool it with fridge\n            # First go to fridge\n            fridge_matches = re.findall(r'fridge\\s+\\d+', room_desc)\n            if fridge_matches:\n                fridge_name = fridge_matches[0]\n                env.step(f\"go to {fridge_name}\")\n                obs = env.observation\n                if \"closed\" in obs:\n                    env.step(f\"open {fridge_name}\")\n                env.step(f\"cool {obj_found} with {fridge_name}\")\n                \n                # Now go to target receptacle\n                target_matches = re.findall(rf'{re.escape(targ_type)}\\s+\\d+', room_desc)\n                if target_matches:\n                    target_name = target_matches[0]\n                    env.step(f\"go to {target_name}\")\n                    obs = env.observation\n                    if \"closed\" in obs:\n                        env.step(f\"open {target_name}\")\n                    env.step(f\"move {obj_found} to {target_name}\")\n            return\n    \n    # Fallback: just try common commands\n    # Try to find object by searching containers\n    pass\n```",
+ "finish_reason": "stop",
+ "prompt_tokens": 1421,
+ "completion_tokens": 963,
+ "seconds": 19.635
+}

@@ -1,0 +1,25 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a bed 2, a bed 1, a desk 1, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, and a shelf 1.\nGoal: look at book under the desklamp.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to shelf 1\nYou arrive at shelf 1. On the shelf 1, you see a alarmclock 1, a book 1, a creditcard 3, a desklamp 1, a keychain 3, a keychain 2, a pencil 2, and a pencil 1.\n> take book 1 from shelf 1\nYou pick up the book 1 from the shelf 1.\n> use desklamp 1\nYou turn on the desklamp 1."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 2,
+ "content": "```python\nimport re\n\ndef solve(env, goal):\n    # Parse the goal to find the object and the light source.\n    m = re.search(r'look at (\\w+) under the (\\w+)', goal, re.IGNORECASE)\n    if not m:\n        # Fallback: split and take the word after \"look at\" and after \"under the\"\n        parts = goal.split()\n        try:\n            obj_idx = parts.index('look') + 2\n            light_idx = parts.index('under') + 2\n            obj_name = parts[obj_idx].rstrip('.,')\n            light_name = parts[light_idx].rstrip('.,')\n        except (IndexError, ValueError):\n            return\n    else:\n        obj_name = m.group(1)\n        light_name = m.group(2)\n\n    # Extract all receptacles in the room from the initial observation.\n    receptacles = re.findall(r'\\ba (\\w+) (\\d+)\\b', env.observation)\n    receptacles = [(name, num) for name, num in receptacles]\n\n    # Explore each receptacle to find the object and light source.\n    loc_contents = {}\n    obj_loc = None\n    light_loc = None\n    visited = set()\n    current_loc = None\n\n    for rec in receptacles:\n        rec_key = tuple(rec)\n        if rec_key in visited:\n            continue\n        visited.add(rec_key)\n        env.step(f\"go to {rec[0]} {rec[1]}\")\n        current_loc = rec_key\n        items = re.findall(r'\\ba (\\w+) (\\d+)\\b', env.observation)\n        loc_contents[rec_key] = items\n        for item_name, item_num in items:\n            if item_name == light_name:\n                light_loc = rec_key\n            if item_name == obj_name:\n                obj_loc = rec_key\n\n    # If we didn't find both, we cannot complete the task.\n    if obj_loc is None or light_loc is None:\n        return\n\n    # Ensure we are at the object's location to take it.\n    if current_loc != obj_loc:\n        env.step(f\"go to {obj_loc[0]} {obj_loc[1]}\")\n        current_loc = obj_loc\n\n    # Take the object from its receptacle.\n    obj_item = None\n    for item_name, item_num in loc_contents.get(obj_loc, []):\n        if item_name == obj_name:\n            obj_item = (item_name, item_num)\n            break\n    if obj_item:\n        env.step(f\"take {obj_item[0]} {obj_item[1]} from {obj_loc[0]} {obj_loc[1]}\")\n\n    # Go to the light source's location.\n    if current_loc != light_loc:\n        env.step(f\"go to {light_loc[0]} {light_loc[1]}\")\n        current_loc = light_loc\n\n    # Use the light source.\n    light_item = None\n    for item_name, item_num in loc_contents.get(light_loc, []):\n        if item_name == light_name:\n            light_item = (item_name, item_num)\n            break\n    if light_item:\n        env.step(f\"use {light_item[0]} {light_item[1]}\")\n\n    # The task is now complete.\n```",
+ "finish_reason": "stop",
+ "prompt_tokens": 468,
+ "completion_tokens": 14686,
+ "seconds": 420.927
+}

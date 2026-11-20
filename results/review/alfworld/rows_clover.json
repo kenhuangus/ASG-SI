@@ -1,0 +1,953 @@
+[
+ {
+  "adequate": true,
+  "admit": {
+   "first_success": true,
+   "independent_replay": true,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "step_budget": 3,
+   "won": 56
+  },
+  "eval_n": 59,
+  "eval_success": 0.9491525423728814,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "clover-pick_and_place_simple-documented-0",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": "UNPARSEABLE",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 10
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "returned": 18,
+   "step_budget": 16,
+   "won": 25
+  },
+  "eval_n": 59,
+  "eval_success": 0.423728813559322,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "clover-pick_and_place_simple-documented-1",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 2
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_and_place_simple-documented-2",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_and_place_simple-documented-3",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_and_place_simple-sparse-0",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_and_place_simple-sparse-1",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "sparse",
+  "eval_ends": {
+   "returned": 41,
+   "won": 18
+  },
+  "eval_n": 59,
+  "eval_success": 0.3050847457627119,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "clover-pick_and_place_simple-sparse-2",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 2
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_and_place_simple-sparse-3",
+  "task_type": "pick_and_place_simple",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-look_at_obj_in_light-documented-0",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-look_at_obj_in_light-documented-1",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-look_at_obj_in_light-documented-2",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-look_at_obj_in_light-documented-3",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "sparse",
+  "eval_ends": {
+   "returned": 13,
+   "won": 18
+  },
+  "eval_n": 31,
+  "eval_success": 0.5806451612903226,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "clover-look_at_obj_in_light-sparse-0",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 3
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "sparse",
+  "eval_ends": {
+   "error:ValueError": 13,
+   "returned": 1,
+   "won": 17
+  },
+  "eval_n": 31,
+  "eval_success": 0.5483870967741935,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "clover-look_at_obj_in_light-sparse-1",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": "UNPARSEABLE",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 0
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "sparse",
+  "eval_ends": {
+   "returned": 18,
+   "won": 13
+  },
+  "eval_n": 31,
+  "eval_success": 0.41935483870967744,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "clover-look_at_obj_in_light-sparse-2",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 7
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-look_at_obj_in_light-sparse-3",
+  "task_type": "look_at_obj_in_light",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "error:AttributeError": 28,
+   "step_budget": 2,
+   "wall_timeout": 1,
+   "won": 27
+  },
+  "eval_n": 58,
+  "eval_success": 0.46551724137931033,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "clover-pick_clean_then_place_in_recep-documented-0",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": "UNPARSEABLE",
+   "self_verification": "UNPARSEABLE"
+  },
+  "verify_wins": 5
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_clean_then_place_in_recep-documented-1",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "documented",
+  "eval_ends": {
+   "returned": 27,
+   "step_budget": 7,
+   "won": 24
+  },
+  "eval_n": 58,
+  "eval_success": 0.41379310344827586,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "clover-pick_clean_then_place_in_recep-documented-2",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": "UNPARSEABLE",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 5
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_clean_then_place_in_recep-documented-3",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_clean_then_place_in_recep-sparse-0",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_clean_then_place_in_recep-sparse-1",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_clean_then_place_in_recep-sparse-2",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_clean_then_place_in_recep-sparse-3",
+  "task_type": "pick_clean_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_heat_then_place_in_recep-documented-0",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_heat_then_place_in_recep-documented-1",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_heat_then_place_in_recep-documented-2",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_heat_then_place_in_recep-documented-3",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_heat_then_place_in_recep-sparse-0",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_heat_then_place_in_recep-sparse-1",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "adequate": false,
+  "admit": {
+   "first_success": true,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "discovery_won": true,
+  "docs": "sparse",
+  "eval_ends": {
+   "returned": 26,
+   "step_budget": 1,
+   "won": 12
+  },
+  "eval_n": 39,
+  "eval_success": 0.3076923076923077,
+  "finish_reason": "stop",
+  "has_code": true,
+  "id": "clover-pick_heat_then_place_in_recep-sparse-2",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": false,
+   "evidence_verification": "REJECT",
+   "self_verification": "REJECT"
+  },
+  "verify_wins": 3
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_heat_then_place_in_recep-sparse-3",
+  "task_type": "pick_heat_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_cool_then_place_in_recep-documented-0",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_cool_then_place_in_recep-documented-1",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_cool_then_place_in_recep-documented-2",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_cool_then_place_in_recep-documented-3",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_cool_then_place_in_recep-sparse-0",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_cool_then_place_in_recep-sparse-1",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_cool_then_place_in_recep-sparse-2",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_cool_then_place_in_recep-sparse-3",
+  "task_type": "pick_cool_then_place_in_recep",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_two_obj_and_place-documented-0",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_two_obj_and_place-documented-1",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_two_obj_and_place-documented-2",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "documented",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_two_obj_and_place-documented-3",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_two_obj_and_place-sparse-0",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_two_obj_and_place-sparse-1",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "stop",
+  "has_code": false,
+  "id": "clover-pick_two_obj_and_place-sparse-2",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ },
+ {
+  "admit": {
+   "first_success": false,
+   "independent_replay": false,
+   "llm_evidence_verification": false,
+   "llm_self_verification": false
+  },
+  "docs": "sparse",
+  "finish_reason": "length",
+  "has_code": false,
+  "id": "clover-pick_two_obj_and_place-sparse-3",
+  "task_type": "pick_two_obj_and_place",
+  "verdicts": {
+   "evidence_all_completed": null,
+   "evidence_verification": null,
+   "self_verification": null
+  }
+ }
+]

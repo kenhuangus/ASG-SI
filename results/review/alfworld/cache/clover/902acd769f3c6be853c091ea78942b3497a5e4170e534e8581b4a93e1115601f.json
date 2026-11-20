@@ -1,0 +1,25 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a diningtable 3, a diningtable 2, a diningtable 1, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\nGoal: put a cool potato in sidetable.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to sinkbasin 1\nYou arrive at sinkbasin 1. On the sinkbasin 1, you see a apple 1, a egg 1, and a mug 1.\n> go to sidetable 1\nYou arrive at sidetable 1. On the sidetable 1, you see a lettuce 1, a potato 1, a saltshaker 1, a spatula 1, and a spoon 1.\n> take potato 1 from sidetable 1\nYou pick up the potato 1 from the sidetable 1.\n> go to fridge 1\nYou arrive at fridge 1. The fridge 1 is closed.\n> cool potato 1 with fridge 1\nYou cool the potato 1 using the fridge 1.\n> go to sidetable 1\nYou arrive at sidetable 1. On the sidetable 1, you see a lettuce 1, a saltshaker 1, a spatula 1, and a spoon 1.\n> move potato 1 to sidetable 1\nYou move the potato 1 to the sidetable 1."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 2,
+ "content": "",
+ "finish_reason": "length",
+ "prompt_tokens": 670,
+ "completion_tokens": 16384,
+ "seconds": 434.157
+}

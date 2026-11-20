@@ -1,0 +1,129 @@
+{
+ "adequate_compiled": 1,
+ "adequate_threshold": 0.8,
+ "by_docs": {
+  "documented": {
+   "adequate": 1,
+   "compiled": 4,
+   "samples": 24
+  },
+  "sparse": {
+   "adequate": 0,
+   "compiled": 5,
+   "samples": 24
+  }
+ },
+ "by_type": {
+  "look_at_obj_in_light": {
+   "adequate": 0,
+   "best_eval_success": 0.5806451612903226,
+   "compiled": 3
+  },
+  "pick_and_place_simple": {
+   "adequate": 1,
+   "best_eval_success": 0.9491525423728814,
+   "compiled": 3
+  },
+  "pick_clean_then_place_in_recep": {
+   "adequate": 0,
+   "best_eval_success": 0.46551724137931033,
+   "compiled": 2
+  },
+  "pick_cool_then_place_in_recep": {
+   "adequate": 0,
+   "best_eval_success": null,
+   "compiled": 0
+  },
+  "pick_heat_then_place_in_recep": {
+   "adequate": 0,
+   "best_eval_success": 0.3076923076923077,
+   "compiled": 1
+  },
+  "pick_two_obj_and_place": {
+   "adequate": 0,
+   "best_eval_success": null,
+   "compiled": 0
+  }
+ },
+ "compiled": 9,
+ "eval_games": 274,
+ "inadequate_compiled": 8,
+ "methods": {
+  "first_success": {
+   "admitted": 9,
+   "admitted_inadequate": 8,
+   "library_success_by_seed": [
+    0.25547445255474455,
+    0.40145985401459855,
+    0.26277372262773724,
+    0.29927007299270075,
+    0.2737226277372263
+   ],
+   "library_success_mean": 0.29854014598540146,
+   "library_success_range": [
+    0.25547445255474455,
+    0.40145985401459855
+   ],
+   "mean_eval_success_admitted": 0.49037287233211146,
+   "rejected_adequate": 0
+  },
+  "independent_replay": {
+   "admitted": 1,
+   "admitted_inadequate": 0,
+   "library_success_by_seed": [
+    0.20437956204379562,
+    0.20437956204379562,
+    0.20437956204379562,
+    0.20437956204379562,
+    0.20437956204379562
+   ],
+   "library_success_mean": 0.20437956204379562,
+   "library_success_range": [
+    0.20437956204379562,
+    0.20437956204379562
+   ],
+   "mean_eval_success_admitted": 0.9491525423728814,
+   "rejected_adequate": 0
+  },
+  "llm_evidence_verification": {
+   "admitted": 0,
+   "admitted_inadequate": 0,
+   "library_success_by_seed": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "library_success_mean": 0.0,
+   "library_success_range": [
+    0.0,
+    0.0
+   ],
+   "mean_eval_success_admitted": 0.0,
+   "rejected_adequate": 1
+  },
+  "llm_self_verification": {
+   "admitted": 0,
+   "admitted_inadequate": 0,
+   "library_success_by_seed": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "library_success_mean": 0.0,
+   "library_success_range": [
+    0.0,
+    0.0
+   ],
+   "mean_eval_success_admitted": 0.0,
+   "rejected_adequate": 1
+  }
+ },
+ "model": "clover",
+ "samples": 48,
+ "verify_threshold": "9/10",
+ "with_code": 9
+}

@@ -1,0 +1,33 @@
+{
+ "endpoint": "clover",
+ "model": "clover-35b-a3b",
+ "request": {
+  "model": "clover-35b-a3b",
+  "messages": [
+   {
+    "role": "system",
+    "content": "You write reusable Python skills for a text-based household environment. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   },
+   {
+    "role": "user",
+    "content": "Skill interface (Python 3):\n  def solve(env, goal): ...\n  goal: str                      the task text, for example \"put a clean apple in fridge.\"\n  env.observation: str           the most recent observation; before the first command it is the room\n                                 description, which lists the receptacles in the room\n  env.step(command: str) -> str  executes one text command and returns the feedback (also stored in env.observation)\n  env.admissible() -> list[str]  the commands that are valid in the current state\nThe episode ends as soon as the task is completed. At most 50 commands may be executed. Only the modules\nre, collections, itertools, math, and string may be imported. solve must not read or write files.\n\nBelow is a successful episode of one such task. Write solve(env, goal) so that it completes this task and other tasks of the same kind in other rooms, with other objects and receptacles.\n\nRoom: You are in the middle of a room. Looking quickly around you, you see a bed 1, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\nGoal: put some book on dresser.\nEpisode:\n> look\nYou are in the middle of a room. Looking quickly around you, you see nothing.\n> go to shelf 1\nYou arrive at shelf 1. On the shelf 1, you see a statue 1.\n> go to shelf 2\nYou arrive at shelf 2. On the shelf 2, you see a creditcard 1, and a keychain 3.\n> go to shelf 3\nYou arrive at shelf 3. On the shelf 3, you see nothing.\n> go to shelf 4\nYou arrive at shelf 4. On the shelf 4, you see a houseplant 1.\n> go to shelf 5\nYou arrive at shelf 5. On the shelf 5, you see a alarmclock 1, and a cd 3.\n> go to shelf 6\nYou arrive at shelf 6. On the shelf 6, you see nothing.\n> go to shelf 7\nYou arrive at shelf 7. On the shelf 7, you see nothing.\n> go to shelf 8\nYou arrive at shelf 8. On the shelf 8, you see a pencil 2.\n> go to shelf 9\nYou arrive at shelf 9. On the shelf 9, you see nothing.\n> go to dresser 1\nYou arrive at dresser 1. On the dresser 1, you see a cd 2, a cd 1, a desklamp 1, a keychain 2, a keychain 1, a pen 2, and a pen 1.\n> go to drawer 1\nYou arrive at drawer 1. The drawer 1 is closed.\n> open drawer 1\nYou open the drawer 1. The drawer 1 is open. In it, you see a pencil 1.\n> close drawer 1\nYou close the drawer 1.\n> go to drawer 2\nYou arrive at drawer 2. The drawer 2 is closed.\n> open drawer 2\nYou open the drawer 2. The drawer 2 is open. In it, you see nothing.\n> close drawer 2\nYou close the drawer 2.\n> go to drawer 3\nYou arrive at drawer 3. The drawer 3 is closed.\n> open drawer 3\nYou open the drawer 3. The drawer 3 is open. In it, you see nothing.\n> close drawer 3\nYou close the drawer 3.\n> go to drawer 4\nYou arrive at drawer 4. The drawer 4 is closed.\n> open drawer 4\nYou open the drawer 4. The drawer 4 is open. In it, you see nothing.\n> close drawer 4\nYou close the drawer 4.\n> go to drawer 5\nYou arrive at drawer 5. The drawer 5 is closed.\n> open drawer 5\nYou open the drawer 5. The drawer 5 is open. In it, you see nothing.\n> close drawer 5\nYou close the drawer 5.\n> go to drawer 6\nYou arrive at drawer 6. The drawer 6 is closed.\n> open drawer 6\nYou open the drawer 6. The drawer 6 is open. In it, you see nothing.\n> close drawer 6\nYou close the drawer 6.\n> go to drawer 7\nYou arrive at drawer 7. The drawer 7 is closed.\n> open drawer 7\nYou open the drawer 7. The drawer 7 is open. In it, you see nothing.\n> close drawer 7\nYou close the drawer 7.\n> go to drawer 8\nYou arrive at drawer 8. The drawer 8 is closed.\n> open drawer 8\nYou open the drawer 8. The drawer 8 is open. In it, you see a cellphone 1.\n> close drawer 8\nYou close the drawer 8.\n> go to drawer 9\nYou arrive at drawer 9. The drawer 9 is closed.\n> open drawer 9\nYou open the drawer 9. The drawer 9 is open. In it, you see nothing.\n> close drawer 9\nYou close the drawer 9.\n> go to drawer 10\nYou arrive at drawer 10. The drawer 10 is closed.\n> open drawer 10\nYou open the drawer 10. The drawer 10 is open. In it, you see nothing.\n> close drawer 10\nYou close the drawer 10.\n> go to bed 1\nYou arrive at bed 1. On the bed 1, you see a book 1, a cellphone 2, a laptop 1, a pillow 2, and a pillow 1.\n> take book 1 from bed 1\nYou pick up the book 1 from the bed 1.\n> go to dresser 1\nYou arrive at dresser 1. On the dresser 1, you see a cd 2, a cd 1, a desklamp 1, a keychain 2, a keychain 1, a pen 2, and a pen 1.\n> move book 1 to dresser 1\nYou move the book 1 to the dresser 1."
+   },
+   {
+    "role": "assistant",
+    "content": ""
+   },
+   {
+    "role": "user",
+    "content": "No ```python code block defining solve(env, goal) was found. Reply with one ```python code block that defines solve(env, goal), and nothing else."
+   }
+  ],
+  "temperature": 0.8,
+  "max_tokens": 16384
+ },
+ "sample": 3,
+ "content": "",
+ "finish_reason": "length",
+ "prompt_tokens": 1594,
+ "completion_tokens": 16384,
+ "seconds": 466.274
+}

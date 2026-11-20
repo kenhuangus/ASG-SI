@@ -1,0 +1,162 @@
+{
+ "deepseek-look_at_obj_in_light-documented-0": {
+  "completion_tokens": {
+   "evidence": 65,
+   "self": 76
+  },
+  "evidence_all_completed": true,
+  "evidence_reason": "The skill completed all three demonstrated tasks (pillow, box, cd under the desklamp) and its search-and-open logic generalizes to other objects and lamps of this task kind.",
+  "evidence_tasks": [
+   0,
+   3,
+   6
+  ],
+  "evidence_verification": "ACCEPT",
+  "self_reason": "The skill's receptacle parsing treats every noun in the room description as a receptacle (including objects like bed, desk, and even the target object), and its search logic can waste commands revisiting or failing to open containers, so it will not reliably find and examine the object within 50 commands in arbitrary rooms.",
+  "self_verification": "REJECT"
+ },
+ "deepseek-look_at_obj_in_light-documented-1": {
+  "completion_tokens": {
+   "evidence": 66,
+   "self": 75
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "Task 0 failed to complete: the skill took a pencil instead of the pillow and never examined the held object, and it also never issues an examine command, so it cannot satisfy the goal.",
+  "evidence_tasks": [
+   0,
+   3,
+   6
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill only scans receptacles parsed from the initial room description, so it misses objects inside containers not listed there (e.g., the pencil was on shelf 9, which was never visited), and it never examines the held object after turning on the lamp, so the task goal is not actually completed.",
+  "self_verification": "REJECT"
+ },
+ "deepseek-pick_and_place_simple-documented-0": {
+  "completion_tokens": {
+   "evidence": 92,
+   "self": 78
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill failed to complete all three tasks: it never found or moved the target objects (book, bowl, handtowel), used malformed commands like 'go to you see a bed 1' and 'take you see a handtowel 1', and episodes ended by return or step_budget without success.",
+  "evidence_tasks": [
+   0,
+   1,
+   7
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The room parser misparses the room description (e.g. 'go to you see a armchair 1' from the first line), so it never visits the sidetable or other receptacles correctly, and it also fails to handle objects hidden in containers or receptacles whose names don't match the goal type.",
+  "self_verification": "REJECT"
+ },
+ "deepseek-pick_clean_then_place_in_recep-documented-0": {
+  "completion_tokens": {
+   "evidence": 61,
+   "self": 60
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill never completed any of the three episodes (all ended by step_budget or returned without cleaning/placing the object), so it is not reliable evidence for reuse.",
+  "evidence_tasks": [
+   0,
+   4,
+   6
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill only scans receptacles listed in the initial room observation, so it fails when the target object or sink basin is inside a closed container or not visible initially, and it never verifies the object was actually cleaned or moved.",
+  "self_verification": "REJECT"
+ },
+ "deepseek-pick_clean_then_place_in_recep-documented-1": {
+  "completion_tokens": {
+   "evidence": 78,
+   "self": 63
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill failed to complete any of the three tasks (all ended by step budget or returned without placing the cleaned object), because it only scans locations mentioned in the initial observation and never finds the target object or destination, so it is not reliable for reuse.",
+  "evidence_tasks": [
+   0,
+   2,
+   4
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill only scans receptacles listed in the initial room description, so it fails when the target object or sinkbasin is inside a closed container not listed there, and it never verifies the object was actually found or cleaned before moving it.",
+  "self_verification": "REJECT"
+ },
+ "deepseek-pick_clean_then_place_in_recep-sparse-0": {
+  "completion_tokens": {
+   "evidence": 75,
+   "self": 73
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill never opens closed receptacles, so it failed to find the ladle hidden in a closed drawer/cabinet (task 4 timed out after 41 commands), and it returned without acting on tasks 0 and 3.",
+  "evidence_tasks": [
+   0,
+   3,
+   4
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill only searches receptacles listed in the initial room description and never opens closed containers (drawers, cabinets, fridge, safe), so it fails whenever the target object is inside a closed receptacle, and it also hardcodes a fallback sinkbasin/destination name that may not exist.",
+  "self_verification": "REJECT"
+ },
+ "deepseek-pick_clean_then_place_in_recep-sparse-1": {
+  "completion_tokens": {
+   "evidence": 79,
+   "self": 95
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill failed tasks 0 and 4 (step_budget/wall_timeout) because it exhaustively opens every cabinet and drawer before checking open surfaces, and it never finds the kettle or ladle, so it is not reliable for this task kind.",
+  "evidence_tasks": [
+   0,
+   4,
+   6
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill only searches cabinets, fridge, microwave, and drawers in its first pass and relies on a hardcoded 'sinkbasin' name plus a fallback 'shelf 1'/'dest 1' that may not exist, and it never handles targets located on open surfaces or in other containers like safes, so it will fail in many rooms and may exceed 50 commands.",
+  "self_verification": "REJECT"
+ },
+ "deepseek-pick_cool_then_place_in_recep-sparse-1": {
+  "completion_tokens": {
+   "evidence": 50,
+   "self": 68
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "Every episode crashed with a TypeError after a single command, so the skill never completed any task and is not reusable.",
+  "evidence_tasks": [
+   0,
+   2,
+   7
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill hardcodes the destination as garbagecan instead of parsing the requested receptacle type from the goal, and its object search only checks the first matching receptacle per type, so it fails when the target object is inside a closed container or when the goal names a different receptacle.",
+  "self_verification": "REJECT"
+ },
+ "deepseek-pick_heat_then_place_in_recep-documented-0": {
+  "completion_tokens": {
+   "evidence": 70,
+   "self": 76
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "Task 4 timed out after 43 commands because the skill's search order scanned all priority surfaces and then every cabinet/drawer before finding the apple, so it is not reliable for every task of this kind.",
+  "evidence_tasks": [
+   0,
+   4,
+   7
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill only scans receptacles listed in the initial room description, so it can miss the target object if it is inside a closed container not listed there, and it never verifies the object was found or that heating/destination succeeded, risking silent failure or exceeding the 50-command budget on large rooms.",
+  "self_verification": "REJECT"
+ },
+ "deepseek-pick_heat_then_place_in_recep-documented-1": {
+  "completion_tokens": {
+   "evidence": 77,
+   "self": 62
+  },
+  "evidence_all_completed": false,
+  "evidence_reason": "The skill failed to complete tasks 4 and 5 (both timed out) because it exhaustively searched every cabinet/drawer before finding the target object, and it never located the microwave or destination receptacle, so it is not reliable for reuse.",
+  "evidence_tasks": [
+   0,
+   4,
+   5
+  ],
+  "evidence_verification": "REJECT",
+  "self_reason": "The skill only searches receptacles listed in the initial room description, so it fails when the target object or microwave is inside a container not listed there, and it also wastes many commands opening every cabinet, risking the 50-command limit.",
+  "self_verification": "REJECT"
+ }
+}
