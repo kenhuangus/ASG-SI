@@ -1,5 +1,6 @@
 """Retrievable artifacts and full SHA-256 manifests; unsigned, with optional external roots."""
 from hashlib import sha256
+import hmac
 import json
 from pathlib import Path
 import platform
@@ -22,7 +23,11 @@ def write_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False, allow_nan=False)+"\n")
 
-def write_bundle(path, candidate, cases, config, decision):
+def sign_manifest(manifest_bytes, key):
+    """HMAC-SHA256 over the manifest bytes; the key must be held outside the policy runtime and run directory."""
+    return hmac.new(key, manifest_bytes, sha256).hexdigest()
+
+def write_bundle(path, candidate, cases, config, decision, *, signing_key=None):
     path = Path(path)
     path.mkdir(parents=True, exist_ok=False)
     files = {"candidate.json": candidate.to_dict(), "tests.json": [c.to_dict() for c in cases],
@@ -32,16 +37,24 @@ def write_bundle(path, candidate, cases, config, decision):
     manifest = {"format": "asg-si-evidence-1", "environment": environment_snapshot(),
                 "artifacts": {name: {"sha256": sha256((path/name).read_bytes()).hexdigest(), "bytes": (path/name).stat().st_size} for name in files}}
     write_json(path/"manifest.json", manifest)
+    if signing_key is not None:
+        (path/"manifest.sig").write_text(sign_manifest((path/"manifest.json").read_bytes(), signing_key) + "\n")
     return {"bundle": str(path), "manifest_sha256": sha256((path/"manifest.json").read_bytes()).hexdigest(),
             "artifact_count": len(files), "evidence_bytes": sum(p.stat().st_size for p in path.iterdir())}
 
-def read_bundle(path, *, expected_manifest_sha256=None):
+def read_bundle(path, *, expected_manifest_sha256=None, signing_key=None):
     path = Path(path)
     manifest_path = path/"manifest.json"
     if not manifest_path.is_file() or manifest_path.is_symlink():
         raise EvidenceError("incomplete_evidence: missing manifest")
     if expected_manifest_sha256 and sha256(manifest_path.read_bytes()).hexdigest() != expected_manifest_sha256:
         raise EvidenceError("integrity_failure: manifest digest mismatch")
+    if signing_key is not None:
+        sig_path = path/"manifest.sig"
+        if not sig_path.is_file():
+            raise EvidenceError("integrity_failure: missing manifest signature")
+        if not hmac.compare_digest(sig_path.read_text().strip(), sign_manifest(manifest_path.read_bytes(), signing_key)):
+            raise EvidenceError("integrity_failure: manifest signature mismatch")
     try:
         manifest = json.loads(manifest_path.read_text())
     except ValueError as error:
@@ -58,4 +71,5 @@ def read_bundle(path, *, expected_manifest_sha256=None):
         if len(content) != metadata["bytes"] or sha256(content).hexdigest() != metadata["sha256"]:
             raise EvidenceError(f"integrity_failure: {name}")
         artifacts[name] = json.loads(content)
-    return {"manifest": manifest, "artifacts": artifacts, "externally_anchored": bool(expected_manifest_sha256)}
+    return {"manifest": manifest, "artifacts": artifacts, "externally_anchored": bool(expected_manifest_sha256),
+            "signature_verified": signing_key is not None}

@@ -123,6 +123,27 @@ integrity error. A hash does not regenerate missing bytes. The manifests are
 unsigned: retain a digest outside the run directory to detect replacement of
 the entire run. The worker is not an OS-enforced adversarial sandbox.
 
+## Review-response experiments
+
+These experiments address the ICML 2026 reviews; `docs/RESPONSE_TO_REVIEWS.md` maps each
+comment to a change. Results are stored in `results/review/`, and `paper/assemble.py` builds
+every table in the revised paper from those files.
+
+| Module | Question | Output |
+|---|---|---|
+| `experiments.llm_candidates` | Do frozen LLMs write faulty skills that pass one example, and which admission method keeps them out? Compares first success, LLM self-verification, SmartSnap-style evidence verification, independent replay, and replay with composition checks | `llm_<model>_*.json` |
+| `experiments.stochastic` | Exact replay versus a sequential Clopper–Pearson gate when tools are stochastic and partially observable | `stochastic.json` |
+| `experiments.composition_depth` | Interface checks on chains of 2 to 5 skills over unit and validation tags, versus a flat library and end-to-end replay | `composition_depth.json` |
+| `experiments.selection` | Four selection rules in libraries of 10, 50, and 200 skills, with and without the gate | `selection.json` |
+| `experiments.tamper` | Which defence (hashes, external anchor, HMAC signature, audit re-execution) detects which evidence attack; a latent poisoned skill | `tamper.json` |
+| `experiments.retention` | A silent tool upgrade with no pins, with pins, and with revocation plus re-verification | `retention.json` |
+
+The language-model experiment calls OpenAI-compatible endpoints configured by `CLOVER_BASE_URL`
+and `DEEPSEEK_BASE_URL`. Every request and response is cached under `runs/llm/llm_cache/` by the
+SHA-256 of the request; the cache is published in `results/review/llm_cache.zip`, and `--offline`
+re-runs the experiment from it without model access. Bundles can be signed with an HMAC key held
+outside the run directory (`write_bundle(..., signing_key=...)`, `read_bundle(..., signing_key=...)`).
+
 ## Compatibility demo
 
 ```bash

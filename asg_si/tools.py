@@ -16,6 +16,8 @@ class ToolRegistry:
             "aggregate": ToolContract({"batch": "dict"}, "dict", {"batch": "L"}, "L"),
             "write_output": ToolContract({"report": "dict", "destination": "str"}, "dict", {"report": "L"}, "L"),
             "constant_report": ToolContract({"value": "number"}, "dict", output_unit="L"),
+            # Plausible shortcut: sums raw values as given, ignoring units and validity flags.
+            "sum_values": ToolContract({"records": "list"}, "dict", output_unit="L"),
         }
 
     def contract(self, name):
@@ -61,6 +63,11 @@ class ToolRegistry:
             output = {"values": [values[0]] * len(values) if values else [], "unit": batch["unit"]}
         elif name == "aggregate":
             output = {"total": sum(arguments["batch"]["values"]), "unit": "L"}
+        elif name == "sum_values":
+            values = [r.get("value", 0) for r in arguments["records"] if isinstance(r, dict)]
+            if any(isinstance(v, bool) or not isinstance(v, (int, float)) for v in values):
+                raise ContractError("record value must be numeric")
+            output = {"total": sum(values), "unit": "L"}
         elif name == "constant_report":
             output = {"total": arguments["value"], "unit": "L"}
         elif name == "write_output":
