@@ -37,8 +37,8 @@ class GateConfig:
         value["required_boundaries"] = tuple(value.get("required_boundaries", BOUNDARIES))
         return cls(**value)
 
-def verify_in_process(candidate, cases, config):
-    registry = ToolRegistry()
+def verify_in_process(candidate, cases, config, registry=None):
+    registry = registry or ToolRegistry()
     first = config.method == "first_success"
     composition = config.method == "independent_composition"
     selected = list(candidate.discovery[:1]) if first else [c for c in cases if c.observation.kind == candidate.skill.kind][:config.max_cases]

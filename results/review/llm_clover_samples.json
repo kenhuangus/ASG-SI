@@ -1,0 +1,4181 @@
+[
+  {
+    "completion_tokens": 876,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_output",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read_records",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read_records"
+            }
+          },
+          "id": "validate_fields",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_fields"
+            }
+          },
+          "id": "convert_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_liters"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write_output",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 17.785,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_0",
+      "output": "write_output",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read_records",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read_records"
+            }
+          },
+          "id": "validate_fields",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_fields"
+            }
+          },
+          "id": "convert_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_liters"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write_output",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "14850cd6ded71d5b46a1c5cc36024ddeaa2df5e1773d0e68b5d2f46b27eceffe",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 441,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step_4",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step_1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "step_1"
+            }
+          },
+          "id": "step_2",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "step_2"
+            }
+          },
+          "id": "step_3",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step_3"
+            }
+          },
+          "id": "step_4",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 11.137,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_1",
+      "output": "step_4",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step_1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "step_1"
+            }
+          },
+          "id": "step_2",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "step_2"
+            }
+          },
+          "id": "step_3",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step_3"
+            }
+          },
+          "id": "step_4",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "31e1b632a862dbb8d3d9bbfb6bc48c7730f0b50702a5bb26eee31c5fd3d7de5b",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1425,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_valid",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_valid"
+            }
+          },
+          "id": "to_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "to_liters"
+            }
+          },
+          "id": "sum_liters",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_liters"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 36.182,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_2",
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_valid",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_valid"
+            }
+          },
+          "id": "to_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "to_liters"
+            }
+          },
+          "id": "sum_liters",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_liters"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "abfacce70e02441db26dc69dd4daa3b6ee86981de6f928541b8e4af4c4f1eea8",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1164,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_output_step",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_records"
+            }
+          },
+          "id": "convert_to_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_to_liters"
+            }
+          },
+          "id": "sum_total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "sum_total"
+            }
+          },
+          "id": "write_output_step",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 31.418,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_3",
+      "output": "write_output_step",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_records"
+            }
+          },
+          "id": "convert_to_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_to_liters"
+            }
+          },
+          "id": "sum_total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "sum_total"
+            }
+          },
+          "id": "write_output_step",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "e8214b4261a02b1ebcfe732cf7647cefe2ef13fd3772f5be8bd25717fbcc9086",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 2058,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "sum",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 4,
+    "seconds": 37.566,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_4",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "sum",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "edbff461e6f25b96df0080dbfc1a288e3e9411a0402e11c31cd08231860c3c09",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1932,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "valid_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid_records"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 5,
+    "seconds": 48.25,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_5",
+      "output": "report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "valid_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid_records"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "8baacfe22607ed6dcc8e3a74648928a3316fb268605c92138d65f3b27bfd8c13",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1564,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 6,
+    "seconds": 34.087,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_6",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "2a129bf330579dcd6fb76b3a2c4b0add614a5b394f32b03ff6e20f2de0fbb63f",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1061,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 7,
+    "seconds": 21.501,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_7",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "2a129bf330579dcd6fb76b3a2c4b0add614a5b394f32b03ff6e20f2de0fbb63f",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 810,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 17.231,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_8",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "2a129bf330579dcd6fb76b3a2c4b0add614a5b394f32b03ff6e20f2de0fbb63f",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1106,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "report",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "report"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 16.478,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_full_9",
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "report",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "report"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7005c09c8b22240e88aff581c527a9fc3a777e55ba4097bf1874dde889b416a0",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 229,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 6.198,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_0",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7d11506f8d92ed38c083b53cc55538891f364a2f49dff36c98e101488d761f9e",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 558,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 12.407,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_1",
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "bfae5f6ec29c1eacbef8f7d7b59d3d29aae9403cf0373337d7d58b152e0823a3",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 219,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum1"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 6.204,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_2",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum1"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "b6fffffb012e151fb9cdb2696c1e4fce6def9fb30f117fef94215b85f858a1b1",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 570,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 16.507,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_3",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7d11506f8d92ed38c083b53cc55538891f364a2f49dff36c98e101488d761f9e",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1592,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_values",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_values"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 4,
+    "seconds": 33.123,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_4",
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_values",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_values"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "650c7103a9a7636e2113b3b087ba53fc0a44e8f2adb0fab2241ce15bff318919",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 477,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "total",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 5,
+    "seconds": 11.534,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_5",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "total",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "c23067ae9badff4e148321da4b8498bafd2157f1ccc536ce24c4e6967f98bd97",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 159,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "s2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 6,
+    "seconds": 2.912,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_6",
+      "output": "s2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "56f6210be450b2615951bf111b5b93f942c418b27931fb13b9d6a439be01001f",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1149,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_volumes",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_volumes"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 7,
+    "seconds": 23.491,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_7",
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_volumes",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_volumes"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "fca83d472352ba327ab2f1182da745d31085de3f9274e3c9076a693511d9b9db",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 450,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 7.156,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_8",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7d11506f8d92ed38c083b53cc55538891f364a2f49dff36c98e101488d761f9e",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1835,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 27.725,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_terse_9",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "4b23ad91fcf5745a0e20d32e03f39eba8a3f6b56bbf4d2ac1031d6edeae9bede",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 250,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 6.197,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_0",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "084dae1a1bf4a8645a27af26ef5ad9d258357a5c7929614da563a8ea276fed65",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 156,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 5.941,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_1",
+      "output": "step1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0"
+      }
+    },
+    "skill_id": "152896b7f8299583c9788944fc36231300f418946244e493c039249cc908046c",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 254,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 8.116,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_2",
+      "output": "2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "76f9ecbe549007962aefae3594535dab6c2cc558e656fdc92c2e60973c84fb00",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 687,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_output",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_records"
+            }
+          },
+          "id": "sum_report",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_report"
+            }
+          },
+          "id": "write_output",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 18.881,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_3",
+      "output": "write_output",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_records"
+            }
+          },
+          "id": "sum_report",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_report"
+            }
+          },
+          "id": "write_output",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "fa76065f1098b45a6d00f3a141d85f259609285928b501b56609f06df252f712",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 522,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_output_step",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_values_step",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_values_step"
+            }
+          },
+          "id": "write_output_step",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 4,
+    "seconds": 12.781,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_4",
+      "output": "write_output_step",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_values_step",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_values_step"
+            }
+          },
+          "id": "write_output_step",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "ebdeb7d4dada23dc87221fe18ec1cd04fdb4a9f759f4f99aabf3a93f94d87d14",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 154,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step_1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step_1",
+          "tool": "sum_values"
+        }
+      ]
+    },
+    "sample": 5,
+    "seconds": 3.645,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_5",
+      "output": "step_1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step_1",
+          "tool": "sum_values"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0"
+      }
+    },
+    "skill_id": "317445e78a1b6c9878e2403349d1e558fb5ec452bd0d369f2f18fe4f1daff959",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 948,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 6,
+    "seconds": 17.085,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_6",
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "bfae5f6ec29c1eacbef8f7d7b59d3d29aae9403cf0373337d7d58b152e0823a3",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1376,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "written",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "aggregated",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregated"
+            }
+          },
+          "id": "written",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 7,
+    "seconds": 24.342,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_7",
+      "output": "written",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "aggregated",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregated"
+            }
+          },
+          "id": "written",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "8229033314bde089e6040554c31d6f3ed2e03818eaef49ec6b989eb5fc9dac9b",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 734,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "report",
+          "tool": "aggregate"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 10.698,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_8",
+      "output": "report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "report",
+          "tool": "aggregate"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0"
+      }
+    },
+    "skill_id": "2f65f59774fc9531a06dcd498db2acac431972a1cf2ad3f1d75ef320dfa04917",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 303,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "sum1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum1",
+          "tool": "sum_values"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 7.36,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_documented_example_9",
+      "output": "sum1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum1",
+          "tool": "sum_values"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0"
+      }
+    },
+    "skill_id": "679f1082311b70b1d91e5cd9562ad51b553810cb6b06b8ad22c9e3822ef153d0",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 0,
+    "seconds": 100.133,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 1,
+    "seconds": 103.053,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 2,
+    "seconds": 98.292,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 3,
+    "seconds": 97.76,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 4,
+    "seconds": 101.921,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 3452,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": null,
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_records"
+            }
+          },
+          "id": "convert_to_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "convert_to_liters"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 5,
+    "seconds": 78.038,
+    "spec": "full",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 6,
+    "seconds": 99.674,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 7,
+    "seconds": 94.613,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 325,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": "ContractError:value must have type number",
+    "finish_reason": "stop",
+    "program": {
+      "output": "e",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "a",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "a"
+            }
+          },
+          "id": "b",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "b"
+            }
+          },
+          "id": "c",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "value": {
+              "step": "c"
+            }
+          },
+          "id": "d",
+          "tool": "constant_report"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "d"
+            }
+          },
+          "id": "e",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 4.49,
+    "spec": "full",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 9,
+    "seconds": 50.591,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 3394,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_volumes",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_volumes"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 71.128,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_terse_0",
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_volumes",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_volumes"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "fca83d472352ba327ab2f1182da745d31085de3f9274e3c9076a693511d9b9db",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 181,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "s3",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 5.078,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_terse_1",
+      "output": "s3",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "bb96469d130337a189eeebd1df5871d3dd8ffb3dcba8bdba1a905c24762c2b63",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 827,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 16.109,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_terse_2",
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "bfae5f6ec29c1eacbef8f7d7b59d3d29aae9403cf0373337d7d58b152e0823a3",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 287,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum1"
+            }
+          },
+          "id": "write1",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 8.704,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_terse_3",
+      "output": "write1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum1"
+            }
+          },
+          "id": "write1",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "b43c2397a360fb68f522272fc7de3a1e8344b8fcd2a71a0a4e8aceb1146e1038",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 2040,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "spaces": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_records"
+            }
+          },
+          "id": "sum_volumes",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_volumes"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 4,
+    "seconds": 47.636,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 5,
+    "seconds": 70.901,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 402,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "3",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "2"
+            }
+          },
+          "id": "3",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 6,
+    "seconds": 6.617,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_terse_6",
+      "output": "3",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "2"
+            }
+          },
+          "id": "3",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "cc3bba5246618f161c7d017db66c99dd8222709e6dca9daa905d45a961458771",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 364,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_volumes",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_volumes"
+            }
+          },
+          "id": "report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 7,
+    "seconds": 7.463,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_terse_7",
+      "output": "report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_volumes",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_volumes"
+            }
+          },
+          "id": "report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "ba8b03a0e56f6e86f655c0f90f5afb86ec786fdb9262e5aa9357d68907669ddb",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1609,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 34.412,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_terse_8",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "084dae1a1bf4a8645a27af26ef5ad9d258357a5c7929614da563a8ea276fed65",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 217,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 3.774,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_terse_9",
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "bfae5f6ec29c1eacbef8f7d7b59d3d29aae9403cf0373337d7d58b152e0823a3",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 0,
+    "seconds": 89.507,
+    "spec": "example",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 600,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": "ContractError:records must have type list",
+    "finish_reason": "stop",
+    "program": {
+      "output": "agg",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "convert"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "sum"
+            }
+          },
+          "id": "agg",
+          "tool": "aggregate"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 12.744,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 1222,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step3",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step2"
+            }
+          },
+          "id": "step3",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 22.623,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_example_2",
+      "output": "step3",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step2"
+            }
+          },
+          "id": "step3",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "4ee531cbf8d1ab83fa1da751541825adfc61f36a0e2e3d969bf9bc1e9554df7a",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1998,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 49.834,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_example_3",
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "a349ccdfac00045d238bb77ff01b108d7c91800232a67057ed7e250b7ea710b4",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 237,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 4,
+    "seconds": 4.352,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "clover_sparse_example_4",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7d11506f8d92ed38c083b53cc55538891f364a2f49dff36c98e101488d761f9e",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 3146,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": null,
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "convert"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 5,
+    "seconds": 64.922,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 6,
+    "seconds": 75.619,
+    "spec": "example",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 975,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": "KeyError:'input.records'",
+    "finish_reason": "stop",
+    "program": {
+      "output": "4",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "step": "input.records"
+            }
+          },
+          "id": "1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "2"
+            }
+          },
+          "id": "3",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "literal": "report"
+            },
+            "report": {
+              "step": "3"
+            }
+          },
+          "id": "4",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 7,
+    "seconds": 9.856,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 801,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": "ContractError:batch must have type dict",
+    "finish_reason": "stop",
+    "program": {
+      "output": "3",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "2"
+            }
+          },
+          "id": "3",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 14.713,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 144,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": "ContractError:binding must have exactly one of input, step, literal",
+    "finish_reason": "stop",
+    "program": {
+      "output": "s2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "value": "L"
+          },
+          "id": "s2",
+          "tool": "constant_report"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 3.234,
+    "spec": "example",
+    "status": "discovery_failed"
+  }
+]

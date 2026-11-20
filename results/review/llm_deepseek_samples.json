@@ -1,0 +1,1860 @@
+[
+  {
+    "completion_tokens": 1037,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 63.546,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_full_0",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "37a99e35dbba47f96cfdb5d1a326dfcb5661e77a4f38c48ec95c9a961fa7e39d",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 771,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "written",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validated",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validated"
+            }
+          },
+          "id": "converted",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "converted"
+            }
+          },
+          "id": "aggregated",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregated"
+            }
+          },
+          "id": "written",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 41.265,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_full_1",
+      "output": "written",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validated",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validated"
+            }
+          },
+          "id": "converted",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "converted"
+            }
+          },
+          "id": "aggregated",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregated"
+            }
+          },
+          "id": "written",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "a75f4c81fabd6e1a22c04b36211694d461f1879ea96870c9f437ebbbf6e3e577",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1574,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 85.438,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_full_2",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "aad712ce3760a23b4e279c09d76567a744d43e70deae15138a9189cab49300a5",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1808,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "written",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "valid_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid_records"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "report",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "report"
+            }
+          },
+          "id": "written",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 95.713,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_full_3",
+      "output": "written",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "valid_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid_records"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "report",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "report"
+            }
+          },
+          "id": "written",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "3d51d67a5d7b27a117be09a31d4e95ae0ba11e6424118b5fd1db6425706365c3",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1328,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 74.771,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_terse_0",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "6ca45d1a5184f8acdd2c407c9c42bd3cb50a389e2185de27dc868a2d0e8017bb",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 363,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "valid",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 19.908,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_terse_1",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "valid",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "110e2fa7d86955385dbf4ff8fc57f2611f196a7f1ffa3fb24f0fe18c2d10e8f1",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1575,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 83.48,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_terse_2",
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "9ed5ab3763957ac04e43998d147b5a2ad7b69b2554a90e183ec0e686f25759a3",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 2511,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 132.13,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_terse_3",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "199be22754810c91a37de47c27ce93d3b000db17391fd7515359392b41ca8615",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1507,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 83.633,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_example_0",
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "9ed5ab3763957ac04e43998d147b5a2ad7b69b2554a90e183ec0e686f25759a3",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1015,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 53.018,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_example_1",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "37a99e35dbba47f96cfdb5d1a326dfcb5661e77a4f38c48ec95c9a961fa7e39d",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1019,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 55.014,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_example_2",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "6ca45d1a5184f8acdd2c407c9c42bd3cb50a389e2185de27dc868a2d0e8017bb",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 896,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "valid",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 47.786,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_example_3",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "valid",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "110e2fa7d86955385dbf4ff8fc57f2611f196a7f1ffa3fb24f0fe18c2d10e8f1",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 0,
+    "seconds": 217.877,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 1,
+    "seconds": 216.828,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 2,
+    "seconds": 229.834,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 3,
+    "seconds": 214.27,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 0,
+    "seconds": 217.243,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 1,
+    "seconds": 216.354,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 2,
+    "seconds": 214.05,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 3,
+    "seconds": 212.34,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 3717,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "s4",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 203.428,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_sparse_example_0",
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "a349ccdfac00045d238bb77ff01b108d7c91800232a67057ed7e250b7ea710b4",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 3250,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 176.769,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_sparse_example_1",
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "a349ccdfac00045d238bb77ff01b108d7c91800232a67057ed7e250b7ea710b4",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 2,
+    "seconds": 213.658,
+    "spec": "example",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 3,
+    "seconds": 216.192,
+    "spec": "example",
+    "status": "unparseable"
+  }
+]

@@ -1,0 +1,306 @@
+{
+  "change_at_checkpoint": 4,
+  "results": {
+    "pinned": {
+      "lifecycle_events": [],
+      "series": [
+        {
+          "checkpoint": 0,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 1,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 2,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 3,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 4,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 30,
+          "success": 0.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 5,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 30,
+          "success": 0.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 6,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 30,
+          "success": 0.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 7,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 30,
+          "success": 0.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 8,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 30,
+          "success": 0.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 9,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 30,
+          "success": 0.0,
+          "tool_version": "2.0.0"
+        }
+      ]
+    },
+    "pinned_lifecycle": {
+      "lifecycle_events": [
+        {
+          "checkpoint": 4,
+          "revoked": 1
+        },
+        {
+          "checkpoint": 4,
+          "decision": "REJECT",
+          "skill": "compiled_standard"
+        },
+        {
+          "checkpoint": 4,
+          "decision": "ACCEPT",
+          "skill": "adapted_filter_valid"
+        }
+      ],
+      "series": [
+        {
+          "checkpoint": 0,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 1,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 2,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 3,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 4,
+          "library": [
+            "adapted_filter_valid"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 5,
+          "library": [
+            "adapted_filter_valid"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 6,
+          "library": [
+            "adapted_filter_valid"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 7,
+          "library": [
+            "adapted_filter_valid"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 8,
+          "library": [
+            "adapted_filter_valid"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 9,
+          "library": [
+            "adapted_filter_valid"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "2.0.0"
+        }
+      ]
+    },
+    "unpinned": {
+      "lifecycle_events": [],
+      "series": [
+        {
+          "checkpoint": 0,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 1,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 2,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 3,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 1.0,
+          "tool_version": "1.0.0"
+        },
+        {
+          "checkpoint": 4,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 0.6,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 5,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 0.6,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 6,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 0.6,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 7,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 0.6,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 8,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 0.6,
+          "tool_version": "2.0.0"
+        },
+        {
+          "checkpoint": 9,
+          "library": [
+            "compiled_standard"
+          ],
+          "observable_errors": 0,
+          "success": 0.6,
+          "tool_version": "2.0.0"
+        }
+      ]
+    }
+  },
+  "scope": "one controlled tool change; re-verification draws from a fixed candidate pool"
+}

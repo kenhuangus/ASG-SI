@@ -1,0 +1,8 @@
+{
+  "admission_bundles": 400,
+  "candidate_test_executions": 3700,
+  "downstream_rewards_reconstructed": 7000,
+  "downstream_tasks": 7000,
+  "integrity_scope": "recorded SHA-256 roots; retain an external checkpoint to detect whole-run replacement",
+  "status": "REPRODUCED"
+}

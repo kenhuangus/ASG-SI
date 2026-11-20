@@ -5,8 +5,8 @@ from .evidence import EvidenceError, environment_snapshot, read_bundle
 from .types import Candidate, EvaluationCase, digest
 from .verifier import GateConfig, verify_in_process
 
-def audit_replay(path, *, expected_manifest_sha256=None):
-    bundle = read_bundle(path, expected_manifest_sha256=expected_manifest_sha256)
+def audit_replay(path, *, expected_manifest_sha256=None, signing_key=None):
+    bundle = read_bundle(path, expected_manifest_sha256=expected_manifest_sha256, signing_key=signing_key)
     if bundle["manifest"]["environment"] != environment_snapshot():
         raise EvidenceError("environment_mismatch: restore recorded code, Python, and tool versions")
     files = bundle["artifacts"]

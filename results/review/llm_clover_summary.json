@@ -1,0 +1,107 @@
+{
+  "by_spec": {
+    "documented/example": {
+      "mean_completion_tokens": 538.4,
+      "samples": 10,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 10,
+        "unparseable": 0
+      },
+      "valid_samples": 2
+    },
+    "documented/full": {
+      "mean_completion_tokens": 1243.7,
+      "samples": 10,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 10,
+        "unparseable": 0
+      },
+      "valid_samples": 10
+    },
+    "documented/terse": {
+      "mean_completion_tokens": 723.8,
+      "samples": 10,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 10,
+        "unparseable": 0
+      },
+      "valid_samples": 1
+    },
+    "sparse/example": {
+      "mean_completion_tokens": 1731.5,
+      "samples": 10,
+      "status": {
+        "discovery_failed": 5,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 3,
+        "unparseable": 2
+      },
+      "valid_samples": 1
+    },
+    "sparse/full": {
+      "mean_completion_tokens": 3654.5,
+      "samples": 10,
+      "status": {
+        "discovery_failed": 2,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 0,
+        "unparseable": 8
+      },
+      "valid_samples": 0
+    },
+    "sparse/terse": {
+      "mean_completion_tokens": 1341.7,
+      "samples": 10,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 8,
+        "unparseable": 2
+      },
+      "valid_samples": 0
+    }
+  },
+  "critic": {
+    "accept_faulty": 0,
+    "accept_valid": 4,
+    "unparseable": 2
+  },
+  "endpoint": "http://ken-mac.local:8000/v1",
+  "evidence_critic": {
+    "accept_faulty": 0,
+    "accept_valid": 6,
+    "unparseable": 9
+  },
+  "faulty_unique": 19,
+  "llm_stats": {
+    "cache_hits": 144,
+    "calls": 0,
+    "completion_tokens": 0,
+    "errors": 0,
+    "prompt_tokens": 0,
+    "seconds": 0.0
+  },
+  "llm_verification_tokens": {
+    "evidence": 80402,
+    "self": 30673
+  },
+  "model": "clover",
+  "no_library_success": 0.23333333333333334,
+  "samples": 60,
+  "submitted": 41,
+  "temperature": 0.8,
+  "unique_candidates": 31,
+  "valid_unique": 12
+}

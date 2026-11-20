@@ -1,0 +1,3932 @@
+[
+  {
+    "completion_tokens": 730,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "filter_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "filter_records"
+            }
+          },
+          "id": "convert_records",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_records"
+            }
+          },
+          "id": "sum_volume",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "sum_volume"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 17.527,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_0",
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "filter_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "filter_records"
+            }
+          },
+          "id": "convert_records",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_records"
+            }
+          },
+          "id": "sum_volume",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "sum_volume"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "6454cce320c4470e7afb7a037fc172d820c345feffd52eb49b98ad2f32f73797",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 2690,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "2"
+            }
+          },
+          "id": "3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "3"
+            }
+          },
+          "id": "4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "4"
+            }
+          },
+          "id": "5",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 65.482,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_1",
+      "output": "5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "2"
+            }
+          },
+          "id": "3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "3"
+            }
+          },
+          "id": "4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "4"
+            }
+          },
+          "id": "5",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "874581660a53064fc39c3efbb01594a12fb94eee1f502e436bdd988507bfe034",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1887,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_result",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "valid_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid_records"
+            }
+          },
+          "id": "to_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "to_liters"
+            }
+          },
+          "id": "report",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "report"
+            }
+          },
+          "id": "write_result",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 43.501,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_2",
+      "output": "write_result",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "valid_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid_records"
+            }
+          },
+          "id": "to_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "to_liters"
+            }
+          },
+          "id": "report",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "report"
+            }
+          },
+          "id": "write_result",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "c60976c0ba5c766df2072e80db10fda32b1d055f4ad729d4872c55e079249e85",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1085,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 26.927,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_3",
+      "output": "report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "059ef3fa85fbf4949f5e4f2ef3f5ebac4d3ef2ff9407dc42c1d816fe8b37e93e",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 2163,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 4,
+    "seconds": 53.904,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_4",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "2a129bf330579dcd6fb76b3a2c4b0add614a5b394f32b03ff6e20f2de0fbb63f",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1687,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "sum",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 5,
+    "seconds": 34.304,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_5",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "sum",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "edbff461e6f25b96df0080dbfc1a288e3e9411a0402e11c31cd08231860c3c09",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1021,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "sum",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 6,
+    "seconds": 20.811,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_6",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "sum",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "edbff461e6f25b96df0080dbfc1a288e3e9411a0402e11c31cd08231860c3c09",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 869,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "total",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 7,
+    "seconds": 14.914,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_7",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "b88afaffcd31591ecd209913952059cfe992498bf85213b3243fdc69b234e2dd",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 2671,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "w1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "v1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "v1"
+            }
+          },
+          "id": "c1",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "c1"
+            }
+          },
+          "id": "a1",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "a1"
+            }
+          },
+          "id": "w1",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 33.547,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_8",
+      "output": "w1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "v1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "v1"
+            }
+          },
+          "id": "c1",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "c1"
+            }
+          },
+          "id": "a1",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "a1"
+            }
+          },
+          "id": "w1",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "973c6a8c5cfed7bbc7573ae10a224d2285986f170aaabdf47e4e08d6f7ce1536",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 893,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step4",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "step2"
+            }
+          },
+          "id": "step3",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step3"
+            }
+          },
+          "id": "step4",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 12.802,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_full_9",
+      "output": "step4",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "step2"
+            }
+          },
+          "id": "step3",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step3"
+            }
+          },
+          "id": "step4",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "92a224dea1e4a0dd08b9d76560269df4e99cb48379fa28b8e340e167ff67b402",
+    "spec": "full",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 477,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum1"
+            }
+          },
+          "id": "write1",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 10.188,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_0",
+      "output": "write1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum1"
+            }
+          },
+          "id": "write1",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "b43c2397a360fb68f522272fc7de3a1e8344b8fcd2a71a0a4e8aceb1146e1038",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 381,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 12.488,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_1",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "084dae1a1bf4a8645a27af26ef5ad9d258357a5c7929614da563a8ea276fed65",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 121,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 4.451,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_2",
+      "output": "2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "76f9ecbe549007962aefae3594535dab6c2cc558e656fdc92c2e60973c84fb00",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 259,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 6.042,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_3",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "084dae1a1bf4a8645a27af26ef5ad9d258357a5c7929614da563a8ea276fed65",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1414,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 4,
+    "seconds": 32.213,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_4",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7d11506f8d92ed38c083b53cc55538891f364a2f49dff36c98e101488d761f9e",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 293,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 5,
+    "seconds": 5.099,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_5",
+      "output": "2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "76f9ecbe549007962aefae3594535dab6c2cc558e656fdc92c2e60973c84fb00",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 183,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 6,
+    "seconds": 3.243,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_6",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "084dae1a1bf4a8645a27af26ef5ad9d258357a5c7929614da563a8ea276fed65",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 349,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_records",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_records"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 7,
+    "seconds": 8.919,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_7",
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_records",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_records"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "c84f32b121fc6d18b7c91e3e40a5cb7aa843a18fdcfafdb7b460d07859f61c57",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 783,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "2"
+            }
+          },
+          "id": "3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "3"
+            }
+          },
+          "id": "4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "4"
+            }
+          },
+          "id": "5",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 17.639,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_8",
+      "output": "5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "1"
+            }
+          },
+          "id": "2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "2"
+            }
+          },
+          "id": "3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "3"
+            }
+          },
+          "id": "4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "4"
+            }
+          },
+          "id": "5",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "874581660a53064fc39c3efbb01594a12fb94eee1f502e436bdd988507bfe034",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 704,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 15.431,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_terse_9",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7d11506f8d92ed38c083b53cc55538891f364a2f49dff36c98e101488d761f9e",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 401,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_records"
+            }
+          },
+          "id": "sum_values",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_values"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 11.953,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_example_0",
+      "output": "write_report",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_records"
+            }
+          },
+          "id": "sum_values",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_values"
+            }
+          },
+          "id": "write_report",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "c44e580e81eee0bf0b18a51d358cafec2854f3e641084ce45c321bbd0a69e42b",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 934,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 20.132,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_example_1",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "084dae1a1bf4a8645a27af26ef5ad9d258357a5c7929614da563a8ea276fed65",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 846,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 16.126,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_example_2",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "2a129bf330579dcd6fb76b3a2c4b0add614a5b394f32b03ff6e20f2de0fbb63f",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 345,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_output_1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_values_1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_values_1"
+            }
+          },
+          "id": "write_output_1",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 10.275,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_example_3",
+      "output": "write_output_1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum_values_1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum_values_1"
+            }
+          },
+          "id": "write_output_1",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "c440686c12c5c6e31b63c27b51bea1413f258d11d2d72d7c8f3f549d329d7108",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 897,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_output",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "convert_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_liters"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write_output",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 4,
+    "seconds": 24.475,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_example_4",
+      "output": "write_output",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "convert_liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_liters"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write_output",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "c1cfc77c0d85698059229837782fef753624021fcf9b1ac74083767ab1a45482",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 764,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregates",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregates"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 5,
+    "seconds": 12.904,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_example_5",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregates",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregates"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "4cf4ce6750335e756e11c4570f5a7fb0a4b7562f6ceaec6410efa9fb6d2885aa",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1031,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 6,
+    "seconds": 18.639,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_example_6",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7d11506f8d92ed38c083b53cc55538891f364a2f49dff36c98e101488d761f9e",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 401,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "documented",
+    "error": "ContractError:argument names do not match declared schema",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "aggregate"
+        }
+      ]
+    },
+    "sample": 7,
+    "seconds": 8.761,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 966,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 22.65,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_example_8",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "read_records": "1.0.0",
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "3ec948db5115aa17e7e8a28f03aad234b8ef875b689e9e2796993befc6302717",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 803,
+    "doc": "documented",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 19.329,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_documented_example_9",
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "bfae5f6ec29c1eacbef8f7d7b59d3d29aae9403cf0373337d7d58b152e0823a3",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 0,
+    "seconds": 109.795,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 1,
+    "seconds": 95.659,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 2,
+    "seconds": 96.558,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 3,
+    "seconds": 98.681,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 4,
+    "seconds": 86.412,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 5,
+    "seconds": 102.764,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 6,
+    "seconds": 108.656,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 7,
+    "seconds": 119.914,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 8,
+    "seconds": 77.969,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 9,
+    "seconds": 68.664,
+    "spec": "full",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 143,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "total",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 4.426,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_sparse_terse_0",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "total",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "c23067ae9badff4e148321da4b8498bafd2157f1ccc536ce24c4e6967f98bd97",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 238,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 6.77,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_sparse_terse_1",
+      "output": "step2",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "step1",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "step1"
+            }
+          },
+          "id": "step2",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "bfae5f6ec29c1eacbef8f7d7b59d3d29aae9403cf0373337d7d58b152e0823a3",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1557,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 33.032,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_sparse_terse_2",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7d11506f8d92ed38c083b53cc55538891f364a2f49dff36c98e101488d761f9e",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 3,
+    "seconds": 102.033,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 4,
+    "seconds": 96.912,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 5,
+    "seconds": 101.295,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 2310,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": null,
+    "finish_reason": "stop",
+    "program": {
+      "output": "liters",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "liters"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 6,
+    "seconds": 57.315,
+    "spec": "terse",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 169,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 7,
+    "seconds": 13.451,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_sparse_terse_7",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "084dae1a1bf4a8645a27af26ef5ad9d258357a5c7929614da563a8ea276fed65",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 8,
+    "seconds": 46.254,
+    "spec": "terse",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 444,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 8.118,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_sparse_terse_9",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "sum",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "sum"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "sum_values": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "7d11506f8d92ed38c083b53cc55538891f364a2f49dff36c98e101488d761f9e",
+    "spec": "terse",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 1743,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": "ContractError:records must have type list",
+    "finish_reason": "stop",
+    "program": {
+      "output": "w",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "v",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "v"
+            }
+          },
+          "id": "c",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "c"
+            }
+          },
+          "id": "s",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s"
+            }
+          },
+          "id": "w",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 0,
+    "seconds": 35.097,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 131,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": null,
+    "finish_reason": "stop",
+    "program": {
+      "output": "1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "convert_liters"
+        }
+      ]
+    },
+    "sample": 1,
+    "seconds": 4.486,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 607,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": "ContractError:value must have type number",
+    "finish_reason": "stop",
+    "program": {
+      "output": "d",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "a",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "a"
+            }
+          },
+          "id": "b",
+          "tool": "sum_values"
+        },
+        {
+          "args": {
+            "value": {
+              "step": "b"
+            }
+          },
+          "id": "c",
+          "tool": "constant_report"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "c"
+            }
+          },
+          "id": "d",
+          "tool": "aggregate"
+        }
+      ]
+    },
+    "sample": 2,
+    "seconds": 13.076,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 3845,
+    "doc": "sparse",
+    "finish_reason": "stop",
+    "program": {
+      "output": "write_output_step",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read_records_step",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read_records_step"
+            }
+          },
+          "id": "validate_step",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_step"
+            }
+          },
+          "id": "convert_step",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_step"
+            }
+          },
+          "id": "aggregate_step",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate_step"
+            }
+          },
+          "id": "write_output_step",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 3,
+    "seconds": 86.94,
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "qwen4b_sparse_example_3",
+      "output": "write_output_step",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read_records_step",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read_records_step"
+            }
+          },
+          "id": "validate_step",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate_step"
+            }
+          },
+          "id": "convert_step",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert_step"
+            }
+          },
+          "id": "aggregate_step",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "aggregate_step"
+            }
+          },
+          "id": "write_output_step",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "skill_id": "92d27c671a620ddb6b5fd1932749a50dc2bdb014013fc0671998f242871dde2c",
+    "spec": "example",
+    "status": "submitted"
+  },
+  {
+    "completion_tokens": 175,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": "KeyError:'s0'",
+    "finish_reason": "stop",
+    "program": {
+      "output": "s4",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "step": "s0"
+            }
+          },
+          "id": "s1",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "step": "s0"
+            },
+            "report": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 4,
+    "seconds": 3.02,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 5,
+    "seconds": 92.711,
+    "spec": "example",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 433,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": null,
+    "finish_reason": "stop",
+    "program": {
+      "output": "1",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "1",
+          "tool": "convert_liters"
+        }
+      ]
+    },
+    "sample": 6,
+    "seconds": 8.938,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 4096,
+    "doc": "sparse",
+    "finish_reason": "length",
+    "program": null,
+    "sample": 7,
+    "seconds": 88.497,
+    "spec": "example",
+    "status": "unparseable"
+  },
+  {
+    "completion_tokens": 327,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": null,
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "convert"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 8,
+    "seconds": 5.895,
+    "spec": "example",
+    "status": "discovery_failed"
+  },
+  {
+    "completion_tokens": 3578,
+    "discovery": {
+      "constraint_violation": false,
+      "outcome_correct": false,
+      "success": false
+    },
+    "doc": "sparse",
+    "error": null,
+    "finish_reason": "stop",
+    "program": {
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "convert"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ]
+    },
+    "sample": 9,
+    "seconds": 69.518,
+    "spec": "example",
+    "status": "discovery_failed"
+  }
+]

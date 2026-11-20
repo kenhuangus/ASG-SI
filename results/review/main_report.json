@@ -1,0 +1,6810 @@
+{
+  "by_fault": [
+    {
+      "accepted": 5,
+      "fault_type": "changed_dependency",
+      "method": "first_success",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "constraint_violation",
+      "method": "first_success",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "incorrect_binding",
+      "method": "first_success",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "memorized_answer",
+      "method": "first_success",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "modified_artifact",
+      "method": "first_success",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 15,
+      "fault_type": "none",
+      "method": "first_success",
+      "phase": "online",
+      "submissions": 15
+    },
+    {
+      "accepted": 5,
+      "fault_type": "skipped_validation",
+      "method": "first_success",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "unit_mismatch",
+      "method": "first_success",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "changed_dependency",
+      "method": "independent_composition",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "constraint_violation",
+      "method": "independent_composition",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "incorrect_binding",
+      "method": "independent_composition",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "memorized_answer",
+      "method": "independent_composition",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "modified_artifact",
+      "method": "independent_composition",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 15,
+      "fault_type": "none",
+      "method": "independent_composition",
+      "phase": "online",
+      "submissions": 15
+    },
+    {
+      "accepted": 0,
+      "fault_type": "skipped_validation",
+      "method": "independent_composition",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "unit_mismatch",
+      "method": "independent_composition",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "changed_dependency",
+      "method": "independent_replay",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "constraint_violation",
+      "method": "independent_replay",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "incorrect_binding",
+      "method": "independent_replay",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "memorized_answer",
+      "method": "independent_replay",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "modified_artifact",
+      "method": "independent_replay",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 15,
+      "fault_type": "none",
+      "method": "independent_replay",
+      "phase": "online",
+      "submissions": 15
+    },
+    {
+      "accepted": 0,
+      "fault_type": "skipped_validation",
+      "method": "independent_replay",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "unit_mismatch",
+      "method": "independent_replay",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "changed_dependency",
+      "method": "self_verification",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "constraint_violation",
+      "method": "self_verification",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "incorrect_binding",
+      "method": "self_verification",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "memorized_answer",
+      "method": "self_verification",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "modified_artifact",
+      "method": "self_verification",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 15,
+      "fault_type": "none",
+      "method": "self_verification",
+      "phase": "online",
+      "submissions": 15
+    },
+    {
+      "accepted": 0,
+      "fault_type": "skipped_validation",
+      "method": "self_verification",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "unit_mismatch",
+      "method": "self_verification",
+      "phase": "online",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "changed_dependency",
+      "method": "first_success",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "constraint_violation",
+      "method": "first_success",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "incorrect_binding",
+      "method": "first_success",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "memorized_answer",
+      "method": "first_success",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "modified_artifact",
+      "method": "first_success",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 15,
+      "fault_type": "none",
+      "method": "first_success",
+      "phase": "static",
+      "submissions": 15
+    },
+    {
+      "accepted": 5,
+      "fault_type": "skipped_validation",
+      "method": "first_success",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 5,
+      "fault_type": "unit_mismatch",
+      "method": "first_success",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "changed_dependency",
+      "method": "independent_composition",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "constraint_violation",
+      "method": "independent_composition",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "incorrect_binding",
+      "method": "independent_composition",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "memorized_answer",
+      "method": "independent_composition",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "modified_artifact",
+      "method": "independent_composition",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 15,
+      "fault_type": "none",
+      "method": "independent_composition",
+      "phase": "static",
+      "submissions": 15
+    },
+    {
+      "accepted": 0,
+      "fault_type": "skipped_validation",
+      "method": "independent_composition",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "unit_mismatch",
+      "method": "independent_composition",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "changed_dependency",
+      "method": "independent_replay",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "constraint_violation",
+      "method": "independent_replay",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "incorrect_binding",
+      "method": "independent_replay",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "memorized_answer",
+      "method": "independent_replay",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "modified_artifact",
+      "method": "independent_replay",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 15,
+      "fault_type": "none",
+      "method": "independent_replay",
+      "phase": "static",
+      "submissions": 15
+    },
+    {
+      "accepted": 0,
+      "fault_type": "skipped_validation",
+      "method": "independent_replay",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "unit_mismatch",
+      "method": "independent_replay",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "changed_dependency",
+      "method": "self_verification",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "constraint_violation",
+      "method": "self_verification",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "incorrect_binding",
+      "method": "self_verification",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "memorized_answer",
+      "method": "self_verification",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "modified_artifact",
+      "method": "self_verification",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 15,
+      "fault_type": "none",
+      "method": "self_verification",
+      "phase": "static",
+      "submissions": 15
+    },
+    {
+      "accepted": 0,
+      "fault_type": "skipped_validation",
+      "method": "self_verification",
+      "phase": "static",
+      "submissions": 5
+    },
+    {
+      "accepted": 0,
+      "fault_type": "unit_mismatch",
+      "method": "self_verification",
+      "phase": "static",
+      "submissions": 5
+    }
+  ],
+  "checkpoint_curves": [
+    {
+      "checkpoint": 0,
+      "method": "first_success",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 0,
+      "method": "first_success",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "first_success",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.24000000000000002,
+          0.7666666666666667
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.5266666666666667,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "first_success",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.23,
+          0.72
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.5,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 2,
+      "method": "first_success",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.3933333333333333,
+          0.6799999999999999
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.54,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 2,
+      "method": "first_success",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.42,
+          0.64
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.53,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 3,
+      "method": "first_success",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.42666666666666664,
+          0.6466666666666666
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.5333333333333333,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 3,
+      "method": "first_success",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.45,
+          0.65
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.55,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 4,
+      "method": "first_success",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.45333333333333337,
+          0.5733333333333334
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.52,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 4,
+      "method": "first_success",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.53,
+          0.59
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.56,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 5,
+      "method": "first_success",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.4,
+          0.5066666666666667
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.4533333333333333,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 5,
+      "method": "first_success",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.37,
+          0.54
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.46,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 0,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 0,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.0,
+          0.8
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.4,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.0,
+          0.8
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.4,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 2,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.4,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.8,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 2,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.4,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.8,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 3,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 3,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 4,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 4,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 5,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 5,
+      "method": "independent_composition",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 0,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 0,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.0,
+          0.8
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.4,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.0,
+          0.8
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.4,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 2,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.4,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.8,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 2,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.4,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.8,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 3,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 3,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 4,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 4,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 5,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 5,
+      "method": "independent_replay",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 0,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 0,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.0,
+          0.8
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.4,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.0,
+          0.8
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.4,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 2,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.4,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.8,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 2,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.4,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.8,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 3,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 3,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 4,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 4,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 5,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 5,
+      "method": "self_verification",
+      "phase": "online",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "first_success",
+      "phase": "static",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          0.4,
+          0.5066666666666667
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.4533333333333333,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "first_success",
+      "phase": "static",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          0.37,
+          0.54
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 0.46,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "independent_composition",
+      "phase": "static",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "independent_composition",
+      "phase": "static",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "independent_replay",
+      "phase": "static",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "independent_replay",
+      "phase": "static",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "self_verification",
+      "phase": "static",
+      "split": "evaluation",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    },
+    {
+      "checkpoint": 1,
+      "method": "self_verification",
+      "phase": "static",
+      "split": "stress",
+      "success": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci_method": "percentile run bootstrap",
+        "mean": 1.0,
+        "n_runs": 5,
+        "statistical_unit": "independent run seed"
+      }
+    }
+  ],
+  "paired_effects": [
+    {
+      "method": "independent_composition",
+      "paired_run_differences": {
+        "accepted_decisions": {
+          "ci95": [
+            -7,
+            -7
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -7,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            -0.21333333333333335,
+            -0.11333333333333333
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -0.17333333333333334,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            0.49333333333333335,
+            0.6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5466666666666666,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            655285.4,
+            671083.4
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 663184.4,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            -1.0,
+            -1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            110,
+            110
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 110,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            0.45999999999999996,
+            0.63
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5399999999999999,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            -6,
+            -6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -6,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            900.7136599975638,
+            929.2257799919753
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 913.6387199978344,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            447,
+            447
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 447,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "online",
+      "reference": "first_success"
+    },
+    {
+      "method": "independent_replay",
+      "paired_run_differences": {
+        "accepted_decisions": {
+          "ci95": [
+            -7,
+            -7
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -7,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            -0.21333333333333335,
+            -0.11333333333333333
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -0.17333333333333334,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            0.49333333333333335,
+            0.6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5466666666666666,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            744549.2,
+            762784.8
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 753667,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            -1.0,
+            -1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            110,
+            110
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 110,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            0.45999999999999996,
+            0.63
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5399999999999999,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            -6,
+            -6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -6,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            908.510079998814,
+            921.3167200054158
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 913.3946800007834,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            522,
+            522
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 522,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "online",
+      "reference": "first_success"
+    },
+    {
+      "method": "self_verification",
+      "paired_run_differences": {
+        "accepted_decisions": {
+          "ci95": [
+            -7,
+            -7
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -7,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            -0.21333333333333335,
+            -0.11333333333333333
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -0.17333333333333334,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            0.49333333333333335,
+            0.6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5466666666666666,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            744405.6,
+            762643.2
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 753524.4,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            -1.0,
+            -1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            110,
+            110
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 110,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            0.45999999999999996,
+            0.63
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5399999999999999,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            -6,
+            -6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -6,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            31.009879997873213,
+            35.33387999923434
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 33.31700000053388,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            522,
+            522
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 522,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "online",
+      "reference": "first_success"
+    },
+    {
+      "method": "independent_composition",
+      "paired_run_differences": {
+        "accepted_decisions": {
+          "ci95": [
+            -7,
+            -7
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -7,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            -0.21333333333333335,
+            -0.11333333333333333
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -0.17333333333333334,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            0.49333333333333335,
+            0.6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5466666666666666,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            655288,
+            671084.4
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 663186.2,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            -1.0,
+            -1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            110,
+            110
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 110,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            0.45999999999999996,
+            0.63
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5399999999999999,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            -6,
+            -6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -6,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            896.7790199989395,
+            919.1056200004823
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 907.5276600022335,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            447,
+            447
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 447,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "static",
+      "reference": "first_success"
+    },
+    {
+      "method": "independent_replay",
+      "paired_run_differences": {
+        "accepted_decisions": {
+          "ci95": [
+            -7,
+            -7
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -7,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            -0.21333333333333335,
+            -0.11333333333333333
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -0.17333333333333334,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            0.49333333333333335,
+            0.6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5466666666666666,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            744548.6,
+            762787
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 753667.8,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            -1.0,
+            -1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            110,
+            110
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 110,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            0.45999999999999996,
+            0.63
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5399999999999999,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            -6,
+            -6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -6,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            916.5319199979422,
+            928.170879992831
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 922.8201999976591,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            522,
+            522
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 522,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "static",
+      "reference": "first_success"
+    },
+    {
+      "method": "self_verification",
+      "paired_run_differences": {
+        "accepted_decisions": {
+          "ci95": [
+            -7,
+            -7
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -7,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            -0.21333333333333335,
+            -0.11333333333333333
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -0.17333333333333334,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            0.49333333333333335,
+            0.6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5466666666666666,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            744406.6,
+            762641.8
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 753524.2,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            -1.0,
+            -1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            110,
+            110
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 110,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            0.45999999999999996,
+            0.63
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.5399999999999999,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            -6,
+            -6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": -6,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            30.61902000408736,
+            35.22751999698812
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 32.41614000144182,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            522,
+            522
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 522,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "static",
+      "reference": "first_success"
+    }
+  ],
+  "per_run": [
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.16666666666666666,
+      "downstream_success": 0.4666666666666667,
+      "evidence_bytes": 275379,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "static",
+      "replay_events": 10,
+      "seed": 7,
+      "stress_success": 0.3,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 4.920700001093792,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.16666666666666666,
+      "downstream_success": 0.4666666666666667,
+      "evidence_bytes": 275385,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "online",
+      "replay_events": 10,
+      "seed": 7,
+      "stress_success": 0.3,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 3.419799995754147,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1023034,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 7,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 35.006000001885695,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1023038,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 7,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 32.84840000196709,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1023178,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 7,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 933.6148999936995,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1023178,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 7,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 912.3289000053774,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 933437,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 7,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 900.3288999992947,
+      "verification_tool_calls": 495
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 933437,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 7,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 897.835199994006,
+      "verification_tool_calls": 495
+    },
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.06666666666666667,
+      "downstream_success": 0.5333333333333333,
+      "evidence_bytes": 282254,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "static",
+      "replay_events": 10,
+      "seed": 42,
+      "stress_success": 0.55,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 3.810799986240454,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.06666666666666667,
+      "downstream_success": 0.5333333333333333,
+      "evidence_bytes": 282252,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "online",
+      "replay_events": 10,
+      "seed": 42,
+      "stress_success": 0.55,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 3.952400009438861,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1047657,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 42,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 35.76860000248416,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1047659,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 42,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 38.88109999752487,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1047803,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 42,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 922.7806000017154,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1047802,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 42,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 915.8812000059697,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 955803,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 42,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 917.869700002484,
+      "verification_tool_calls": 495
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 955803,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 42,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 945.8879999983765,
+      "verification_tool_calls": 495
+    },
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.2,
+      "downstream_success": 0.5,
+      "evidence_bytes": 279990,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "static",
+      "replay_events": 10,
+      "seed": 123,
+      "stress_success": 0.55,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 4.130700010136934,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.2,
+      "downstream_success": 0.5,
+      "evidence_bytes": 279994,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "online",
+      "replay_events": 10,
+      "seed": 123,
+      "stress_success": 0.55,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 3.4477999979571905,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1045736,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 123,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 42.1621999994386,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1045742,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 123,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 39.43730000537471,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1045881,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 123,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 915.7959000040137,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1045880,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 123,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 910.6852999939292,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 953680,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 123,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 895.6067000035546,
+      "verification_tool_calls": 495
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 953680,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 123,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 904.4320999964839,
+      "verification_tool_calls": 495
+    },
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.23333333333333334,
+      "downstream_success": 0.36666666666666664,
+      "evidence_bytes": 274392,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "static",
+      "replay_events": 10,
+      "seed": 456,
+      "stress_success": 0.4,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 4.248400000506081,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.23333333333333334,
+      "downstream_success": 0.36666666666666664,
+      "evidence_bytes": 274388,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "online",
+      "replay_events": 10,
+      "seed": 456,
+      "stress_success": 0.4,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 3.381200003786944,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1012298,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 456,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 35.37309999956051,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1012296,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 456,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 38.21420000895159,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1012437,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 456,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 934.0526999912981,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1012442,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 456,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 913.6972999986028,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 924082,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 456,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 932.9353999964951,
+      "verification_tool_calls": 495
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 924078,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 456,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 922.7189999983239,
+      "verification_tool_calls": 495
+    },
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.2,
+      "downstream_success": 0.4,
+      "evidence_bytes": 275522,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "static",
+      "replay_events": 10,
+      "seed": 789,
+      "stress_success": 0.5,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 3.696300002047792,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 10,
+      "constraint_violation_rate": 0.2,
+      "downstream_success": 0.4,
+      "evidence_bytes": 275525,
+      "faulty_admission_rate": 1.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "first_success",
+      "phase": "online",
+      "replay_events": 10,
+      "seed": 789,
+      "stress_success": 0.5,
+      "submissions": 10,
+      "unique_promotions": 9,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 4.049399994983105,
+      "verification_tool_calls": 48
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1026433,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 789,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 34.577700003865175,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1026431,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "self_verification",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 789,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 35.454599990771385,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1026577,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 789,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 928.6637999975937,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 1026577,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_replay",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 789,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 932.6313000019582,
+      "verification_tool_calls": 570
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 936466,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "static",
+      "replay_events": 120,
+      "seed": 789,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 911.704500009364,
+      "verification_tool_calls": 495
+    },
+    {
+      "accepted_decisions": 3,
+      "constraint_violation_rate": 0.0,
+      "downstream_success": 1.0,
+      "evidence_bytes": 936468,
+      "faulty_admission_rate": 0.0,
+      "faulty_candidates": 7,
+      "insufficient_decisions": 0,
+      "method": "independent_composition",
+      "phase": "online",
+      "replay_events": 120,
+      "seed": 789,
+      "stress_success": 1.0,
+      "submissions": 10,
+      "unique_promotions": 3,
+      "unknown_validity": 0,
+      "valid_candidates": 3,
+      "valid_non_admission_rate": 0.0,
+      "valid_rejection_rate": 0.0,
+      "verification_ms": 915.5699000039021,
+      "verification_tool_calls": 495
+    }
+  ],
+  "reward_diagnostics": [
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.3666666666666667,
+      "without_reuse_bonus": 0.8666666666666667
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.3,
+      "without_reuse_bonus": 0.8
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.2,
+      "without_reuse_bonus": 0.7
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.0,
+      "without_reuse_bonus": 0.5
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0333333333333334,
+      "without_reuse_bonus": 0.5333333333333333
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.05,
+      "without_reuse_bonus": 0.55
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.1,
+      "without_reuse_bonus": 0.6
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.05,
+      "without_reuse_bonus": 0.55
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.9666666666666667,
+      "without_reuse_bonus": 0.4666666666666667
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 0.8,
+      "without_reuse_bonus": 0.3
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.9666666666666667,
+      "without_reuse_bonus": 0.4666666666666667
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 0.8,
+      "without_reuse_bonus": 0.3
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 7,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 7,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.5,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.5,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.7666666666666667,
+      "without_reuse_bonus": 0.26666666666666666
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.95,
+      "without_reuse_bonus": 0.45
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.8666666666666667,
+      "without_reuse_bonus": 0.36666666666666664
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.9,
+      "without_reuse_bonus": 0.4
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0666666666666667,
+      "without_reuse_bonus": 0.5666666666666667
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.1,
+      "without_reuse_bonus": 0.6
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0333333333333334,
+      "without_reuse_bonus": 0.5333333333333333
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.05,
+      "without_reuse_bonus": 0.55
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0333333333333334,
+      "without_reuse_bonus": 0.5333333333333333
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.05,
+      "without_reuse_bonus": 0.55
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 42,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 42,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.9,
+      "without_reuse_bonus": 0.4
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 0.9,
+      "without_reuse_bonus": 0.4
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0333333333333334,
+      "without_reuse_bonus": 0.5333333333333333
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.2,
+      "without_reuse_bonus": 0.7
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.9333333333333333,
+      "without_reuse_bonus": 0.43333333333333335
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 0.95,
+      "without_reuse_bonus": 0.45
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0333333333333334,
+      "without_reuse_bonus": 0.5333333333333333
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.05,
+      "without_reuse_bonus": 0.55
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0,
+      "without_reuse_bonus": 0.5
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.05,
+      "without_reuse_bonus": 0.55
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0,
+      "without_reuse_bonus": 0.5
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.05,
+      "without_reuse_bonus": 0.55
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 123,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 123,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.3,
+      "without_reuse_bonus": 0.8
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.25,
+      "without_reuse_bonus": 0.75
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.9666666666666667,
+      "without_reuse_bonus": 0.4666666666666667
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.85,
+      "without_reuse_bonus": 0.35
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.1,
+      "without_reuse_bonus": 0.6
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.15,
+      "without_reuse_bonus": 0.65
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.9,
+      "without_reuse_bonus": 0.4
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.0,
+      "without_reuse_bonus": 0.5
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.8666666666666667,
+      "without_reuse_bonus": 0.36666666666666664
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.9,
+      "without_reuse_bonus": 0.4
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.8666666666666667,
+      "without_reuse_bonus": 0.36666666666666664
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 0.9,
+      "without_reuse_bonus": 0.4
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 456,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 456,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0666666666666667,
+      "without_reuse_bonus": 0.5666666666666667
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.05,
+      "without_reuse_bonus": 0.55
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.2333333333333334,
+      "without_reuse_bonus": 0.7333333333333333
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.15,
+      "without_reuse_bonus": 0.65
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.2333333333333334,
+      "without_reuse_bonus": 0.7333333333333333
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.2,
+      "without_reuse_bonus": 0.7
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.0,
+      "without_reuse_bonus": 0.5
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.1,
+      "without_reuse_bonus": 0.6
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.9,
+      "without_reuse_bonus": 0.4
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.0,
+      "without_reuse_bonus": 0.5
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 0,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 0.0,
+      "without_reuse_bonus": 0.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 2,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 3,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 4,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 5,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "online",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 0.9,
+      "without_reuse_bonus": 0.4
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "first_success",
+      "phase": "static",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.0,
+      "without_reuse_bonus": 0.5
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_composition",
+      "phase": "static",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "independent_replay",
+      "phase": "static",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 789,
+      "split": "evaluation",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    },
+    {
+      "checkpoint": 1,
+      "interpretation": "post-hoc metric sensitivity on identical actions; not a training ablation",
+      "method": "self_verification",
+      "phase": "static",
+      "seed": 789,
+      "split": "stress",
+      "with_reuse_bonus": 1.5,
+      "without_reuse_bonus": 1.0
+    }
+  ],
+  "setting": "deterministic synthetic benchmark; no LLM training",
+  "statistics": "Descriptive run-bootstrap CIs conditional on this frozen candidate pool; no p-values or equivalence claims.",
+  "summary": [
+    {
+      "method": "first_success",
+      "metrics": {
+        "accepted_decisions": {
+          "ci95": [
+            10,
+            10
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 10,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            0.12,
+            0.21333333333333335
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.17333333333333334,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            0.4,
+            0.5066666666666667
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.4533333333333333,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            275014.2,
+            280427
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 277508.8,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            10,
+            10
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 10,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            0.37,
+            0.54
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.46,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            9,
+            9
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 9,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            3.4099599994078744,
+            3.9040799980284646
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3.6501200003840495,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            48,
+            48
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 48,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "online"
+    },
+    {
+      "method": "independent_composition",
+      "metrics": {
+        "accepted_decisions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            930299.6,
+            951086.8
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 940693.2,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            120,
+            120
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 120,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            904.1313399953651,
+            932.9630199979874
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 917.2888399982185,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            495,
+            495
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 495,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "online"
+    },
+    {
+      "method": "independent_replay",
+      "metrics": {
+        "accepted_decisions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            1019563.4,
+            1042788.2
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1031175.8,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            120,
+            120
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 120,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            911.9451399994432,
+            925.2208000034443
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 917.0448000011675,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            570,
+            570
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 570,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "online"
+    },
+    {
+      "method": "self_verification",
+      "metrics": {
+        "accepted_decisions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            1019419.8,
+            1042646.6
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1031033.2,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            120,
+            120
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 120,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            34.687420000409475,
+            38.97020000295015
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 36.96712000091793,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            570,
+            570
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 570,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "online"
+    },
+    {
+      "method": "first_success",
+      "metrics": {
+        "accepted_decisions": {
+          "ci95": [
+            10,
+            10
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 10,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            0.12,
+            0.21333333333333335
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.17333333333333334,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            0.4,
+            0.5066666666666667
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.4533333333333333,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            275012.8,
+            280426.2
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 277507.4,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            10,
+            10
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 10,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            0.37,
+            0.54
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.46,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            9,
+            9
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 9,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            3.8289799973426852,
+            4.54136000116705
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 4.1613800000050105,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            48,
+            48
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 48,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "static"
+    },
+    {
+      "method": "independent_composition",
+      "metrics": {
+        "accepted_decisions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            930300.8,
+            951086.4
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 940693.6,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            120,
+            120
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 120,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            901.0037400024885,
+            923.4009599982528
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 911.6890400022385,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            495,
+            495
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 495,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "static"
+    },
+    {
+      "method": "independent_replay",
+      "metrics": {
+        "accepted_decisions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            1019561.4,
+            1042789
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1031175.2,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            120,
+            120
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 120,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            920.7566400014912,
+            932.7122399939981
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 926.9815799976641,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            570,
+            570
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 570,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "static"
+    },
+    {
+      "method": "self_verification",
+      "metrics": {
+        "accepted_decisions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "constraint_violation_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "downstream_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "evidence_bytes": {
+          "ci95": [
+            1019419.4,
+            1042643.8
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1031031.6,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "faulty_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "replay_events": {
+          "ci95": [
+            120,
+            120
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 120,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "stress_success": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 1.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "unique_promotions": {
+          "ci95": [
+            3,
+            3
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 3,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_non_admission_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "valid_rejection_rate": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 0.0,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_ms": {
+          "ci95": [
+            34.90154000319308,
+            39.45224000053713
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 36.57752000144683,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        },
+        "verification_tool_calls": {
+          "ci95": [
+            570,
+            570
+          ],
+          "ci_method": "percentile run bootstrap",
+          "mean": 570,
+          "n_runs": 5,
+          "statistical_unit": "independent run seed"
+        }
+      },
+      "phase": "static"
+    }
+  ]
+}
