@@ -52,7 +52,8 @@ def table_main():
                     "Table 3: Controlled fault benchmark, mean over five run seeds with 95 % run-bootstrap intervals where nonzero. Per method: 35 faulty and 15 valid decisions, 150 evaluation and 100 stress tasks")
 
 
-MODELS = (("qwen4b", "qwen3.5-4b"), ("clover", "clover-35b-a3b"), ("deepseek", "DeepSeek (748B)"))
+# "qwen4b" is the cache and file key of Clover run 2: requested as qwen3.5-4b, served by clover-35b-a3b.
+MODELS = (("clover", "Clover, run 1"), ("qwen4b", "Clover, run 2"), ("deepseek", "DeepSeek (748B)"))
 
 
 def llm(model):

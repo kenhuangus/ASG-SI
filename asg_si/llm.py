@@ -15,6 +15,9 @@ from .types import canonical_json, digest
 
 ENDPOINTS = {
     "clover": {"base_url": os.getenv("CLOVER_BASE_URL", "http://ken-mac.local:8000/v1"), "model": "clover-35b-a3b"},
+    # Clover run 2. These requests named qwen3.5-4b:4bit, but the server ignored the requested model and answered
+    # every one with its loaded model; all recorded responses report clover-35b-a3b. The request field is kept so
+    # the recorded cache still replays offline; live calls under this name now fail the model check below.
     "qwen4b": {"base_url": os.getenv("CLOVER_BASE_URL", "http://ken-mac.local:8000/v1"), "model": "qwen3.5-4b:4bit"},
     "deepseek": {"base_url": os.getenv("DEEPSEEK_BASE_URL", "http://localhost:8888/v1"), "model": "deepseek"},
 }
@@ -63,6 +66,9 @@ class ChatClient:
         else:
             raise LLMError(f"{self.name} request failed: {last}")
         elapsed = time.perf_counter() - start
+        served = raw.get("model")
+        if served and served != self.model:
+            raise LLMError(f"{self.name}: requested model {self.model} but the server answered with {served}")
         message = raw["choices"][0]["message"]
         usage = raw.get("usage", {})
         record = {"endpoint": self.name, "model": raw.get("model", self.model), "request": request, "sample": sample,
