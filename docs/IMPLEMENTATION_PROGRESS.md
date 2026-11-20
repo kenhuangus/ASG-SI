@@ -2,7 +2,7 @@
 
 Completed and revalidated on **2026-11-18**, using Python **3.12.14**.
 Base repository commit: `c1da9a1d15883d04518f4a7213ccba612b0e6b28`.
-Local implementation branch: `evidence-gated-library`.
+Implementation branch: `evidence-gated-library`, merged into `main` through pull request #1 (merge commit `26c4e84d4d0510b58ba3823c33ee30596386fe08`).
 
 | Step | Implemented result | Validation |
 | --- | --- | --- |
@@ -85,6 +85,7 @@ adversarial isolation remain future milestones. The in-process condition is
 a checking surrogate, not an LLM self-verification result. The five-run CIs
 are conditional on this small frozen candidate pool.
 
-The connected GitHub account has read access to `kenhuangus/ASG-SI`; this
-implementation is delivered as a local branch and downloadable patch/package.
-No upstream branch or pull request has been published.
+The implementation was published to `kenhuangus/ASG-SI` through pull request #1.
+The reported results were produced by commit
+`71657fac5c7e135daf8a88199cc6585186abdda3`; the paper cites merge commit
+`26c4e84d4d0510b58ba3823c33ee30596386fe08`.
