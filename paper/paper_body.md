@@ -63,6 +63,7 @@ ASG-SI has five components: a frozen policy runtime, a trajectory log, a skill c
 
 ![Figure 1: ASG-SI components and data flow](figures/figure1_architecture.png)
 
+\pagebreak
 ### 4.1 Definitions
 
 Table 2 lists the notation used in the rest of the paper.
@@ -92,8 +93,8 @@ The compiler records each tool call of a successful trajectory with the binding 
 ```algorithm Algorithm 1: Compile a successful trajectory into a program
 input: trajectory events e_1..e_k (tool, bindings, tool version), task inputs x, success flag
 if not success or any event lacks a tool or bindings: return none
-steps <- [(id_i, tool_i, bindings_i) for each event e_i]      # bindings: input key | earlier step | literal
-pins  <- {tool_i: version_i}                                  # exact versions observed
+steps <- [(id_i, tool_i, bindings_i) for each event e_i]   # input key, earlier step, or literal
+pins  <- {tool_i: version_i}                               # exact versions observed
 P     <- (steps, output = id_k, pins, input_keys = keys(x))
 return P, id(P) = SHA-256(canonical_json(P))
 ```
@@ -151,7 +152,7 @@ Each decision writes a bundle with four artifacts (candidate, test inputs and la
 
 ### 4.7 Rewards
 
-The decomposed reward of earlier drafts (tool validity, outcome, reuse, composition, memory) is computed and stored for every execution so that alternative weightings can be evaluated after the fact. All results in this paper use a fixed metric: success means a correct output with no constraint violation, with every other weight set to zero. Appendix B gives the proposed phase schedule as a design for future policy training; no reported result depends on it.
+The decomposed reward of earlier drafts (tool validity, outcome, reuse, composition, memory) is computed and stored for every execution so that alternative weightings can be evaluated after the fact. All results in this paper use a fixed metric: success means a correct output with no constraint violation, with every other weight set to zero. Appendix C gives the proposed phase schedule as a design for future policy training; no reported result depends on it.
 
 ## 5 Experimental Setup
 
@@ -233,7 +234,7 @@ Unpinned skills continued to run and produced wrong totals on every task that co
 
 **What the results support.** Replay with coverage requirements excluded every controlled fault class and every faulty model-written candidate in our pools, at roughly ten times the verification cost of first-success admission. Same-model verification was a weaker filter on the same candidates (Section 6.2). Exact replay is the wrong test for stochastic tools, and a statistical gate with a threshold fixed in advance separated adequate from inadequate skills in our setting. Interface checks are a cheap pre-filter that is sound for declared tags and conservative otherwise. Evidence integrity requires layers: hashes, an external anchor or signature, and re-execution each detect a different attack.
 
-**Limitations.** The environments are small and synthetic, and the model-written faults are dominated by one shortcut that the registry made available. Natural fault rates depend on prompts and documentation and do not transfer to other tasks. Coverage requirements only test what the boundary classes describe; the poisoning case passed the standard gate. The separate verifier worker shares the operating-system identity of the policy and is not an adversarial sandbox; signatures assume the key is held outside the agent's reach. No policy is trained, so the paper makes no claim about reward-driven learning, utilization drift under learning, or the reward schedule in Appendix B. SmartSnap and SuperIntelliAgent were not run end to end; we re-implemented their admission rule. Evidence bundles can contain sensitive data and need access control and retention rules in deployment.
+**Limitations.** The environments are small and synthetic, and the model-written faults are dominated by one shortcut that the registry made available. Natural fault rates depend on prompts and documentation and do not transfer to other tasks. Coverage requirements only test what the boundary classes describe; the poisoning case passed the standard gate. The separate verifier worker shares the operating-system identity of the policy and is not an adversarial sandbox; signatures assume the key is held outside the agent's reach. No policy is trained, so the paper makes no claim about reward-driven learning, utilization drift under learning, or the reward schedule in Appendix C. SmartSnap and SuperIntelliAgent were not run end to end; we re-implemented their admission rule. Evidence bundles can contain sensitive data and need access control and retention rules in deployment.
 
 **Next steps.** Evaluate the gate on an established interactive benchmark such as ALFWorld [@shridhar2021alfworld] with model-generated candidates, train a policy against the stored reward components, and enforce the policy, verifier, and evidence boundary at the operating-system level.
 
@@ -262,7 +263,18 @@ python -m experiments.tamper --output runs/review/tamper.json
 python -m experiments.retention --output runs/review/retention.json
 ```
 
-## Appendix B: Proposed reward schedule (design only)
+## Appendix B: Prompts for the language-model experiments
+
+Each generation request contains a system message ("You write small tool-calling programs. Reply with a single JSON object and nothing else."), the tool documentation (full descriptions, or signatures only), the program format with binding rules, one of the three task statements below, and the discovery example with its expected output. Requests use temperature 0.8 and at most 4,096 output tokens; verification requests use temperature 0. The full prompt text is in experiments/llm_candidates.py, and every request and response is stored in the response cache.
+
+- Full: "Write a reusable program for this task. Output the total volume, in liters, of all records whose valid field is true. Records can be in liters (L) or milliliters (mL). Write the report to the task's destination; writing anywhere other than allowed_destination is prohibited. The program must work for any input of this task, not only the example."
+- Terse: "Write a program that totals the record volumes and writes the report."
+- Example only: "Write a program that turns the example input into the example output."
+- Self-verification: the full task statement, the candidate program, its execution on the discovery example, and the question "Will this program produce the correct report, without prohibited writes, for every valid input of this task?"
+- Evidence verification: the proposing model first selects three task inputs that "would best reveal whether this program is correct"; the harness executes the program on them; the model then receives the program, the inputs, and the actual outputs and returns ACCEPT or REJECT.
+
+\pagebreak
+## Appendix C: Proposed reward schedule (design only)
 
 The weights below are a proposal for future policy training and are not used by any result in this paper. Table 11 lists them by phase.
 

@@ -1,0 +1,107 @@
+{
+  "by_spec": {
+    "documented/example": {
+      "mean_completion_tokens": 1109.25,
+      "samples": 4,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 4,
+        "unparseable": 0
+      },
+      "valid_samples": 4
+    },
+    "documented/full": {
+      "mean_completion_tokens": 1297.5,
+      "samples": 4,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 4,
+        "unparseable": 0
+      },
+      "valid_samples": 4
+    },
+    "documented/terse": {
+      "mean_completion_tokens": 1444.25,
+      "samples": 4,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 4,
+        "unparseable": 0
+      },
+      "valid_samples": 4
+    },
+    "sparse/example": {
+      "mean_completion_tokens": 3789.75,
+      "samples": 4,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 2,
+        "unparseable": 2
+      },
+      "valid_samples": 2
+    },
+    "sparse/full": {
+      "mean_completion_tokens": 4096.0,
+      "samples": 4,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 0,
+        "unparseable": 4
+      },
+      "valid_samples": 0
+    },
+    "sparse/terse": {
+      "mean_completion_tokens": 4096.0,
+      "samples": 4,
+      "status": {
+        "discovery_failed": 0,
+        "not_compilable": 0,
+        "provider_error": 0,
+        "submitted": 0,
+        "unparseable": 4
+      },
+      "valid_samples": 0
+    }
+  },
+  "critic": {
+    "accept_faulty": 0,
+    "accept_valid": 7,
+    "unparseable": 1
+  },
+  "endpoint": "http://localhost:8888/v1",
+  "evidence_critic": {
+    "accept_faulty": 0,
+    "accept_valid": 9,
+    "unparseable": 0
+  },
+  "faulty_unique": 0,
+  "llm_stats": {
+    "cache_hits": 51,
+    "calls": 0,
+    "completion_tokens": 0,
+    "errors": 0,
+    "prompt_tokens": 0,
+    "seconds": 0.0
+  },
+  "llm_verification_tokens": {
+    "evidence": 16029,
+    "self": 14170
+  },
+  "model": "deepseek",
+  "no_library_success": 0.5833333333333334,
+  "samples": 24,
+  "submitted": 14,
+  "temperature": 0.8,
+  "unique_candidates": 9,
+  "valid_unique": 9
+}

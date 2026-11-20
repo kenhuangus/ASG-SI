@@ -69,11 +69,15 @@ def table_llm_gen():
         if not d:
             continue
         s = d[0]
-        st = {k: sum(v["status"][k] for v in s["by_spec"].values()) for k in ("unparseable", "discovery_failed", "provider_error", "submitted")}
-        rows.append([name, s["samples"], st["unparseable"] + st["provider_error"], st["discovery_failed"], st["submitted"],
+        samples = load(f"llm_{key}_samples.json")
+        length = sum(r.get("finish_reason") == "length" and r["status"] in ("unparseable", "provider_error") for r in samples)
+        other = sum(r["status"] in ("unparseable", "provider_error", "not_compilable") for r in samples) - length
+        failed = sum(r["status"] == "discovery_failed" for r in samples)
+        sub = sum(r["status"] == "submitted" for r in samples)
+        rows.append([name, s["samples"], length, other, failed, sub,
                      s["unique_candidates"], s["valid_unique"], s["faulty_unique"], pct(s["no_library_success"])])
-    return md_table(["Model", "Samples", "Unparseable or error", "Failed discovery", "Submitted", "Unique compiled", "Valid", "Faulty", "Fresh-sample success"],
-                    rows, [1.15, 0.6, 0.75, 0.7, 0.7, 0.7, 0.45, 0.5, 0.85],
+    return md_table(["Model", "Samples", "Over token budget", "Other errors", "Failed example", "Submitted", "Unique", "Valid", "Faulty", "Fresh-sample success"],
+                    rows, [1.1, 0.6, 0.62, 0.55, 0.6, 0.72, 0.55, 0.45, 0.5, 0.71],
                     "Table 4: Candidate generation by frozen models over six prompt conditions. Fresh-sample success is the share of all samples whose program is valid on the hidden suite, which equals expected success when every task receives a new sample and no library")
 
 
@@ -120,8 +124,8 @@ def table_depth():
     rows = [[r["chain_length"], r["chains"], r["incompatible"], pct(r["flat_incorrect_task_rate"]),
              r["incompatible_chains_correct_on_all_tasks"], r["replay5_incompatible_admitted"], f"{r['replay5_test_calls_per_chain']:.0f}",
              r["checked_incompatible_admitted"], r["checked_compatible_rejected"]] for r in s]
-    return md_table(["Chain length", "Chains", "Incompatible", "Flat: wrong tasks", "Incompatible but always correct", "Replay-5: incompatible admitted", "Replay-5: calls per chain", "Check: incompatible admitted", "Check: compatible rejected"],
-                    rows, [0.55, 0.55, 0.75, 0.7, 0.85, 0.85, 0.7, 0.75, 0.7],
+    return md_table(["Length", "Chains", "Incompat.", "Flat: wrong tasks", "Incompat., always correct", "Replay-5: incompat. admitted", "Replay-5: calls per chain", "Check: incompat. admitted", "Check: compat. rejected"],
+                    rows, [0.6, 0.6, 0.7, 0.7, 0.8, 0.8, 0.75, 0.75, 0.7],
                     "Table 7: Composition at depth, 20 evaluation tasks per chain. The interface check uses no tool calls")
 
 
@@ -140,7 +144,10 @@ def table_sel():
 def table_tamper():
     s = load("tamper.json")["evidence_attacks"]
     short = lambda v: "detected" if v.startswith("detected") else "not detected"
-    rows = [[k, short(v["hashes"]), short(v["anchor"]), short(v["signature"]), short(v["replay"])] for k, v in s.items()]
+    order = ["no attack", "edit decision only", "edit decision and recompute manifest hashes", "delete test inputs",
+             "compromised verifier writes forged decision", "compromised verifier records modified source"]
+    assert set(order) == set(s), "attack names changed"
+    rows = [[k, short(s[k]["hashes"]), short(s[k]["anchor"]), short(s[k]["signature"]), short(s[k]["replay"])] for k in order]
     return md_table(["Attack", "Artifact hashes", "External anchor", "HMAC signature", "Audit re-execution"],
                     rows, [2.4, 1.0, 1.0, 1.0, 1.0],
                     "Table 9: Detection of evidence attacks by each defence layer used alone")

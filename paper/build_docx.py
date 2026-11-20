@@ -116,13 +116,18 @@ def borders(table, color="94A3B8"):
     tbl_pr.append(parse_xml(f'<w:tblBorders {nsdecls("w")}>{xml}</w:tblBorders>'))
 
 
-def keep_rows_together(table):
-    for row in table.rows:
+def keep_rows_together(table, max_rows=13):
+    """Short tables stay on one page; long tables may break, with the header row repeated."""
+    rows = list(table.rows)
+    for i, row in enumerate(rows):
         tr_pr = row._tr.get_or_add_trPr()
         tr_pr.append(parse_xml(f'<w:cantSplit {nsdecls("w")}/>'))
+        if i == 0 and len(rows) > 1:
+            tr_pr.append(parse_xml(f'<w:tblHeader {nsdecls("w")}/>'))
+        keep = len(rows) <= max_rows or i == 0 or i >= len(rows) - 2
         for cell in row.cells:
             for p in cell.paragraphs:
-                p.paragraph_format.keep_with_next = True
+                p.paragraph_format.keep_with_next = keep
 
 
 def table(doc, rows, widths=None):
@@ -139,7 +144,7 @@ def table(doc, rows, widths=None):
             p = cell.paragraphs[0]
             p.paragraph_format.space_after = p.paragraph_format.space_before = Pt(1)
             text = row[c].strip() if c < len(row) else ""
-            add_inline(p, text, 9, bold=(r == 0))
+            add_inline(p, text, 8.5, bold=(r == 0))
             if r == 0:
                 shade(cell, "E2E8F0")
     keep_rows_together(t)
@@ -183,6 +188,9 @@ def build(src, out):
             para(doc, line[10:], 11, "center", 2)
         elif line.startswith("% affiliations "):
             para(doc, line[15:], 9.5, "center", 14, italic=True)
+        elif line.strip() == "\\pagebreak":
+            from docx.enum.text import WD_BREAK
+            doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
         elif line.startswith("## "):
             h = para(doc, line[3:], 12.5, after=5, before=12, bold=True)
             h.paragraph_format.keep_with_next = True
@@ -214,7 +222,7 @@ def build(src, out):
             m = re.match(r"!\[(.*)\]\((.*)\)", line)
             p = para(doc, align="center", after=2, before=6)
             p.paragraph_format.keep_with_next = True
-            p.add_run().add_picture(str(root / m.group(2)), width=Inches(6.2))
+            p.add_run().add_picture(str(root / m.group(2)), width=Inches(5.8))
             caption(doc, m.group(1))
         elif line.startswith("```algorithm"):
             cap = line[len("```algorithm"):].strip()

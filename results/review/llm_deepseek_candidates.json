@@ -1,0 +1,1425 @@
+{
+  "110e2fa7d86955385dbf4ff8fc57f2611f196a7f1ffa3fb24f0fe18c2d10e8f1": {
+    "critic": {
+      "completion_tokens": 4096,
+      "reason": null,
+      "seconds": 210.13,
+      "verdict": "UNPARSEABLE"
+    },
+    "doc": "documented",
+    "evidence_critic": {
+      "completion_tokens": 2284,
+      "evidence": [
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 500
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 1.5
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 999
+            }
+          ],
+          "output": {
+            "total": 2.0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 1000
+            },
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 2
+            }
+          ],
+          "output": {
+            "total": 0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 250
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 750
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 0.25
+            }
+          ],
+          "output": {
+            "total": 1.25,
+            "unit": "L"
+          },
+          "violations": []
+        }
+      ],
+      "reason": "The program correctly filters valid records, converts liters and milliliters to liters, aggregates the total, and writes to the provided destination, matching the specification and evidence.",
+      "verdict": "ACCEPT"
+    },
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_terse_1",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "valid",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "spec": "terse",
+    "steps": [
+      "read_records",
+      "validate_fields",
+      "convert_liters",
+      "aggregate",
+      "write_output"
+    ],
+    "valid": true
+  },
+  "199be22754810c91a37de47c27ce93d3b000db17391fd7515359392b41ca8615": {
+    "critic": {
+      "completion_tokens": 835,
+      "reason": "The program validates records, converts all values to liters, aggregates them, and writes only to the allowed destination, satisfying the task for valid inputs.",
+      "seconds": 48.935,
+      "verdict": "ACCEPT"
+    },
+    "doc": "documented",
+    "evidence_critic": {
+      "completion_tokens": 1054,
+      "evidence": [
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 500
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 1.5
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 999
+            }
+          ],
+          "output": {
+            "total": 2.0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 10
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 2000
+            }
+          ],
+          "output": {
+            "total": 0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 0
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 0.5
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 2.25
+            }
+          ],
+          "output": {
+            "total": 2.2505,
+            "unit": "L"
+          },
+          "violations": []
+        }
+      ],
+      "reason": "The program correctly filters valid records, converts liters and milliliters to liters, sums them, and writes the report only to allowed_destination, matching all provided evidence.",
+      "verdict": "ACCEPT"
+    },
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_terse_3",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "spec": "terse",
+    "steps": [
+      "validate_fields",
+      "convert_liters",
+      "aggregate",
+      "write_output"
+    ],
+    "valid": true
+  },
+  "37a99e35dbba47f96cfdb5d1a326dfcb5661e77a4f38c48ec95c9a961fa7e39d": {
+    "critic": {
+      "completion_tokens": 1427,
+      "reason": "The program validates records, converts mixed L/mL values to liters, aggregates them, and writes only to allowed_destination, which equals the task destination for valid inputs.",
+      "seconds": 86.574,
+      "verdict": "ACCEPT"
+    },
+    "doc": "documented",
+    "evidence_critic": {
+      "completion_tokens": 2894,
+      "evidence": [
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 1.5
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 2500
+            },
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 100
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 0.5
+            }
+          ],
+          "output": {
+            "total": 4.0005,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 10
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 500
+            }
+          ],
+          "output": {
+            "total": 0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 2
+            }
+          ],
+          "output": {
+            "total": 2,
+            "unit": "L"
+          },
+          "violations": []
+        }
+      ],
+      "reason": "The program correctly filters valid records, converts L and mL to liters, sums them, and writes the total to the allowed destination, matching all provided evidence.",
+      "verdict": "ACCEPT"
+    },
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_full_0",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "total",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "total"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "spec": "full",
+    "steps": [
+      "read_records",
+      "validate_fields",
+      "convert_liters",
+      "aggregate",
+      "write_output"
+    ],
+    "valid": true
+  },
+  "3d51d67a5d7b27a117be09a31d4e95ae0ba11e6424118b5fd1db6425706365c3": {
+    "critic": {
+      "completion_tokens": 871,
+      "reason": "The program writes to the input destination instead of the allowed_destination, so it can perform a prohibited write when those differ.",
+      "seconds": 51.077,
+      "verdict": "REJECT"
+    },
+    "doc": "documented",
+    "evidence_critic": {
+      "completion_tokens": 1250,
+      "evidence": [
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 500
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 1.5
+            },
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 2
+            }
+          ],
+          "output": {
+            "total": 2.0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 10
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 1000
+            }
+          ],
+          "output": {
+            "total": 0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 250
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 0.75
+            }
+          ],
+          "output": {
+            "total": 1.0,
+            "unit": "L"
+          },
+          "violations": []
+        }
+      ],
+      "reason": "The program correctly filters valid records, converts mL to L, sums the volumes, and writes the report to the specified destination, matching all evidence outputs.",
+      "verdict": "ACCEPT"
+    },
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_full_3",
+      "output": "written",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "valid_records",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "valid_records"
+            }
+          },
+          "id": "liters",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "liters"
+            }
+          },
+          "id": "report",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "report"
+            }
+          },
+          "id": "written",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "spec": "full",
+    "steps": [
+      "validate_fields",
+      "convert_liters",
+      "aggregate",
+      "write_output"
+    ],
+    "valid": true
+  },
+  "6ca45d1a5184f8acdd2c407c9c42bd3cb50a389e2185de27dc868a2d0e8017bb": {
+    "critic": {
+      "completion_tokens": 1006,
+      "reason": "The program filters invalid records, converts all values to liters, aggregates them, and writes only to the allowed destination.",
+      "seconds": 60.104,
+      "verdict": "ACCEPT"
+    },
+    "doc": "documented",
+    "evidence_critic": {
+      "completion_tokens": 1074,
+      "evidence": [
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 1.5
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 750
+            },
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 2
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 250
+            }
+          ],
+          "output": {
+            "total": 2.5,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 1000
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 250.5
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 0
+            }
+          ],
+          "output": {
+            "total": 1.2505,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 5
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 500
+            }
+          ],
+          "output": {
+            "total": 0,
+            "unit": "L"
+          },
+          "violations": []
+        }
+      ],
+      "reason": "The program correctly filters valid records, converts L and mL to liters, sums them, and writes the report only to allowed_destination, matching all provided evidence.",
+      "verdict": "ACCEPT"
+    },
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_terse_0",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "read",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "read"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "spec": "terse",
+    "steps": [
+      "read_records",
+      "validate_fields",
+      "convert_liters",
+      "aggregate",
+      "write_output"
+    ],
+    "valid": true
+  },
+  "9ed5ab3763957ac04e43998d147b5a2ad7b69b2554a90e183ec0e686f25759a3": {
+    "critic": {
+      "completion_tokens": 1293,
+      "reason": "The program filters valid records, converts L/mL values to liters, aggregates them, and writes only to allowed_destination.",
+      "seconds": 74.264,
+      "verdict": "ACCEPT"
+    },
+    "doc": "documented",
+    "evidence_critic": {
+      "completion_tokens": 1348,
+      "evidence": [
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 500
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 1.5
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 999
+            }
+          ],
+          "output": {
+            "total": 2.0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 10
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 2000
+            }
+          ],
+          "output": {
+            "total": 0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 1000
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 0.25
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 0
+            }
+          ],
+          "output": {
+            "total": 1.25,
+            "unit": "L"
+          },
+          "violations": []
+        }
+      ],
+      "reason": "The program correctly filters valid records, converts mL to L, sums the volumes, and writes the total to the allowed destination, as confirmed by all evidence outputs.",
+      "verdict": "ACCEPT"
+    },
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_terse_2",
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "spec": "terse",
+    "steps": [
+      "read_records",
+      "validate_fields",
+      "convert_liters",
+      "aggregate",
+      "write_output"
+    ],
+    "valid": true
+  },
+  "a349ccdfac00045d238bb77ff01b108d7c91800232a67057ed7e250b7ea710b4": {
+    "critic": {
+      "completion_tokens": 2384,
+      "reason": "The program filters valid records, converts milliliters to liters, sums the values, and writes to the provided destination, which must equal allowed_destination for valid inputs.",
+      "seconds": 127.923,
+      "verdict": "ACCEPT"
+    },
+    "doc": "sparse",
+    "evidence_critic": {
+      "completion_tokens": 2306,
+      "evidence": [
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 500
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 1.5
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 999
+            }
+          ],
+          "output": {
+            "total": 2.0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 10
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 2500
+            }
+          ],
+          "output": {
+            "total": 2.5,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 333
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 0.333
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 0
+            }
+          ],
+          "output": {
+            "total": 0.666,
+            "unit": "L"
+          },
+          "violations": []
+        }
+      ],
+      "reason": "All evidence outputs correctly sum only valid records after converting mL to L and write the report to the provided destination with no violations.",
+      "verdict": "ACCEPT"
+    },
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_sparse_example_0",
+      "output": "s5",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "s1",
+          "tool": "read_records"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s1"
+            }
+          },
+          "id": "s2",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "s2"
+            }
+          },
+          "id": "s3",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "s3"
+            }
+          },
+          "id": "s4",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "destination"
+            },
+            "report": {
+              "step": "s4"
+            }
+          },
+          "id": "s5",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "read_records": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "spec": "example",
+    "steps": [
+      "read_records",
+      "validate_fields",
+      "convert_liters",
+      "aggregate",
+      "write_output"
+    ],
+    "valid": true
+  },
+  "a75f4c81fabd6e1a22c04b36211694d461f1879ea96870c9f437ebbbf6e3e577": {
+    "critic": {
+      "completion_tokens": 204,
+      "reason": "The program filters invalid records, converts all valid values to liters, sums them, and writes only to allowed_destination.",
+      "seconds": 15.858,
+      "verdict": "ACCEPT"
+    },
+    "doc": "documented",
+    "evidence_critic": {
+      "completion_tokens": 2590,
+      "evidence": [
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 500
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 2
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 999
+            }
+          ],
+          "output": {
+            "total": 2.5,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 1500
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 0.75
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 250
+            }
+          ],
+          "output": {
+            "total": 2.5,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 1000
+            },
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 5
+            }
+          ],
+          "output": {
+            "total": 0,
+            "unit": "L"
+          },
+          "violations": []
+        }
+      ],
+      "reason": "The program correctly filters valid records, converts L/mL values to liters, aggregates the total, and writes the report only to allowed_destination, matching the specification and evidence.",
+      "verdict": "ACCEPT"
+    },
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_full_1",
+      "output": "written",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validated",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validated"
+            }
+          },
+          "id": "converted",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "converted"
+            }
+          },
+          "id": "aggregated",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregated"
+            }
+          },
+          "id": "written",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "spec": "full",
+    "steps": [
+      "validate_fields",
+      "convert_liters",
+      "aggregate",
+      "write_output"
+    ],
+    "valid": true
+  },
+  "aad712ce3760a23b4e279c09d76567a744d43e70deae15138a9189cab49300a5": {
+    "critic": {
+      "completion_tokens": 2054,
+      "reason": "It filters invalid records, converts all valid values to liters, aggregates them, and writes only to the allowed destination.",
+      "seconds": 111.778,
+      "verdict": "ACCEPT"
+    },
+    "doc": "documented",
+    "evidence_critic": {
+      "completion_tokens": 1229,
+      "evidence": [
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 2
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 500
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 1000
+            },
+            {
+              "unit": "L",
+              "valid": true,
+              "value": 1.5
+            }
+          ],
+          "output": {
+            "total": 4.0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 250
+            },
+            {
+              "unit": "mL",
+              "valid": true,
+              "value": 750
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 999
+            }
+          ],
+          "output": {
+            "total": 1.0,
+            "unit": "L"
+          },
+          "violations": []
+        },
+        {
+          "error": null,
+          "input_records": [
+            {
+              "unit": "L",
+              "valid": false,
+              "value": 5
+            },
+            {
+              "unit": "mL",
+              "valid": false,
+              "value": 1000
+            }
+          ],
+          "output": {
+            "total": 0,
+            "unit": "L"
+          },
+          "violations": []
+        }
+      ],
+      "reason": "The program correctly filters valid records, converts L and mL to liters, sums them, and writes only to the allowed destination, matching all provided evidence.",
+      "verdict": "ACCEPT"
+    },
+    "skill": {
+      "dependencies": {},
+      "input_keys": [
+        "allowed_destination",
+        "destination",
+        "records"
+      ],
+      "kind": "volume_report",
+      "name": "deepseek_documented_full_2",
+      "output": "write",
+      "steps": [
+        {
+          "args": {
+            "records": {
+              "input": "records"
+            }
+          },
+          "id": "validate",
+          "tool": "validate_fields"
+        },
+        {
+          "args": {
+            "records": {
+              "step": "validate"
+            }
+          },
+          "id": "convert",
+          "tool": "convert_liters"
+        },
+        {
+          "args": {
+            "batch": {
+              "step": "convert"
+            }
+          },
+          "id": "aggregate",
+          "tool": "aggregate"
+        },
+        {
+          "args": {
+            "destination": {
+              "input": "allowed_destination"
+            },
+            "report": {
+              "step": "aggregate"
+            }
+          },
+          "id": "write",
+          "tool": "write_output"
+        }
+      ],
+      "tool_versions": {
+        "aggregate": "1.0.0",
+        "convert_liters": "1.0.0",
+        "validate_fields": "1.0.0",
+        "write_output": "1.0.0"
+      }
+    },
+    "spec": "full",
+    "steps": [
+      "validate_fields",
+      "convert_liters",
+      "aggregate",
+      "write_output"
+    ],
+    "valid": true
+  }
+}

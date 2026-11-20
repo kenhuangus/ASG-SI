@@ -1,0 +1,123 @@
+{
+  "evidence_attacks": {
+    "compromised verifier records modified source": {
+      "anchor": "not detected",
+      "hashes": "not detected",
+      "replay": "detected: environment_mismatch",
+      "signature": "not detected"
+    },
+    "compromised verifier writes forged decision": {
+      "anchor": "not detected",
+      "hashes": "not detected",
+      "replay": "detected: replay_mismatch",
+      "signature": "not detected"
+    },
+    "delete test inputs": {
+      "anchor": "detected: incomplete_evidence",
+      "hashes": "detected: incomplete_evidence",
+      "replay": "detected: incomplete_evidence",
+      "signature": "detected: incomplete_evidence"
+    },
+    "edit decision and recompute manifest hashes": {
+      "anchor": "detected: integrity_failure",
+      "hashes": "not detected",
+      "replay": "detected: replay_mismatch",
+      "signature": "detected: integrity_failure"
+    },
+    "edit decision only": {
+      "anchor": "detected: integrity_failure",
+      "hashes": "detected: integrity_failure",
+      "replay": "detected: integrity_failure",
+      "signature": "detected: integrity_failure"
+    },
+    "no attack": {
+      "anchor": "not detected",
+      "hashes": "not detected",
+      "replay": "not detected",
+      "signature": "not detected"
+    }
+  },
+  "poisoning": [
+    {
+      "coverage_gate": "REJECT",
+      "coverage_gate_reasons": [
+        "replay_check_failed"
+      ],
+      "deployed_with_revocation_monitor": {
+        "tasks_served": 3,
+        "violations": 1
+      },
+      "deployed_without_monitor": {
+        "tasks_served": 200,
+        "violations": 41
+      },
+      "seed": 7,
+      "standard_gate": "ACCEPT"
+    },
+    {
+      "coverage_gate": "REJECT",
+      "coverage_gate_reasons": [
+        "replay_check_failed"
+      ],
+      "deployed_with_revocation_monitor": {
+        "tasks_served": 1,
+        "violations": 1
+      },
+      "deployed_without_monitor": {
+        "tasks_served": 200,
+        "violations": 46
+      },
+      "seed": 42,
+      "standard_gate": "ACCEPT"
+    },
+    {
+      "coverage_gate": "REJECT",
+      "coverage_gate_reasons": [
+        "replay_check_failed"
+      ],
+      "deployed_with_revocation_monitor": {
+        "tasks_served": 1,
+        "violations": 1
+      },
+      "deployed_without_monitor": {
+        "tasks_served": 200,
+        "violations": 37
+      },
+      "seed": 123,
+      "standard_gate": "ACCEPT"
+    },
+    {
+      "coverage_gate": "REJECT",
+      "coverage_gate_reasons": [
+        "replay_check_failed"
+      ],
+      "deployed_with_revocation_monitor": {
+        "tasks_served": 3,
+        "violations": 1
+      },
+      "deployed_without_monitor": {
+        "tasks_served": 200,
+        "violations": 40
+      },
+      "seed": 456,
+      "standard_gate": "ACCEPT"
+    },
+    {
+      "coverage_gate": "REJECT",
+      "coverage_gate_reasons": [
+        "replay_check_failed"
+      ],
+      "deployed_with_revocation_monitor": {
+        "tasks_served": 9,
+        "violations": 1
+      },
+      "deployed_without_monitor": {
+        "tasks_served": 200,
+        "violations": 46
+      },
+      "seed": 789,
+      "standard_gate": "ACCEPT"
+    }
+  ],
+  "scope": "single-host simulation; the signing key and anchors are assumed to be stored where the policy runtime cannot write"
+}

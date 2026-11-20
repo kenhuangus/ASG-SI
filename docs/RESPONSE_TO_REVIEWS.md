@@ -24,7 +24,7 @@ the revised paper (`paper/paper.md`). Experiment code and result files are named
 | iMLt-6 | No baseline comparisons | First success, LLM self-verification, SmartSnap-style evidence verification, in-process checking, independent replay, replay with composition checks, flat library, end-to-end chain replay, four selection rules | Tables 3, 5, 7, 8 |
 | iMLt-7 | Figures 1 and 2 identical; Figure 4 lacks detail | All figures redrawn with distinct content: architecture, interface propagation, lifecycle | Figures 1–3 |
 | iMLt-8 | Undefined terms (evidence-store integrity, evidence-based checks, canonical programs) | Defined in Table 2 and §4.6; vague terms removed | §4.1, §4.6 |
-| iMLt-9 | Continual learning, forgetting, reward hacking discussed but not tested | Retention experiment under a tool upgrade (Table 10); reward hacking is no longer claimed as tested; memory and reward schedule marked design-only | §6.7, App. B |
+| iMLt-9 | Continual learning, forgetting, reward hacking discussed but not tested | Retention experiment under a tool upgrade (Table 10); reward hacking is no longer claimed as tested; memory and reward schedule marked design-only | §6.7, App. C |
 | iMLt-10 | Related work too brief; novelty unclear | See AC-2; the contribution is stated as admission control with recorded evidence | §1, §2 |
 
 ## Reviewer Df4u
@@ -47,7 +47,7 @@ the revised paper (`paper/paper.md`). Experiment code and result files are named
 |---|---|---|---|
 | EXwR-W1 | Very limited experimental setting | See Df4u-1 and iMLt-5 | §6 |
 | EXwR-W2 | Skill selection among many skills; large graphs; exploration versus reuse | Four selection rules, libraries of 10, 50, 200 skills; a UCB rule that learns from runtime-observable outcomes shows that runtime feedback cannot detect silent faults | §6.5, Table 8 |
-| EXwR-W3 / C1 | Manually chosen reward weights may invite gaming | Results use a fixed success metric; the schedule is moved to an appendix as an unevaluated design; the gate never reads weighted reward | §4.7, App. B |
+| EXwR-W3 / C1 | Manually chosen reward weights may invite gaming | Results use a fixed success metric; the schedule is moved to an appendix as an unevaluated design; the gate never reads weighted reward | §4.7, App. C |
 | EXwR-C2 | Overlapping arrows in figures | Figures redrawn with at most 8 shapes and no crossing arrows; rendered at 5000 px and inspected | Figures 1–3 |
 | EXwR-C3 | Note instructing reviewers to include phrases | Not present in the revision; the text extraction of the PDF contains no such note | whole paper |
 
@@ -60,7 +60,7 @@ the revised paper (`paper/paper.md`). Experiment code and result files are named
 | PAT-3 | Agent as adversary | Third adversary tier; poisoning experiment | §3, §6.6 |
 | PAT-4 | Verification used for both rewards and gating | Rewards are stored for reconstruction; gating is the evaluated use | §1, §4.7 |
 | PAT-5 | Skill compiler and interface synthesis underspecified | Algorithm 1; interfaces come from declared contracts, not inferred | §4.2 |
-| PAT-6 | Reward weights, scaling constants, phase schedule undefined | Fixed metric in all results; schedule in App. B marked unevaluated | §4.7, App. B |
+| PAT-6 | Reward weights, scaling constants, phase schedule undefined | Fixed metric in all results; schedule in App. C marked unevaluated | §4.7, App. C |
 | PAT-7 | composition-ok predicate undefined | Defined via tag propagation; Figure 2 | §4.1, §4.4 |
 | PAT-8 | Guarded fallbacks not defined | Removed from the evaluated method; listed as a design proposal in the scope box | §3 |
 | PAT-9 | Only atomic skills validated | Compiler now handles multi-step trajectories; composition up to length 5 | §4.2, §6.4 |

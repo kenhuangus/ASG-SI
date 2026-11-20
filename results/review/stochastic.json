@@ -1,0 +1,87 @@
+{
+  "alpha": 0.05,
+  "candidates": [
+    {
+      "candidate": "single_read",
+      "gates": {
+        "exact_all_of_4_replays": {
+          "acceptance_rate": 0.0,
+          "mean_executions": 60.0
+        },
+        "exact_single_replay": {
+          "acceptance_rate": 0.008,
+          "mean_executions": 15.0
+        },
+        "statistical_cp": {
+          "acceptance_rate": 0.0,
+          "mean_executions": 76.2
+        }
+      },
+      "meets_requirement": false,
+      "true_success": 0.75535
+    },
+    {
+      "candidate": "two_reads",
+      "gates": {
+        "exact_all_of_4_replays": {
+          "acceptance_rate": 0.16,
+          "mean_executions": 60.0
+        },
+        "exact_single_replay": {
+          "acceptance_rate": 0.674,
+          "mean_executions": 15.0
+        },
+        "statistical_cp": {
+          "acceptance_rate": 1.0,
+          "mean_executions": 149.64
+        }
+      },
+      "meets_requirement": true,
+      "true_success": 0.9705
+    },
+    {
+      "candidate": "three_reads",
+      "gates": {
+        "exact_all_of_4_replays": {
+          "acceptance_rate": 0.824,
+          "mean_executions": 60.0
+        },
+        "exact_single_replay": {
+          "acceptance_rate": 0.944,
+          "mean_executions": 15.0
+        },
+        "statistical_cp": {
+          "acceptance_rate": 1.0,
+          "mean_executions": 63.24
+        }
+      },
+      "meets_requirement": true,
+      "true_success": 0.99695
+    },
+    {
+      "candidate": "unit_blind_three_reads",
+      "gates": {
+        "exact_all_of_4_replays": {
+          "acceptance_rate": 0.0,
+          "mean_executions": 60.0
+        },
+        "exact_single_replay": {
+          "acceptance_rate": 0.0,
+          "mean_executions": 15.0
+        },
+        "statistical_cp": {
+          "acceptance_rate": 0.0,
+          "mean_executions": 60.0
+        }
+      },
+      "meets_requirement": false,
+      "true_success": 0.4741
+    }
+  ],
+  "evaluation_cases": 200,
+  "monte_carlo_executions": 20000,
+  "p_drop": 0.1,
+  "scope": "synthetic stochastic tool environment; true success estimated by Monte Carlo on a fixed evaluation distribution",
+  "tau": 0.9,
+  "trials": 500
+}
