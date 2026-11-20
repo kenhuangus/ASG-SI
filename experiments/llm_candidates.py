@@ -251,7 +251,8 @@ def run(model, out, n_per_spec, temperature, workers, offline):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--model", choices=("clover", "deepseek", "qwen4b"), required=True)
+    p.add_argument("--model", choices=("clover", "deepseek", "qwen4b"), required=True,
+                   help="qwen4b replays Clover run 2 (requested as qwen3.5-4b; served by clover-35b-a3b)")
     p.add_argument("--output", required=True)
     p.add_argument("--n-per-spec", type=int, default=20)
     p.add_argument("--temperature", type=float, default=0.8)

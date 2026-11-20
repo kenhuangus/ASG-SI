@@ -10,14 +10,14 @@ the revised paper (`paper/paper.md`). Experiment code and result files are named
 |---|---|---|---|
 | AC-1 | Method unclear to the point of irreproducibility | Definitions, notation table, three algorithms; every table regenerated from published raw evidence; audit command re-executes decisions | §4, Table 2, Alg. 1–3, App. A |
 | AC-2 | Insufficient positioning in the literature | Related work rewritten into five groups with 28 verified references and a comparison table | §2, Table 1 |
-| AC-3 | Limited results: domain difficulty and baselines | Seven experiments, including candidates from three frozen LLMs, stochastic tools, composition depth, selection at scale, attacks, retention; baselines include LLM self-verification and a SmartSnap-style evidence verifier | §6 |
+| AC-3 | Limited results: domain difficulty and baselines | Seven experiments, including candidates from two frozen LLMs (three runs), stochastic tools, composition depth, selection at scale, attacks, retention; baselines include LLM self-verification and a SmartSnap-style evidence verifier | §6 |
 
 ## Reviewer iMLt
 
 | ID | Comment | Response | Where |
 |---|---|---|---|
 | iMLt-1 | Policy-improvement algorithm never specified | The paper no longer claims policy optimization. All models are frozen; the contribution is the admission gate. Scope stated in a box | §3 scope box, §4.5, §7 |
-| iMLt-2 | Base model not described | Three frozen models with sizes, quantization, hardware, and serving stack; all responses cached by request hash | §5 Models |
+| iMLt-2 | Base model not described | Two frozen models (one sampled in two independent runs) with sizes, quantization, hardware, and serving stack; all responses cached by request hash | §5 Models |
 | iMLt-3 | External verifier not described | Algorithm 2 (exact replay), Algorithm 3 (statistical), reason codes, separate worker | §4.3 |
 | iMLt-4 | Skill extraction not described | Algorithm 1 and its limits | §4.2 |
 | iMLt-5 | Toy tasks solvable out of the box; results saturated | Models write candidates and frequently produce faults that pass one example (Table 4); stochastic tools give non-saturated gate behaviour (Table 6); larger libraries (Table 8). The task remains small and synthetic, stated as a limitation | §6.2–6.5, §7 |
@@ -76,3 +76,4 @@ the revised paper (`paper/paper.md`). Experiment code and result files are named
 - The previous draft stated that SmartSnap and SuperIntelliAgent have no public implementations. Both do (github.com/TencentYoutuResearch/SmartSnap, github.com/jianzhelin/SuperIntelliAgent). The statement was removed.
 - Reference metadata was re-checked against DataCite, arxiv.org, Crossref, and publisher pages. Corrected entries: Wu et al. (2025) (previously listed under Tu), Su et al. (2025) (previously listed under Zhuang, title updated), Chen, M. F. et al. (2023) for Skill-it (previously listed with other authors), and ALFWorld (ICLR 2021).
 - The previous draft attributed results to a GPT-4o-mini policy served by Ollama and trained with REINFORCE. No such experiment exists in the repository; those claims were removed.
+- The first revision reported one candidate pool as written by qwen3.5-4b. The model name recorded with every response shows that the Mac server answered all 120 of those requests with its loaded model, clover-35b-a3b. The pool is now reported as a second Clover run, and the client rejects responses whose model differs from the request.
